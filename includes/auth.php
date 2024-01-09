@@ -13,6 +13,7 @@ function generateRandomString($length = 14) {
 
 // Example usage:
 $w_ref_id = generateRandomString();
+
 if (isset($_POST['register'])) {
     // Collect user input
     $user_name = $_POST['user_name'];
@@ -45,28 +46,20 @@ if (isset($_POST['register'])) {
     $sql = "INSERT INTO users (user_name, password, email, first_name, last_name) VALUES ('$user_name', '$password', '$email', '$first_name', '$last_name')";
 
     if (mysqli_query($conn, $sql)) {
-        $user_name = $_POST['user_name'];
+        $get_user_id = mysqli_insert_id($conn);
 
-        $get_user_data = "SELECT * FROM users WHERE user_name = '$user_name'";
-        $result = $conn->query($get_user_data);
-        $row = $result->fetch_assoc();
-        $get_user_id = $row['id'];
-
-        $add_wallet = "INSERT INTO wallet (wallet_ref_id, wallet_owner_id, wallet_key, wallet_status) VALUES ($w_ref_id, $get_user_id, 1, 3)";
+        $add_wallet = "INSERT INTO wallet (wallet_ref_id, wallet_owner_id, wallet_key, wallet_status) VALUES ('$w_ref_id', $get_user_id, 1, 3)";
 
         if (mysqli_query($conn, $add_wallet)) {
+            $get_wallet_id = mysqli_insert_id($conn);
+            $get_wallet_key = 1;
 
-            $get_user_data = "SELECT * FROM wallet WHERE wallet_owner_id = '$get_user_id'";
-            $result = $conn->query($get_user_data);
-            $row = $result->fetch_assoc();
-            $get_wallet_id = $row['wallet_id'];
-            $get_wallet_key = $row['wallet_key'];
-            if ($get_wallet_key == 1){
+            // Check and update wallet key
+            if ($get_wallet_key == 1) {
                 $get_wallet_key = 'meta_mask';
             }
 
-            $add_wallet_data = "INSERT INTO wallet_data (d_wallet_parent_id, d_wallet_name, d_wallet_phase, d_wallet_owner_id, d_wallet_username) VALUES ($get_wallet_id, $get_wallet_key, 0, $get_user_id, 0)";
-
+            $add_wallet_data = "INSERT INTO wallet_data (d_wallet_parent_id, d_wallet_name, d_wallet_phase, d_wallet_owner_id, d_wallet_username) VALUES ($get_wallet_id, '$get_wallet_key', 0, $get_user_id, 0)";
 
             if (mysqli_query($conn, $add_wallet_data)) {
                 // Registration success
@@ -80,6 +73,7 @@ if (isset($_POST['register'])) {
         exit();
     }
 }
+
 
 elseif (isset($_POST['login'])) {
     // Collect user input
