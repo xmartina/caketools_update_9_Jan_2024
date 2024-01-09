@@ -125,14 +125,14 @@
 
     // Dark Light Mode
      if($('.body').hasClass('is_dark')) {
-            document.getElementById("img-mode").src = "assets/images/icon/moon.png";
-            document.getElementById("logo_header").src = "assets/images/logo/logo_dark.png";
-            document.getElementById("logo_footer").src = "assets/images/logo/logo_dark.png";
+            document.getElementById("img-mode").src = "/assets/images/icon/moon.png";
+            document.getElementById("logo_header").src = "/assets/images/logo/logo_dark.png";
+            document.getElementById("logo_footer").src = "/assets/images/logo/logo_dark.png";
 
     } else  if($('.body').hasClass('is_light')) {
-            document.getElementById("img-mode").src = "assets/images/icon/sun.png";
-            document.getElementById("logo_header").src = "assets/images/logo/logo.png";
-            document.getElementById("logo_footer").src = "assets/images/logo/logo.png";
+            document.getElementById("img-mode").src = "/assets/images/icon/sun.png";
+            document.getElementById("logo_header").src = "/assets/images/logo/logo.png";
+            document.getElementById("logo_footer").src = "/assets/images/logo/logo.png";
         }
         
     // Header Connect
