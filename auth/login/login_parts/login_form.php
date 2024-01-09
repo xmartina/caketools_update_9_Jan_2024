@@ -42,7 +42,23 @@
 <?php }elseif (isset($user_id)){ ?>
 
 <form action="" method="post">
-    <div class="title-login text-success">Hi <?=$fullName ?> : you are already logged in</div>
+    <?php
+    if (!isset($_GET['login-success'])){ ?>
+        <div class="title-login text-success">Hi <?=$fullName ?> : you are already logged in</div>
+        <?php } elseif (isset($_GET['login-success'])){
+    echo '<div class="success-msg text-success pb-3 mb-2 text-center">
+                                    login successful, <a href="/users">redirecting to dashboard</a>
+                                  </div>';
+    ?>
+    <script>
+        function redirectToDashboard() {
+            setTimeout(function () {
+                window.location.href = '/users';
+            }, 3000);
+        }
+        window.onload = redirectToDashboard;
+    </script>
+   <?php } ?>
     <button class="submit" type="submit" name="goto_my_dashboard">Goto My Dashboard</button>
 </form>
 <?php } ?>
