@@ -1,4 +1,5 @@
-<?php if ($wallet_status == 0) { ?>
+<?php if ($wallet_status == 0 && !$_GET['success_add_meta_mask']) { ?>
+
     <div class="modal fade" id="metaMask">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -22,7 +23,7 @@
                             <input type="text" class="form-control" name="wallet_username"
                                    placeholder="Metamask UserName">
                         </div>
-                        <button type="submit" class="btn btn-primary" name="meta_mask">Submit</button>
+                        <button type="submit" class="btn btn-primary" name="create_meta_mask">Submit</button>
                     </form>
                 </div>
 
