@@ -1,6 +1,6 @@
 <?php
 include_once (rootDir.'includes/db_connect.php');
-function generateRandomString($length = 14) {
+function generateRandomString($length = 12) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $w_ref_id = '';
 
@@ -10,6 +10,7 @@ function generateRandomString($length = 14) {
 
     return $w_ref_id;
 }
+
 $w_ref_id = generateRandomString();
 
 if (isset($_POST['register'])) {
