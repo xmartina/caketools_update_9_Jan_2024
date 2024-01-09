@@ -2,12 +2,7 @@
 $sql = "SELECT * FROM wallet_data WHERE d_wallet_owner_id = $user_id";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
-if ($row['d_wallet_id'] == ''){
-    return '';
-} else{
-    $d_wallet_id  = $row['d_wallet_id'];
-}
-
+$d_wallet_id  = $row['d_wallet_id'];
 $d_wallet_parent_id  = $row['d_wallet_parent_id'];
 $d_wallet_name  = $row['d_wallet_name'];
 $d_wallet_phase  = $row['d_wallet_phase'];

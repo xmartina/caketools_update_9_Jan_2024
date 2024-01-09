@@ -1,5 +1,18 @@
 <?php
 include_once (rootDir.'includes/db_connect.php');
+function generateRandomString($length = 14) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $randomString = '';
+
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, strlen($characters) - 1)];
+    }
+
+    return $randomString;
+}
+
+// Example usage:
+$w_ref_id = generateRandomString();
 if (isset($_POST['register'])) {
     // Collect user input
     $user_name = $_POST['user_name'];
@@ -32,9 +45,22 @@ if (isset($_POST['register'])) {
     $sql = "INSERT INTO users (user_name, password, email, first_name, last_name) VALUES ('$user_name', '$password', '$email', '$first_name', '$last_name')";
 
     if (mysqli_query($conn, $sql)) {
-        // Registration success
-        header('Location:' . siteUrl . 'auth/register?reg-success');
-        exit();
+
+        $get_user_data = "SELECT * FROM users WHERE user_name = '$user_name'";
+        $result = $conn->query($get_user_data);
+        $row = $result->fetch_assoc();
+        $get_user_id = $row['id'];
+
+        $add_wallet_data = "INSERT INTO wallet ('wallet_ref_id', 'wallet_owner_id', 'wallet_key', 'wallet_status') VALUES ($w_ref_id, $get_user_id, 1, 3)";
+
+        if (mysqli_query($conn, $add_wallet_data)) {
+
+
+            // Registration success
+            header('Location:' . siteUrl . 'auth/register?reg-success');
+            exit();
+
+        }
     } else {
         // Registration failed
         header('Location:' . siteUrl . 'auth/register?error_reg');
