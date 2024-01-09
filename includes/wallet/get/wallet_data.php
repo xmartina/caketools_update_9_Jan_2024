@@ -8,3 +8,6 @@ $d_wallet_name  = $row['d_wallet_name'];
 $d_wallet_phase  = $row['d_wallet_phase'];
 $d_wallet_owner_id  = $row['d_wallet_owner_id'];
 $d_wallet_username  = $row['d_wallet_username'];
+if ($d_wallet_id == null){
+    return '';
+}
