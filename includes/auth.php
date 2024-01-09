@@ -48,9 +48,10 @@ if (isset($_POST['register'])) {
         $get_user_id = mysqli_insert_id($conn);
 
 
-        $add_wallet = "INSERT INTO wallet (wallet_ref_id, wallet_owner_id, wallet_key, wallet_status) VALUES ('$w_ref_id', $get_user_id, 1, 3)";
+        // Add MetaMask Wallet
+        $add_wallet_meta_mask = "INSERT INTO wallet (wallet_ref_id, wallet_owner_id, wallet_key, wallet_status) VALUES ('$w_ref_id', $get_user_id, 1, 3)";
 
-        if (mysqli_query($conn, $add_wallet)) {
+        if (mysqli_query($conn, $add_wallet_meta_mask)) {
             $get_wallet_id = mysqli_insert_id($conn);
             $get_wallet_key = 1;
 
@@ -62,9 +63,26 @@ if (isset($_POST['register'])) {
             $add_wallet_data = "INSERT INTO wallet_data (d_wallet_parent_id, d_wallet_name, d_wallet_phase, d_wallet_owner_id, d_wallet_username) VALUES ($get_wallet_id, '$get_wallet_key', 0, $get_user_id, 0)";
 
             if (mysqli_query($conn, $add_wallet_data)) {
-                // Registration success
-                header('Location:' . siteUrl . 'auth/register?reg-success');
-                exit();
+
+                // Add Binance Wallet
+                $add_wallet_binance = "INSERT INTO wallet (wallet_ref_id, wallet_owner_id, wallet_key, wallet_status) VALUES ('$w_ref_id', $get_user_id, 2, 3)";
+                if (mysqli_query($conn, $add_wallet_binance)) {
+                    $get_wallet_id = mysqli_insert_id($conn);
+                    $get_wallet_key = 2;
+
+                    // Check and update wallet key
+                    if ($get_wallet_key == 2) {
+                        $get_wallet_key = 'binance';
+                    }
+
+                    $add_wallet_data_binance = "INSERT INTO wallet_data (d_wallet_parent_id, d_wallet_name, d_wallet_phase, d_wallet_owner_id, d_wallet_username) VALUES ($get_wallet_id, '$get_wallet_key', 0, $get_user_id, 0)";
+
+                    if (mysqli_query($conn, $add_wallet_data_binance)) {
+                        // Registration success
+                        header('Location:' . siteUrl . 'auth/register?reg-success');
+                        exit();
+                    }
+                }
             }
         }
     } else {
