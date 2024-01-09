@@ -1,11 +1,11 @@
 <?php
     session_start();
+    $user_id = $_SESSION['user_id'];
     const pageName = 'Home';
     const rootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_html/';
     include_once ('includes/generalConfig.php');
     include_once ('includes/core.php');
     include_once (rootDir.'partials/front/header/main.php');
-    $user_id = $_SESSION['user_id'];
 ?>
         <section class="tf-slider">
             <div class="tf-container">
