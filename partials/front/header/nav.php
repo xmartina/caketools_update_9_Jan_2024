@@ -17,10 +17,11 @@
                                 <li class="menu-item <?php if ($_SERVER['REQUEST_URI'] == '/'){echo 'current-menu-item';} ?>">
                                     <a href="/">Home</a>
                                 </li>
+                                <?php if (!$user_id){ ?>
                                 <li class="menu-item">
                                     <a href="#">Explore</a>
                                 </li>
-
+                                <?php } ?>
                                 <li class="menu-item <?php if ($_SERVER['REQUEST_URI'] == '/add_nft/'){echo 'current-menu-item';} ?>">
                                     <a href="<?=siteUrl ?>add_nft">Create NFT</a>
 
