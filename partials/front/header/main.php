@@ -1,5 +1,4 @@
 <?php include_once (rootDir.'partials/front/header/page_meta.php');
-$user_id = $_SESSION['user_id'];
 ?>
 <body class="body header-fixed home-1">
 
