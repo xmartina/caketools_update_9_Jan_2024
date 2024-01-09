@@ -1,3 +1,4 @@
+<?php if (!isset($user_id)){ ?>
 <form action="" method="post">
     <div class="title-login">login with account details</div>
         <?php
@@ -38,3 +39,10 @@
     </div>
     <button class="submit" type="submit" name="login">Login</button>
 </form>
+<?php }elseif (isset($user_id)){ ?>
+
+<form action="" method="post">
+    <div class="title-login text-success">you are already logged in</div>
+    <button class="submit" type="submit" name="goto_my_dashboard">Goto My Dashboard</button>
+</form>
+<?php } ?>

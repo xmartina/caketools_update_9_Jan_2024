@@ -118,5 +118,9 @@ elseif (isset($_POST['logout'])){
     exit();
 
 }
+elseif (isset($_POST['goto_my_dashboard'])){
+    header("Location: /users");
+}
+
 // Close the database connection
 mysqli_close($conn);
