@@ -1,7 +1,7 @@
 <?php
 include_once (rootDir.'includes/db_connect.php');
 function generateRandomString($length = 12) {
-    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $characters = '0123456789abTF';
     $w_ref_id = '';
 
     for ($i = 0; $i < $length; $i++) {
