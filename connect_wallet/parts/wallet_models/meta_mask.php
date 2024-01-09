@@ -1,4 +1,4 @@
-<?php if ($m_wallet_status == 'm_3' && !$_GET['success_add_meta_mask']) { ?>
+<?php if ($m_wallet_status == 'm_3' && !isset($_GET['success_add_meta_mask'])) { ?>
 
     <div class="modal fade" id="metaMask">
         <div class="modal-dialog modal-dialog-centered">
