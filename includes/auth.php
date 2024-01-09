@@ -2,16 +2,14 @@
 include_once (rootDir.'includes/db_connect.php');
 function generateRandomString($length = 14) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    $randomString = '';
+    $w_ref_id = '';
 
     for ($i = 0; $i < $length; $i++) {
-        $randomString .= $characters[rand(0, strlen($characters) - 1)];
+        $w_ref_id .= $characters[rand(0, strlen($characters) - 1)];
     }
 
-    return $randomString;
+    return $w_ref_id;
 }
-
-// Example usage:
 $w_ref_id = generateRandomString();
 
 if (isset($_POST['register'])) {
@@ -47,6 +45,7 @@ if (isset($_POST['register'])) {
 
     if (mysqli_query($conn, $sql)) {
         $get_user_id = mysqli_insert_id($conn);
+
 
         $add_wallet = "INSERT INTO wallet (wallet_ref_id, wallet_owner_id, wallet_key, wallet_status) VALUES ('$w_ref_id', $get_user_id, 1, 3)";
 
