@@ -1,5 +1,5 @@
 <?php
-$sql = "SELECT * FROM wallet_data WHERE wallet_owner_id = $user_id";
+$sql = "SELECT * FROM wallet_data WHERE d_wallet_owner_id = $user_id";
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 $d_wallet_id  = $row['d_wallet_id'];
