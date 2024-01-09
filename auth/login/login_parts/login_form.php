@@ -42,7 +42,7 @@
 <?php }elseif (isset($user_id)){ ?>
 
 <form action="" method="post">
-    <div class="title-login text-success">you are already logged in</div>
+    <div class="title-login text-success">Hi <?=$fullName ?> : you are already logged in</div>
     <button class="submit" type="submit" name="goto_my_dashboard">Goto My Dashboard</button>
 </form>
 <?php } ?>

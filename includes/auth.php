@@ -122,5 +122,16 @@ elseif (isset($_POST['goto_my_dashboard'])){
     header("Location: /users");
 }
 
+if (isset($_SESSION['user_id'])) {
+    $user_id = $_SESSION['user_id'];
+
+//Get Users data from users table
+    $sql = "SELECT * FROM users WHERE id = $user_id";
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+    $firstName = $row['first_name'];
+    $lastName = $row['last_name'];
+    $fullName = $firstName . " " . $lastName;
+}
 // Close the database connection
 mysqli_close($conn);
