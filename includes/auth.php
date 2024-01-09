@@ -21,83 +21,65 @@ if (isset($_POST['register'])) {
     $first_name = $_POST['first_name'];
     $last_name = $_POST['last_name'];
 
-    // Use prepared statements to check email existence
-    $emailCheckQuery = "SELECT * FROM users WHERE email = ?";
-    $emailCheckStmt = $conn->prepare($emailCheckQuery);
-    $emailCheckStmt->bind_param("s", $email);
-    $emailCheckStmt->execute();
-    $emailCheckResult = $emailCheckStmt->get_result();
+    // Check if email already exists
+    $emailCheckQuery = "SELECT * FROM users WHERE email = '$email'";
+    $emailCheckResult = mysqli_query($conn, $emailCheckQuery);
 
-    if ($emailCheckResult->num_rows > 0) {
+    if (mysqli_num_rows($emailCheckResult) > 0) {
         // Email already exists
         header('Location:' . siteUrl . 'auth/register?email-exists');
         exit();
     }
 
-    // Use prepared statements to check username existence
-    $usernameCheckQuery = "SELECT * FROM users WHERE user_name = ?";
-    $usernameCheckStmt = $conn->prepare($usernameCheckQuery);
-    $usernameCheckStmt->bind_param("s", $user_name);
-    $usernameCheckStmt->execute();
-    $usernameCheckResult = $usernameCheckStmt->get_result();
+    // Check if username already exists
+    $usernameCheckQuery = "SELECT * FROM users WHERE user_name = '$user_name'";
+    $usernameCheckResult = mysqli_query($conn, $usernameCheckQuery);
 
-    if ($usernameCheckResult->num_rows > 0) {
+    if (mysqli_num_rows($usernameCheckResult) > 0) {
         // Username already exists
         header('Location:' . siteUrl . 'auth/register?username-exists');
         exit();
     }
 
-    // Start a transaction
-    mysqli_begin_transaction($conn);
-
     // Insert user data into the database
-    $insertUserQuery = "INSERT INTO users (user_name, password, email, first_name, last_name) VALUES (?, ?, ?, ?, ?)";
-    $insertUserStmt = $conn->prepare($insertUserQuery);
-    $insertUserStmt->bind_param("sssss", $user_name, $password, $email, $first_name, $last_name);
+    $sql = "INSERT INTO users (user_name, password, email, first_name, last_name) VALUES ('$user_name', '$password', '$email', '$first_name', '$last_name')";
 
-    if ($insertUserStmt->execute()) {
-        // Get user ID
-        $get_user_id = $insertUserStmt->insert_id;
+    if (mysqli_query($conn, $sql)) {
+        $user_name = $_POST['user_name'];
 
-        // Insert wallet data
-        $add_wallet_query = "INSERT INTO wallet (wallet_ref_id, wallet_owner_id, wallet_key, wallet_status) VALUES (?, ?, 1, 3)";
-        $add_wallet_stmt = $conn->prepare($add_wallet_query);
-        $add_wallet_stmt->bind_param("ii", $w_ref_id, $get_user_id);
+        $get_user_data = "SELECT * FROM users WHERE user_name = '$user_name'";
+        $result = $conn->query($get_user_data);
+        $row = $result->fetch_assoc();
+        $get_user_id = $row['id'];
 
-        if ($add_wallet_stmt->execute()) {
-            // Get wallet ID
-            $get_wallet_id = $add_wallet_stmt->insert_id;
-            $get_wallet_key = 1;
+        $add_wallet = "INSERT INTO wallet (wallet_ref_id, wallet_owner_id, wallet_key, wallet_status) VALUES ($w_ref_id, $get_user_id, 1, 3)";
 
-            // Check and update wallet key
-            if ($get_wallet_key == 1) {
+        if (mysqli_query($conn, $add_wallet)) {
+
+            $get_user_data = "SELECT * FROM wallet WHERE wallet_owner_id = '$get_user_id'";
+            $result = $conn->query($get_user_data);
+            $row = $result->fetch_assoc();
+            $get_wallet_id = $row['wallet_id'];
+            $get_wallet_key = $row['wallet_key'];
+            if ($get_wallet_key == 1){
                 $get_wallet_key = 'meta_mask';
             }
 
-            // Insert wallet data
-            $add_wallet_data_query = "INSERT INTO wallet_data (d_wallet_parent_id, d_wallet_name, d_wallet_phase, d_wallet_owner_id, d_wallet_username) VALUES (?, ?, 0, ?, 0)";
-            $add_wallet_data_stmt = $conn->prepare($add_wallet_data_query);
-            $add_wallet_data_stmt->bind_param("isi", $get_wallet_id, $get_wallet_key, $get_user_id);
+            $add_wallet_data = "INSERT INTO wallet_data (d_wallet_parent_id, d_wallet_name, d_wallet_phase, d_wallet_owner_id, d_wallet_username) VALUES ($get_wallet_id, $get_wallet_key, 0, $get_user_id, 0)";
 
-            if ($add_wallet_data_stmt->execute()) {
-                // Commit the transaction
-                mysqli_commit($conn);
 
+            if (mysqli_query($conn, $add_wallet_data)) {
                 // Registration success
                 header('Location:' . siteUrl . 'auth/register?reg-success');
                 exit();
             }
         }
+    } else {
+        // Registration failed
+        header('Location:' . siteUrl . 'auth/register?error_reg');
+        exit();
     }
-
-    // Rollback the transaction if any step fails
-    mysqli_rollback($conn);
-
-    // Registration failed
-    header('Location:' . siteUrl . 'auth/register?error_reg');
-    exit();
 }
-
 
 elseif (isset($_POST['login'])) {
     // Collect user input
