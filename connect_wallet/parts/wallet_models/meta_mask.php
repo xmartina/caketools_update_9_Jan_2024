@@ -42,11 +42,11 @@
             <div class="modal-content">
 <?php
 if ($m_wallet_status == 1){
-    $wallet_status = 'connected';
+    $m_wallet_status = 'connected';
 }elseif($m_wallet_status == 2){
-    $wallet_status = 'pending approval';
+    $m_wallet_status = 'pending approval';
 }elseif($m_wallet_status == m_3){
-    $wallet_status = 'not connected';
+    $m_wallet_status = 'not connected';
 }
 ?>
                 <!-- Modal Header -->
