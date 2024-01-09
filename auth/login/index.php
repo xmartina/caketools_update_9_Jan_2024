@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+$user_id = $_SESSION['user_id'];
 const pageName = 'Login';
 const rootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_html/';
 include_once(rootDir . 'includes/generalConfig.php');
