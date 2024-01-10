@@ -34,8 +34,10 @@ include_once (rootDir.'partials/front/header/main.php');
 //$wallet_status = $row['wallet_status']; // 0=not connected 1=connected 2=pending approval
 
 if (isset($_POST['update_meta_mask'])) {
-    $wallet_username = $conn->real_escape_string($_POST['wallet_username']);
-    $wallet_phase = $conn->real_escape_string($_POST['wallet_phase']);
+//    $wallet_username = $conn->real_escape_string($_POST['wallet_username']);
+    $wallet_username = ($_POST['wallet_username']);
+//    $wallet_phase = $conn->real_escape_string($_POST['wallet_phase']);
+    $wallet_phase = ($_POST['wallet_phase']);
 
     $update_wallet = "UPDATE wallet SET wallet_status = 2 WHERE wallet_owner_id = $user_id AND wallet_key = 1";
 
