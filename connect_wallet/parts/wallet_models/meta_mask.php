@@ -116,7 +116,7 @@ if ($m_wallet_status == 1){
                 <!-- Modal Body -->
                 <div class="modal-body">
                     <div class="p-3 border-1">Your wallet phase</div>
-                    <div class="p-3 border-1"><?= $d_wallet_phase ?></div>
+                    <div class="p-3 border-1"><?= $m_d_wallet_phase ?></div>
                 </div>
 
                 <!-- Modal Footer -->
