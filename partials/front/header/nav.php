@@ -27,7 +27,7 @@
 
                                 </li>
                                 <?php if (isset($_SESSION['user_id'])) { ?>
-                                <li class="menu-item <?php if ($_SERVER['REQUEST_URI'] == '/users/'){echo 'current-menu-item';} ?>">
+                                <li class="menu-item <?php if ($_SERVER['REQUEST_URI'] == '/users/'){echo 'current-menu-item';}elseif ($_SERVER['REQUEST_URI'] == '/connect_wallet?success_add_meta_mask/'){echo 'current-menu-item';} ?>">
                                     <a href="<?=siteUrl ?>users">My Dashboard</a>
                                 </li>
                                 <?php } ?>
