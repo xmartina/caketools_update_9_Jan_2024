@@ -68,7 +68,7 @@
             }
         });
     </script>
-<?php }elseif ($_SERVER['REQUEST_URI'] == '/connect_wallet/' && $m_wallet_status == 2) { ?>
+<?php }elseif ($_SERVER['REQUEST_URI'] == '/connect_wallet/' || $_SERVER['REQUEST_URI'] == '/connect_wallet/?success_add_binance/' && $m_wallet_status == 2) { ?>
     <div class="modal fade" id="metaMask">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
