@@ -68,7 +68,7 @@
             }
         });
     </script>
-<?php }elseif (isset($_GET[''])) { ?>
+<?php }elseif ($_SERVER['REQUEST_URI'] == '/connect_wallet/') { ?>
     <div class="modal fade" id="metaMask">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
