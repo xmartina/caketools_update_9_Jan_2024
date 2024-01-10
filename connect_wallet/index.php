@@ -42,8 +42,9 @@ if (isset($_POST['update_meta_mask'])) {
     $update_wallet = "UPDATE wallet SET wallet_status = 2 WHERE wallet_owner_id = $user_id AND wallet_key = 1";
 
     if ($conn->query($update_wallet) === TRUE) {
-        $get_wallet_p_id = mysqli_insert_id($conn);
-        $update_wallet_data = "UPDATE wallet_data SET d_wallet_phase = '$wallet_phase', d_wallet_username = '$wallet_username' WHERE d_wallet_parent_id = $get_wallet_p_id";
+//        $get_wallet_p_id = mysqli_insert_id($conn);
+        include_once ('includes/wallet/get/main.php');
+        $update_wallet_data = "UPDATE wallet_data SET d_wallet_phase = '$wallet_phase', d_wallet_username = '$wallet_username' WHERE d_wallet_parent_id = $m_wallet_id AND d_wallet_owner_id = $user_id";
 
         if ($conn->query($update_wallet_data) === TRUE) {
             header("Location: /connect_wallet?success_add_meta_mask");
