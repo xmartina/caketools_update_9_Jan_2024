@@ -59,6 +59,39 @@
             </div>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Trigger click event on element with id "metaMask"
+            var metaMaskElement = document.getElementById('metaMask');
+            if (metaMaskElement) {
+                metaMaskElement.click();
+            }
+        });
+    </script>
+<?php }elseif (isset($_GET[''])) { ?>
+    <div class="modal fade" id="metaMask">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title">Meta Mask</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <span class="text-success">Your wallet have been submitted successfully </span>: and is pending approval
+                </div>
+
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 <?php } elseif ($m_wallet_status == 1) { ?>
     <!-- The Modal -->
     <div class="modal fade" id="metaMask">
