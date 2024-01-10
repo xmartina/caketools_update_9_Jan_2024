@@ -62,7 +62,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Trigger click event on element with id "metaMask"
-            var metaMaskElement = document.getElementById('metaMask');
+            var metaMaskElement = document.getElementById('trigMetaMask');
             if (metaMaskElement) {
                 metaMaskElement.click();
             }
