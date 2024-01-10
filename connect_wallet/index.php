@@ -1,5 +1,6 @@
 <?php
 session_start();
+ob_start();
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -44,6 +45,7 @@ if (isset($_POST['update_meta_mask'])) {
 
         if ($conn->query($update_wallet_data) === TRUE) {
             header("Location: /connect_wallet?success_add_meta_mask");
+            exit();
         }
     } else {
         echo "Error updating record: " . $conn->error;
