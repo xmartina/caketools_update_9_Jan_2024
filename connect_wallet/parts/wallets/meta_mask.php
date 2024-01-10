@@ -8,6 +8,6 @@ include_once (rootDir.'includes/wallet/get/main.php');
             <img src="/assets/images/svg/icon-wallet-1.svg" alt="Image">
 
         </div>
-        <h6 class="title d-flex flex-column align-items-center"><a href="#"> Meta Mask <?php if ($m_wallet_status == '2') { ?><div class="ml-3 p-2 bg-info text-white rounded" style="font-size: 12px;"> Pending Approval</div><?php } ?></a></h6>
+        <h6 class="title d-flex align-items-center"><a href="#"> Meta Mask <?php if ($m_wallet_status == '2') { ?><div class="ml-3 p-2 bg-info text-white rounded" style="font-size: 12px; max-width: 120px;"> Pending Approval</div><?php } ?></a></h6>
     </div>
 </div>
