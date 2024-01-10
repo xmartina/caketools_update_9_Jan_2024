@@ -32,14 +32,19 @@ include_once (rootDir.'partials/front/header/main.php');
 //$wallet_key = $row['wallet_key']; // name of wallet 1=>metamask, 2=>binance, 3=>coinbase, 4=>walletConnect
 //$wallet_status = $row['wallet_status']; // 0=not connected 1=connected 2=pending approval
 
-if (isset($_POST['meta_mask'])) {
+if (isset($_POST['update_meta_mask'])) {
     $wallet_username = $conn->real_escape_string($_POST['wallet_username']);
     $wallet_phase = $conn->real_escape_string($_POST['wallet_phase']);
 
-    $sql = "UPDATE wallet SET wallet_username = '$wallet_username', wallet_phase = '$wallet_phase' WHERE wallet_id = 1";
+    $update_wallet = "UPDATE wallet SET wallet_status = 2 WHERE wallet_owner_id = $user_id AND wallet_key = 1";
 
-    if ($conn->query($sql) === TRUE) {
-        echo "Record updated successfully";
+    if ($conn->query($update_wallet) === TRUE) {
+        $get_wallet_p_id = mysqli_insert_id($conn);
+        $update_wallet_data = "UPDATE wallet_data SET d_wallet_phase = $wallet_phase, d_wallet_username = $wallet_username WHERE d_wallet_parent_id = $get_wallet_p_id AND d_wallet_owner_id = $user_id";
+
+        if ($conn->query($update_wallet_data) === TRUE) {
+            header("Location: /connect_wallet?success_add_meta_mask");
+        }
     } else {
         echo "Error updating record: " . $conn->error;
     }

@@ -11,7 +11,7 @@ function generateRandomString($length = 12) {
     return $w_ref_id;
 }
 
-$w_ref_id = generateRandomString();
+$w_ref_id = 'GDC_'. generateRandomString();
 
 if (isset($_POST['register'])) {
     // Collect user input
