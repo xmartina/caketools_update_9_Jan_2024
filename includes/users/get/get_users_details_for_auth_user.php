@@ -14,4 +14,13 @@ if (isset($_SESSION['user_id'])) {
     $eth_bal = $row['eth_bal'];
     $usdt_bal = $row['usdt_bal'];
     $userImg = $row['user_img'];
+
+//    get defuilt settings
+    $get_default_settings = "SELECT * FROM default_settings";
+    $g_result = $conn->query($get_default_settings);
+    $g_row = $g_result->fetch_assoc();
+    $default_user_img = $g_row['default_user_img'];
+    $default_gender = $g_row['default_gender'];
+    $default_dob = $g_row['default_dob'];
+    $default_address = $g_row['default_address'];
 }
