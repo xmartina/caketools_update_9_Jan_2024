@@ -1,7 +1,6 @@
 <?php
 if ($userImg == '')
     $userImg = $default_user_img;
-    return $userImg;
 ?>
 <div class="col-xl-3 col-lg-12 col-md-12" id="targetElement">
     <div class="dashboard-user">
