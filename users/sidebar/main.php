@@ -8,6 +8,9 @@ if ($default_gender == 3){
 if($gender == ''){
     $gender = $default_gender;
 }
+if ($dob == ''){
+    $dob = $default_dob;
+}
 ?>
 <div class="col-xl-3 col-lg-12 col-md-12" id="targetElement">
     <div class="dashboard-user">

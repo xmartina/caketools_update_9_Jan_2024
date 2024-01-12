@@ -14,6 +14,18 @@ include_once (rootDir.'includes/core.php');
 include_once (rootDir.'partials/users/header/main.php');
 ?>
 
+    <style>
+        .tf-connect-wallet .tf-wallet {
+            min-height: 144px;
+            padding: 38px;
+        }
+        .tf-wallet .title {
+            color: var(--primary-color5);
+            font-size: 30px;
+            line-height: 12px;
+            margin-bottom: 2px;
+        }
+    </style>
 <!-- title page -->
 <div class="py-5"></div>
         <section class="tf-page-title ">
@@ -57,7 +69,7 @@ include_once (rootDir.'partials/users/header/main.php');
                                         <div class="title">Contact details</div>
                                         <fieldset>
                                             <h6>Full Name</h6>
-                                            <input type="text" placeholder="Francisco Maia" required>
+                                            <input type="text" placeholder="<?=$fullName?>" required value="<?=$fullName?>">
                                         </fieldset>
                                         <fieldset>
                                             <h6>Gender</h6>
@@ -65,7 +77,7 @@ include_once (rootDir.'partials/users/header/main.php');
                                         </fieldset>
                                         <fieldset>
                                             <h6>Date of birth</h6>
-                                            <input type="text" placeholder="January 24, 1983" required>
+                                            <input type="text" placeholder="<?=$dob?>" required value="<?=$dob?>">
                                         </fieldset>
                                     </div>
                                     <div class="user-profile">

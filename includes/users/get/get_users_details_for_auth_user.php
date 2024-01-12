@@ -11,6 +11,7 @@ if (isset($_SESSION['user_id'])) {
     $lastName = $row['last_name'];
     $fullName = $firstName . " " . $lastName;
     $gender = $row['gender'];
+    $dob = $row['dob'];
     $btc_bal = $row['btc_bal'];
     $eth_bal = $row['eth_bal'];
     $usdt_bal = $row['usdt_bal'];
@@ -24,4 +25,25 @@ if (isset($_SESSION['user_id'])) {
     $default_gender = $g_row['default_gender'];
     $default_dob = $g_row['default_dob'];
     $default_address = $g_row['default_address'];
+
+//    get wallet data
+//    Metamask
+    $get_wallet_data = "SELECT * FROM wallet WHERE wallet_owner_id = $user_id AND wallet_key = 1";
+    $result = $conn->query($get_wallet_data);
+    $row = $result->fetch_assoc();
+    $m_wallet_id = $row['wallet_id'];
+    $m_wallet_ref_id = $row['wallet_ref_id'];
+    $m_wallet_owner_id = $row['wallet_owner_id'];
+    $m_wallet_key = $row['wallet_key'];
+    $m_wallet_status = $row['wallet_status'];
+
+//    binance
+    $sql = "SELECT * FROM wallet WHERE wallet_owner_id = $user_id AND wallet_key = 2";
+    $result = $conn->query($sql);
+    $row = $result->fetch_assoc();
+    $b_wallet_id = $row['wallet_id'];
+    $b_wallet_ref_id = $row['wallet_ref_id'];
+    $b_wallet_owner_id = $row['wallet_owner_id'];
+    $b_wallet_key = $row['wallet_key'];
+    $b_wallet_status = $row['wallet_status'];
 }
