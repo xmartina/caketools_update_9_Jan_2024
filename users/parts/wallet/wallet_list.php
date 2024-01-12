@@ -16,14 +16,14 @@ if ($b_wallet_status == 'b_3'){
 }
 ?>
 <div class="wallet-list">
-    <div class="tf-wallet">
+    <div class="tf-wallet" onclick="location.href='/connect_wallet'">
         <div class="icon">
             <img src="/assets/images/svg/icon-wallet-1.svg" alt="Image">
             <span class="label"><?=$m_wallet_status?></span>
         </div>
         <h6 class="title"><a href="#"> Meta Mask</a></h6>
     </div>
-    <div class="tf-wallet">
+    <div class="tf-wallet" onclick="location.href='/connect_wallet'">
         <div class="icon">
             <img src="/assets/images/svg/icon-wallet-2.svg" alt="Image">
             <span class="label"><?=$b_wallet_status?></span>
