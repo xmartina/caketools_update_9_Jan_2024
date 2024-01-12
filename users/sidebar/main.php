@@ -14,9 +14,9 @@ if ($dob == ''){
 if($address == ''){
     $address = $default_address;
 }
-if ($user_img == ''){
+if ($userImg == ''){
     $user_img_status = 'Not Set';
-}elseif (!$user_img == ''){
+}elseif (!$userImg == ''){
     $user_img_status = 'Set';
 }
 ?>
