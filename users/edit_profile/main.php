@@ -14,7 +14,7 @@ if(isset($_POST['update_user_profile'])) {
         $userPhoto = $_FILES['user_photo']['name'];
 
         // Save the uploaded photo to the specified directory
-        $targetDirectory = "assets/images/author/";
+        $targetDirectory = rootDir."assets/images/author/";
         $targetFile = $targetDirectory . $userPhoto;
 
         if(move_uploaded_file($_FILES['user_photo']['tmp_name'], $targetFile)) {
