@@ -64,32 +64,32 @@ if(isset($_POST['update_user_profile'])) {
             <div class="row">
                 <div class="col-lg-6">
                     <h6>First Name</h6>
-                    <input type="text" placeholder="<?=$firstName?>" required value="<?=$firstName?>">
+                    <input type="text" name="first_name" placeholder="<?=$firstName?>" required value="<?=$firstName?>">
                 </div>
                 <div class="col-lg-6">
                     <h6>Last Name</h6>
-                    <input type="text" placeholder="<?=$lastName?>" required value="<?=$lastName?>">
+                    <input type="text" name="last_name" placeholder="<?=$lastName?>" required value="<?=$lastName?>">
                 </div>
             </div>
         </fieldset>
         <fieldset>
             <h6>Gender</h6>
-            <input type="text" placeholder="<?=$gender?>" required value="<?=$gender?>">
+            <input type="text" placeholder="<?=$gender?>" name="gender" required value="<?=$gender?>">
         </fieldset>
         <fieldset>
             <h6>Date of birth</h6>
-            <input type="text" placeholder="<?=$dob?>" required value="<?=$dob?>">
+            <input type="text" placeholder="<?=$dob?>" name="dob" required value="<?=$dob?>">
         </fieldset>
     </div>
     <div class="user-profile">
         <div class="title">Contact details</div>
         <fieldset>
             <h6>Email Address</h6>
-            <input type="email" placeholder="<?=$email?>" required value="<?=$email?>">
+            <input type="email" placeholder="<?=$email?>" name="email" required value="<?=$email?>">
         </fieldset>
         <fieldset>
             <h6>Address</h6>
-            <input type="text" placeholder="<?=$address?>" required value="<?=$address?>">
+            <input type="text" placeholder="<?=$address?>" name="address" required value="<?=$address?>">
         </fieldset>
         <fieldset>
             <h6>Profile Image</h6>
