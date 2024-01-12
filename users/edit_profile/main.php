@@ -85,7 +85,7 @@ if(isset($_POST['update_user_profile'])) {
         <div class="title">Contact details</div>
         <fieldset>
             <h6>Email Address</h6>
-            <input type="email" placeholder="<?=$email?>" name="email" required value="<?=$email?>">
+            <input type="email" placeholder="<?=$email?>" disabled name="email" required value="<?=$email?>">
         </fieldset>
         <fieldset>
             <h6>Address</h6>
