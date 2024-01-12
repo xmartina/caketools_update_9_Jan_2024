@@ -10,6 +10,7 @@ if (isset($_SESSION['user_id'])) {
     $firstName = $row['first_name'];
     $lastName = $row['last_name'];
     $fullName = $firstName . " " . $lastName;
+    $gender = $row['gender'];
     $btc_bal = $row['btc_bal'];
     $eth_bal = $row['eth_bal'];
     $usdt_bal = $row['usdt_bal'];

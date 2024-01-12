@@ -487,7 +487,7 @@ include_once (rootDir.'partials/users/header/main.php');
                                         </fieldset>
                                         <fieldset>
                                             <h6>Gender</h6>
-                                            <input type="text" placeholder="Female" required>
+                                            <input type="text" placeholder="<?=$gender?>" required value="<?=$gender?>">
                                         </fieldset>
                                         <fieldset>
                                             <h6>Date of birth</h6>
