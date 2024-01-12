@@ -64,7 +64,7 @@ include_once (rootDir.'partials/users/header/main.php');
                             </div>
                             <div class="inner-content profile">
                                 <h4 class="title-dashboard">Edit Profile</h4>
-                                <?php include_once ('users/edit_profile/main.php'); ?>
+                                <?php include_once (rootDir.'users/edit_profile/main.php'); ?>
                             </div>
                         </div>
                     </div>
