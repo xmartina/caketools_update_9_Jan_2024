@@ -6,7 +6,7 @@ if(isset($_POST['update_user_profile'])) {
     $lastName = $_POST['last_name'];
     $gender = $_POST['gender'];
     $dob = $_POST['dob'];
-    $email = $_POST['email'];
+//    $email = $_POST['email'];
     $address = $_POST['address'];
 
     // Check if a profile image is uploaded
@@ -24,7 +24,6 @@ if(isset($_POST['update_user_profile'])) {
                     last_name = '$lastName',
                     gender = '$gender',
                     dob = '$dob',
-                    email = '$email',
                     address = '$address',
                     user_img = '$userPhoto'
                     WHERE id = '$user_id'";
@@ -44,7 +43,6 @@ if(isset($_POST['update_user_profile'])) {
                 last_name = '$lastName',
                 gender = '$gender',
                 dob = '$dob',
-                email = '$email',
                 address = '$address'
                 WHERE id = '$user_id'";
 
