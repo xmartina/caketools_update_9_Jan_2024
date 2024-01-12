@@ -37,7 +37,7 @@ if(isset($_POST['update_user_profile'])) {
         } else {
             echo "Error uploading the profile photo.";
         }
-    } else {
+    } elseif(!isset($_FILES['user_photo']) && isset($_POST['update_user_profile'])) {
         // Prepare the update statement without changing the profile image
         $sql = "UPDATE users SET
                 first_name = '$firstName',
