@@ -7,11 +7,14 @@ if (isset($_SESSION['user_id'])) {
     $sql = "SELECT * FROM users WHERE id = $user_id";
     $result = $conn->query($sql);
     $row = $result->fetch_assoc();
+    $user_name = $row['user_name'];
+    $email = $row['email'];
     $firstName = $row['first_name'];
     $lastName = $row['last_name'];
     $fullName = $firstName . " " . $lastName;
     $gender = $row['gender'];
     $dob = $row['dob'];
+    $address = $row['address'];
     $btc_bal = $row['btc_bal'];
     $eth_bal = $row['eth_bal'];
     $usdt_bal = $row['usdt_bal'];

@@ -11,6 +11,14 @@ if($gender == ''){
 if ($dob == ''){
     $dob = $default_dob;
 }
+if($address == ''){
+    $address = $default_address;
+}
+if ($user_img == ''){
+    $user_img_status = 'Not Set';
+}elseif (!$user_img == ''){
+    $user_img_status = 'Set';
+}
 ?>
 <div class="col-xl-3 col-lg-12 col-md-12" id="targetElement">
     <div class="dashboard-user">

@@ -64,41 +64,7 @@ include_once (rootDir.'partials/users/header/main.php');
                             </div>
                             <div class="inner-content profile">
                                 <h4 class="title-dashboard">Edit Profile</h4>
-                                <form action="#" class="form-edit-profile">
-                                    <div class="user-profile">
-                                        <div class="title">Contact details</div>
-                                        <fieldset>
-                                            <h6>Full Name</h6>
-                                            <input type="text" placeholder="<?=$fullName?>" required value="<?=$fullName?>">
-                                        </fieldset>
-                                        <fieldset>
-                                            <h6>Gender</h6>
-                                            <input type="text" placeholder="<?=$gender?>" required value="<?=$gender?>">
-                                        </fieldset>
-                                        <fieldset>
-                                            <h6>Date of birth</h6>
-                                            <input type="text" placeholder="<?=$dob?>" required value="<?=$dob?>">
-                                        </fieldset>
-                                    </div>
-                                    <div class="user-profile">
-                                        <div class="title">Contact details</div>
-                                        <fieldset>
-                                            <h6>Email Address</h6>
-                                            <input type="text" placeholder="Francisco Maia" required>
-                                        </fieldset>
-                                        <fieldset>
-                                            <h6>Gender</h6>
-                                            <input type="text" placeholder="seb.bennett@gmail.com" required>
-                                        </fieldset>
-                                        <fieldset>
-                                            <h6>Address</h6>
-                                            <input type="text" placeholder="83222 Dicki View, South Pasqualeview, RI 79216-3100" required>
-                                        </fieldset>
-                                    </div>
-                                    <button class="btn-form" type="submit">
-                                        Update Settings
-                                    </button>
-                                </form>
+                                <?php include_once ('users/edit_profile/main.php'); ?>
                             </div>
                         </div>
                     </div>
