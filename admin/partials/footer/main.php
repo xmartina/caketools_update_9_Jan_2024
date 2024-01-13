@@ -11,6 +11,7 @@
 
 <!-- Core JS -->
 <!-- build:js assets/vendor/js/core.js -->
+<?php include_once(adminRootDir . 'partials/footer/parts/user_edit_modals.php') ?>
 <?php include_once(adminRootDir . 'partials/footer/parts/core-js.php') ?>
 </body>
 </html>
