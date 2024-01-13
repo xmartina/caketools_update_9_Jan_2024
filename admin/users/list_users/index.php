@@ -58,7 +58,8 @@
                             <button class="dt-button add-new btn btn-primary waves-effect waves-light" tabindex="0"
                                     aria-controls="DataTables_Table_0" type="button" data-bs-toggle="offcanvas"
                                     data-bs-target="#offcanvasAddUser"><span><i
-                                        class="mdi mdi-plus me-0 me-sm-1"></i><span class="d-none d-sm-inline-block">Add User</span></span>
+                                        class="mdi mdi-plus me-0 me-sm-1"></i><span
+                                        class="d-none d-sm-inline-block">Add User</span></span>
                             </button>
                         </div>
                     </div>
@@ -71,7 +72,8 @@
                     <th class="control sorting_disabled dtr-hidden" rowspan="1" colspan="1"
                         style="width: 0px; display: none;" aria-label=""></th>
                     <th class="sorting_disabled dt-checkboxes-cell dt-checkboxes-select-all" rowspan="1" colspan="1"
-                        style="width: 18px;" data-col="1" aria-label=""><input type="checkbox" class="form-check-input">
+                        style="width: 18px;" data-col="1" aria-label=""><input type="checkbox"
+                                                                               class="form-check-input">
                     </th>
                     <th class="sorting sorting_desc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1"
                         colspan="1" style="width: 358px;" aria-label="User: activate to sort column ascending"
@@ -97,7 +99,8 @@
                 <tbody>
                 <tr class="odd">
                     <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -106,15 +109,18 @@
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
                                                                class="text-truncate"><span
-                                        class="fw-medium text-heading">Jonah Wharlton</span></a><small>jwharltona@oakley.com</small>
+                                        class="fw-medium text-heading">Jonah
+                                            Wharlton</span></a><small>jwharltona@oakley.com</small>
                             </div>
                         </div>
                     </td>
                     <td><span class="text-truncate d-flex align-items-center"><i
-                                class="mdi mdi-account-outline mdi-20px text-primary me-2"></i>Subscriber</span></td>
+                                class="mdi mdi-account-outline mdi-20px text-primary me-2"></i>Subscriber</span>
+                    </td>
                     <td><span class="text-heading">Team</span></td>
                     <td class="" style="">Manual - Paypal</td>
-                    <td class="" style=""><span class="badge rounded-pill bg-label-secondary" text-capitalized="">Inactive</span>
+                    <td class="" style=""><span class="badge rounded-pill bg-label-secondary"
+                                                text-capitalized="">Inactive</span>
                     </td>
                     <td class="" style="">
                         <div class="d-inline-block text-nowrap">
@@ -123,8 +129,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -133,7 +139,8 @@
                 </tr>
                 <tr class="even">
                     <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -142,7 +149,8 @@
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
                                                                class="text-truncate"><span
-                                        class="fw-medium text-heading">Jillene Bellany</span></a><small>jbellany9@kickstarter.com</small>
+                                        class="fw-medium text-heading">Jillene
+                                            Bellany</span></a><small>jbellany9@kickstarter.com</small>
                             </div>
                         </div>
                     </td>
@@ -150,7 +158,8 @@
                                 class="mdi mdi-chart-donut mdi-20px text-success me-2"></i>Maintainer</span></td>
                     <td><span class="text-heading">Company</span></td>
                     <td class="" style="">Auto Debit</td>
-                    <td class="" style=""><span class="badge rounded-pill bg-label-secondary" text-capitalized="">Inactive</span>
+                    <td class="" style=""><span class="badge rounded-pill bg-label-secondary"
+                                                text-capitalized="">Inactive</span>
                     </td>
                     <td class="" style="">
                         <div class="d-inline-block text-nowrap">
@@ -159,8 +168,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -169,7 +178,8 @@
                 </tr>
                 <tr class="odd">
                     <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -178,7 +188,8 @@
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
                                                                class="text-truncate"><span
-                                        class="fw-medium text-heading">Jameson Lyster</span></a><small>jlysterl@guardian.co.uk</small>
+                                        class="fw-medium text-heading">Jameson
+                                            Lyster</span></a><small>jlysterl@guardian.co.uk</small>
                             </div>
                         </div>
                     </td>
@@ -186,7 +197,8 @@
                                 class="mdi mdi-pencil-outline mdi-20px text-info me-2"></i>Editor</span></td>
                     <td><span class="text-heading">Company</span></td>
                     <td class="" style="">Auto Debit</td>
-                    <td class="" style=""><span class="badge rounded-pill bg-label-secondary" text-capitalized="">Inactive</span>
+                    <td class="" style=""><span class="badge rounded-pill bg-label-secondary"
+                                                text-capitalized="">Inactive</span>
                     </td>
                     <td class="" style="">
                         <div class="d-inline-block text-nowrap">
@@ -195,8 +207,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -205,7 +217,8 @@
                 </tr>
                 <tr class="even">
                     <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -214,12 +227,14 @@
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
                                                                class="text-truncate"><span
-                                        class="fw-medium text-heading">Isabel Mallindine</span></a><small>imallindinet@shinystat.com</small>
+                                        class="fw-medium text-heading">Isabel
+                                            Mallindine</span></a><small>imallindinet@shinystat.com</small>
                             </div>
                         </div>
                     </td>
                     <td><span class="text-truncate d-flex align-items-center"><i
-                                class="mdi mdi-account-outline mdi-20px text-primary me-2"></i>Subscriber</span></td>
+                                class="mdi mdi-account-outline mdi-20px text-primary me-2"></i>Subscriber</span>
+                    </td>
                     <td><span class="text-heading">Team</span></td>
                     <td class="" style="">Manual - Credit Card</td>
                     <td class="" style=""><span class="badge rounded-pill bg-label-warning"
@@ -231,8 +246,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -241,7 +256,8 @@
                 </tr>
                 <tr class="odd">
                     <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -250,7 +266,8 @@
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
                                                                class="text-truncate"><span
-                                        class="fw-medium text-heading">Hugh Hasson</span></a><small>hhassonp@bizjournals.com</small>
+                                        class="fw-medium text-heading">Hugh
+                                            Hasson</span></a><small>hhassonp@bizjournals.com</small>
                             </div>
                         </div>
                     </td>
@@ -258,7 +275,8 @@
                                 class="mdi mdi-laptop mdi-20px text-danger me-2"></i>Admin</span></td>
                     <td><span class="text-heading">Basic</span></td>
                     <td class="" style="">Manual - Cash</td>
-                    <td class="" style=""><span class="badge rounded-pill bg-label-secondary" text-capitalized="">Inactive</span>
+                    <td class="" style=""><span class="badge rounded-pill bg-label-secondary"
+                                                text-capitalized="">Inactive</span>
                     </td>
                     <td class="" style="">
                         <div class="d-inline-block text-nowrap">
@@ -267,8 +285,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -277,7 +295,8 @@
                 </tr>
                 <tr class="even">
                     <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -286,7 +305,8 @@
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
                                                                class="text-truncate"><span
-                                        class="fw-medium text-heading">Halsey Redmore</span></a><small>hredmore1@imgur.com</small>
+                                        class="fw-medium text-heading">Halsey
+                                            Redmore</span></a><small>hredmore1@imgur.com</small>
                             </div>
                         </div>
                     </td>
@@ -303,8 +323,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -313,7 +333,8 @@
                 </tr>
                 <tr class="odd">
                     <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -322,7 +343,8 @@
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
                                                                class="text-truncate"><span
-                                        class="fw-medium text-heading">Gwendolyn Meineken</span></a><small>gmeinekenu@hc360.com</small>
+                                        class="fw-medium text-heading">Gwendolyn
+                                            Meineken</span></a><small>gmeinekenu@hc360.com</small>
                             </div>
                         </div>
                     </td>
@@ -339,8 +361,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -349,7 +371,8 @@
                 </tr>
                 <tr class="even">
                     <td class="control dtr-hidden" style="display: none;" tabindex="0"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -358,7 +381,8 @@
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
                                                                class="text-truncate"><span
-                                        class="fw-medium text-heading">Galen Slixby</span></a><small>gslixby0@abc.net.au</small>
+                                        class="fw-medium text-heading">Galen
+                                            Slixby</span></a><small>gslixby0@abc.net.au</small>
                             </div>
                         </div>
                     </td>
@@ -366,7 +390,8 @@
                                 class="mdi mdi-pencil-outline mdi-20px text-info me-2"></i>Editor</span></td>
                     <td><span class="text-heading">Enterprise</span></td>
                     <td class="" style="">Manual - Credit Card</td>
-                    <td class="" style=""><span class="badge rounded-pill bg-label-secondary" text-capitalized="">Inactive</span>
+                    <td class="" style=""><span class="badge rounded-pill bg-label-secondary"
+                                                text-capitalized="">Inactive</span>
                     </td>
                     <td class="" style="">
                         <div class="d-inline-block text-nowrap">
@@ -375,8 +400,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -385,7 +410,8 @@
                 </tr>
                 <tr class="odd">
                     <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -394,7 +420,8 @@
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
                                                                class="text-truncate"><span
-                                        class="fw-medium text-heading">Germain Jacombs</span></a><small>gjacombsq@jigsy.com</small>
+                                        class="fw-medium text-heading">Germain
+                                            Jacombs</span></a><small>gjacombsq@jigsy.com</small>
                             </div>
                         </div>
                     </td>
@@ -411,8 +438,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -421,7 +448,8 @@
                 </tr>
                 <tr class="even">
                     <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -430,12 +458,14 @@
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
                                                                class="text-truncate"><span
-                                        class="fw-medium text-heading">Franz Scotfurth</span></a><small>fscotfurth8@dailymotion.com</small>
+                                        class="fw-medium text-heading">Franz
+                                            Scotfurth</span></a><small>fscotfurth8@dailymotion.com</small>
                             </div>
                         </div>
                     </td>
                     <td><span class="text-truncate d-flex align-items-center"><i
-                                class="mdi mdi-account-outline mdi-20px text-primary me-2"></i>Subscriber</span></td>
+                                class="mdi mdi-account-outline mdi-20px text-primary me-2"></i>Subscriber</span>
+                    </td>
                     <td><span class="text-heading">Team</span></td>
                     <td class="" style="">Auto Debit</td>
                     <td class="" style=""><span class="badge rounded-pill bg-label-warning"
@@ -447,8 +477,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -457,7 +487,8 @@
                 </tr>
                 <tr class="odd">
                     <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -466,7 +497,8 @@
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
                                                                class="text-truncate"><span
-                                        class="fw-medium text-heading">Florenza Desporte</span></a><small>fdesporte13@omniture.com</small>
+                                        class="fw-medium text-heading">Florenza
+                                            Desporte</span></a><small>fdesporte13@omniture.com</small>
                             </div>
                         </div>
                     </td>
@@ -483,8 +515,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -493,7 +525,8 @@
                 </tr>
                 <tr class="even">
                     <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -502,7 +535,8 @@
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
                                                                class="text-truncate"><span
-                                        class="fw-medium text-heading">Edwina Baldetti</span></a><small>ebaldetti14@theguardian.com</small>
+                                        class="fw-medium text-heading">Edwina
+                                            Baldetti</span></a><small>ebaldetti14@theguardian.com</small>
                             </div>
                         </div>
                     </td>
@@ -519,8 +553,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -529,7 +563,8 @@
                 </tr>
                 <tr class="odd">
                     <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -555,8 +590,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -565,7 +600,8 @@
                 </tr>
                 <tr class="even">
                     <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -574,12 +610,14 @@
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
                                                                class="text-truncate"><span
-                                        class="fw-medium text-heading">Corrie Perot</span></a><small>cperot18@goo.ne.jp</small>
+                                        class="fw-medium text-heading">Corrie
+                                            Perot</span></a><small>cperot18@goo.ne.jp</small>
                             </div>
                         </div>
                     </td>
                     <td><span class="text-truncate d-flex align-items-center"><i
-                                class="mdi mdi-account-outline mdi-20px text-primary me-2"></i>Subscriber</span></td>
+                                class="mdi mdi-account-outline mdi-20px text-primary me-2"></i>Subscriber</span>
+                    </td>
                     <td><span class="text-heading">Team</span></td>
                     <td class="" style="">Manual - Paypal</td>
                     <td class="" style=""><span class="badge rounded-pill bg-label-warning"
@@ -591,8 +629,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -601,7 +639,8 @@
                 </tr>
                 <tr class="odd">
                     <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -610,7 +649,8 @@
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
                                                                class="text-truncate"><span
-                                        class="fw-medium text-heading">Cleavland Hatherleigh</span></a><small>chatherleighn@washington.edu</small>
+                                        class="fw-medium text-heading">Cleavland
+                                            Hatherleigh</span></a><small>chatherleighn@washington.edu</small>
                             </div>
                         </div>
                     </td>
@@ -627,8 +667,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -637,7 +677,8 @@
                 </tr>
                 <tr class="even">
                     <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -646,7 +687,8 @@
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
                                                                class="text-truncate"><span
-                                        class="fw-medium text-heading">Candice Pinyon</span></a><small>cpinyons@behance.net</small>
+                                        class="fw-medium text-heading">Candice
+                                            Pinyon</span></a><small>cpinyons@behance.net</small>
                             </div>
                         </div>
                     </td>
@@ -663,8 +705,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -673,7 +715,8 @@
                 </tr>
                 <tr class="odd">
                     <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -682,15 +725,18 @@
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
                                                                class="text-truncate"><span
-                                        class="fw-medium text-heading">Bradan Rosebotham</span></a><small>brosebothamz@tripadvisor.com</small>
+                                        class="fw-medium text-heading">Bradan
+                                            Rosebotham</span></a><small>brosebothamz@tripadvisor.com</small>
                             </div>
                         </div>
                     </td>
                     <td><span class="text-truncate d-flex align-items-center"><i
-                                class="mdi mdi-account-outline mdi-20px text-primary me-2"></i>Subscriber</span></td>
+                                class="mdi mdi-account-outline mdi-20px text-primary me-2"></i>Subscriber</span>
+                    </td>
                     <td><span class="text-heading">Team</span></td>
                     <td class="" style="">Manual - Paypal</td>
-                    <td class="" style=""><span class="badge rounded-pill bg-label-secondary" text-capitalized="">Inactive</span>
+                    <td class="" style=""><span class="badge rounded-pill bg-label-secondary"
+                                                text-capitalized="">Inactive</span>
                     </td>
                     <td class="" style="">
                         <div class="d-inline-block text-nowrap">
@@ -699,8 +745,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -709,7 +755,8 @@
                 </tr>
                 <tr class="even">
                     <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -718,7 +765,8 @@
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
                                                                class="text-truncate"><span
-                                        class="fw-medium text-heading">Benedetto Rossiter</span></a><small>brossiter15@craigslist.org</small>
+                                        class="fw-medium text-heading">Benedetto
+                                            Rossiter</span></a><small>brossiter15@craigslist.org</small>
                             </div>
                         </div>
                     </td>
@@ -726,7 +774,8 @@
                                 class="mdi mdi-pencil-outline mdi-20px text-info me-2"></i>Editor</span></td>
                     <td><span class="text-heading">Team</span></td>
                     <td class="" style="">Manual - Cash</td>
-                    <td class="" style=""><span class="badge rounded-pill bg-label-secondary" text-capitalized="">Inactive</span>
+                    <td class="" style=""><span class="badge rounded-pill bg-label-secondary"
+                                                text-capitalized="">Inactive</span>
                     </td>
                     <td class="" style="">
                         <div class="d-inline-block text-nowrap">
@@ -735,8 +784,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -745,7 +794,8 @@
                 </tr>
                 <tr class="odd">
                     <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -754,7 +804,8 @@
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
                                                                class="text-truncate"><span
-                                        class="fw-medium text-heading">Brockie Myles</span></a><small>bmylesg@amazon.com</small>
+                                        class="fw-medium text-heading">Brockie
+                                            Myles</span></a><small>bmylesg@amazon.com</small>
                             </div>
                         </div>
                     </td>
@@ -771,8 +822,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -781,7 +832,8 @@
                 </tr>
                 <tr class="even">
                     <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -790,7 +842,8 @@
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
                                                                class="text-truncate"><span
-                                        class="fw-medium text-heading">Bree Kilday</span></a><small>bkildayr@mashable.com</small>
+                                        class="fw-medium text-heading">Bree
+                                            Kilday</span></a><small>bkildayr@mashable.com</small>
                             </div>
                         </div>
                     </td>
@@ -807,8 +860,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -817,7 +870,8 @@
                 </tr>
                 <tr class="odd">
                     <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -826,12 +880,14 @@
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
                                                                class="text-truncate"><span
-                                        class="fw-medium text-heading">Breena Gallemore</span></a><small>bgallemore6@boston.com</small>
+                                        class="fw-medium text-heading">Breena
+                                            Gallemore</span></a><small>bgallemore6@boston.com</small>
                             </div>
                         </div>
                     </td>
                     <td><span class="text-truncate d-flex align-items-center"><i
-                                class="mdi mdi-account-outline mdi-20px text-primary me-2"></i>Subscriber</span></td>
+                                class="mdi mdi-account-outline mdi-20px text-primary me-2"></i>Subscriber</span>
+                    </td>
                     <td><span class="text-heading">Company</span></td>
                     <td class="" style="">Manual - Paypal</td>
                     <td class="" style=""><span class="badge rounded-pill bg-label-warning"
@@ -843,8 +899,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -853,7 +909,8 @@
                 </tr>
                 <tr class="even">
                     <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -862,7 +919,8 @@
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
                                                                class="text-truncate"><span
-                                        class="fw-medium text-heading">Beverlie Krabbe</span></a><small>bkrabbe1d@home.pl</small>
+                                        class="fw-medium text-heading">Beverlie
+                                            Krabbe</span></a><small>bkrabbe1d@home.pl</small>
                             </div>
                         </div>
                     </td>
@@ -879,8 +937,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -889,7 +947,8 @@
                 </tr>
                 <tr class="odd">
                     <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -898,7 +957,8 @@
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
                                                                class="text-truncate"><span
-                                        class="fw-medium text-heading">Bertha Biner</span></a><small>bbinerh@mozilla.com</small>
+                                        class="fw-medium text-heading">Bertha
+                                            Biner</span></a><small>bbinerh@mozilla.com</small>
                             </div>
                         </div>
                     </td>
@@ -915,8 +975,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -925,7 +985,8 @@
                 </tr>
                 <tr class="even">
                     <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -934,7 +995,8 @@
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
                                                                class="text-truncate"><span
-                                        class="fw-medium text-heading">Bentlee Emblin</span></a><small>bemblinf@wired.com</small>
+                                        class="fw-medium text-heading">Bentlee
+                                            Emblin</span></a><small>bemblinf@wired.com</small>
                             </div>
                         </div>
                     </td>
@@ -951,8 +1013,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -961,7 +1023,8 @@
                 </tr>
                 <tr class="odd">
                     <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
-                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input"></td>
+                    <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
+                    </td>
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
@@ -970,7 +1033,8 @@
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
                                                                class="text-truncate"><span
-                                        class="fw-medium text-heading">Adeline Micco</span></a><small>amiccoo@whitehouse.gov</small>
+                                        class="fw-medium text-heading">Adeline
+                                            Micco</span></a><small>amiccoo@whitehouse.gov</small>
                             </div>
                         </div>
                     </td>
@@ -987,8 +1051,8 @@
                                 data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                             <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
                                                                                 class="dropdown-item"><i
-                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a href="javascript:;"
-                                                                                                     class="dropdown-item"><i
+                                        class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
+                                    href="javascript:;" class="dropdown-item"><i
                                         class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
                                     href="javascript:;" class="dropdown-item delete-record"><i
                                         class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
@@ -1019,7 +1083,8 @@
                             <li class="paginate_button page-item active"><a href="#" aria-controls="DataTables_Table_0"
                                                                             role="link" aria-current="page"
                                                                             data-dt-idx="1" tabindex="0"
-                                                                            class="page-link">2</a></li>
+                                                                            class="page-link">2</a>
+                            </li>
                             <li class="paginate_button page-item next disabled" id="DataTables_Table_0_next"><a
                                     aria-controls="DataTables_Table_0" aria-disabled="true" role="link"
                                     data-dt-idx="next" tabindex="0" class="page-link">Next</a></li>
@@ -1042,15 +1107,15 @@
                     <input type="text" class="form-control" id="add-user-fullname" placeholder="John Doe"
                            name="userFullname" aria-label="John Doe">
                     <label for="add-user-fullname">Full Name</label>
-                    <div
-                        class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+                    <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
+                    </div>
                 </div>
                 <div class="form-floating form-floating-outline mb-4 fv-plugins-icon-container">
                     <input type="text" id="add-user-email" class="form-control" placeholder="john.doe@example.com"
                            aria-label="john.doe@example.com" name="userEmail">
                     <label for="add-user-email">Email</label>
-                    <div
-                        class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback"></div>
+                    <div class="fv-plugins-message-container fv-plugins-message-container--enabled invalid-feedback">
+                    </div>
                 </div>
                 <div class="form-floating form-floating-outline mb-4">
                     <input type="text" id="add-user-contact" class="form-control phone-mask"
@@ -1065,7 +1130,8 @@
                 <div class="form-floating form-floating-outline mb-4 form-floating-select2">
                     <div class="position-relative"><select id="country"
                                                            class="select2 form-select select2-hidden-accessible"
-                                                           data-select2-id="country" tabindex="-1" aria-hidden="true">
+                                                           data-select2-id="country"
+                                                           tabindex="-1" aria-hidden="true">
                             <option value="" data-select2-id="2">Select</option>
                             <option value="Australia">Australia</option>
                             <option value="Bangladesh">Bangladesh</option>
@@ -1099,8 +1165,10 @@
                                         class="select2-selection__rendered" id="select2-country-container"
                                         role="textbox" aria-readonly="true"><span
                                             class="select2-selection__placeholder">Select Country</span></span><span
-                                        class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span
-                                class="dropdown-wrapper" aria-hidden="true"></span></span></div>
+                                        class="select2-selection__arrow" role="presentation"><b
+                                            role="presentation"></b></span></span></span><span class="dropdown-wrapper"
+                                                                                               aria-hidden="true"></span></span>
+                    </div>
                     <label for="country">Country</label>
                 </div>
                 <div class="form-floating form-floating-outline mb-4">
@@ -1126,7 +1194,8 @@
                 </button>
                 <button type="reset" class="btn btn-outline-secondary waves-effect" data-bs-dismiss="offcanvas">Cancel
                 </button>
-                <input type="hidden"></form>
+                <input type="hidden">
+            </form>
         </div>
     </div>
 </div>
