@@ -102,7 +102,7 @@
     <!-- /Project table -->
     <div class="row">
         <!-- Meeting Schedule -->
-        <div class="col-xl-4 col-md-6">
+        <div class="col-xl-6 col-md-6">
             <div class="card h-100">
                 <div class="card-header d-flex align-items-center justify-content-between">
                     <h5 class="card-title m-0 me-2">Pending Wallet Connect</h5>
