@@ -35,7 +35,7 @@
                 <li class="d-flex mb-3">
                     <div class="flex-shrink-0">
                         <img
-                            src="../../assets/img/icons/brands/facebook-rounded.png"
+                            src="<?=adminUrl?>assets/img/icons/brands/facebook-rounded.png"
                             alt="facebook"
                             class="me-3"
                             height="34" />
@@ -54,7 +54,7 @@
                 <li class="d-flex mb-3">
                     <div class="flex-shrink-0">
                         <img
-                            src="../../assets/img/icons/brands/dribbble-rounded.png"
+                            src="<?=adminUrl?>assets/img/icons/brands/dribbble-rounded.png"
                             alt="dribbble"
                             class="me-3"
                             height="34" />
@@ -73,7 +73,7 @@
                 <li class="d-flex mb-3">
                     <div class="flex-shrink-0">
                         <img
-                            src="../../assets/img/icons/brands/twitter-rounded.png"
+                            src="<?=adminUrl?>assets/img/icons/brands/twitter-rounded.png"
                             alt="facebook"
                             class="me-3"
                             height="34" />
@@ -92,7 +92,7 @@
                 <li class="d-flex">
                     <div class="flex-shrink-0">
                         <img
-                            src="../../assets/img/icons/brands/instagram-rounded.png"
+                            src="<?=adminUrl?>assets/img/icons/brands/instagram-rounded.png"
                             alt="instagram"
                             class="me-3"
                             height="34" />
