@@ -47,7 +47,7 @@ if(isset($_POST['update_user_profile'])) {
                 WHERE id = '$user_id'";
 
         if ($conn->query($sql) === TRUE) {
-            echo "User profile updated successfully.";
+            header("location: /user");
         } else {
             echo "Error updating user profile: " . $conn->error;
         }
