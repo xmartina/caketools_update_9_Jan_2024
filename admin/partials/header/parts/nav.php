@@ -32,11 +32,11 @@
         <li class="menu-item <?php if ($pageUrl == '/admin/users/') { echo 'active open'; } ?>">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons mdi mdi-account-outline"></i>
-                <div data-i18n="Users" onclick="location.href='/admin/users'">Users</div>
+                <div data-i18n="Users">Users</div>
             </a>
             <ul class="menu-sub">
                 <li class="menu-item">
-                    <a href="app-user-list.html" class="menu-link">
+                    <a href="javascript:void(0);" class="menu-link" onclick="location.href='/admin/users'">
                         <div data-i18n="List">All Users</div>
                     </a>
                 </li>
