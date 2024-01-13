@@ -1,5 +1,4 @@
 
-</div>
 <div class="card">
     <div class="card-datatable table-responsive">
         <table class="datatables-users table">
