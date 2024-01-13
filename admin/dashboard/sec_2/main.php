@@ -22,7 +22,7 @@
         </div>
         <div class="card-body mt-1 pt-1" >
             <div class="mb-3">
-                <small class="mb-4" style="cursor: pointer" onclick="location.href='/admin/deposit';">view all request</small>
+                <small class="pb-4" style="cursor: pointer" onclick="location.href='/admin/deposit';">view all request</small>
             </div>
             <div class="my-3"></div>
             <ul class="p-0 m-0">
