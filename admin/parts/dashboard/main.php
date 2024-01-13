@@ -1,2 +1,2 @@
 <?php
-include_once (adminRootDir.'partials/header/main.php');
+include_once (adminRootDir.'parts/dashboard/sec_1/main.php');
