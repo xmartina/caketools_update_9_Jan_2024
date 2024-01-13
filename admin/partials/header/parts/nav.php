@@ -38,7 +38,7 @@
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons mdi mdi-shield-outline"></i>
-                <div data-i18n="Roles & Permissions">Wallet</div>
+                <div data-i18n="Wallet">Wallet</div>
             </a>
             <!--<ul class="menu-sub">
                 <li class="menu-item">
@@ -56,7 +56,7 @@
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons mdi mdi-cart-outline"></i>
-                <div data-i18n="eCommerce">Deposit</div>
+                <div data-i18n="Deposit">Deposit</div>
             </a>
             <!--<ul class="menu-sub">
                 <li class="menu-item">
