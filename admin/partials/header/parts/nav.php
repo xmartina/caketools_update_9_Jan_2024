@@ -43,7 +43,7 @@
             </ul>
         </li>
         <li class="menu-item <?php if ($pageUrl == '/admin/wallet/') { echo 'active open'; } ?>">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
+            <a href="javascript:void(0);" class="menu-link menu-toggle" onclick="location.href='/admin/wallet'">
                 <i class="menu-icon tf-icons mdi mdi-shield-outline"></i>
                 <div data-i18n="Wallet">Wallet</div>
             </a>
@@ -61,7 +61,7 @@
             </ul> -->
         </li>
         <li class="menu-item <?php if ($pageUrl == '/admin/deposit/') { echo 'active open'; } ?>">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
+            <a href="javascript:void(0);" class="menu-link menu-toggle" onclick="location.href='/admin/deposit'">
                 <i class="menu-icon tf-icons mdi mdi-cart-outline"></i>
                 <div data-i18n="Deposit">Deposit</div>
             </a>
