@@ -21,3 +21,10 @@
 
 <!-- Page JS -->
 <script src="<?=adminUrl?>assets/js/dashboards-crm.js"></script>
+
+<?php if (isset($pageName) && $pageName == 'Edit User' || isset($pageName) && $pageName == 'All Users') { ?>
+<!-- Page JS -->
+<script src="<?=adminUrl?>assets/js/modal-edit-user.js"></script>
+<script src="<?=adminUrl?>assets/js/app-user-view.js"></script>
+<script src="<?=adminUrl?>assets/js/app-user-view-account.js"></script>
+<?php }?>
