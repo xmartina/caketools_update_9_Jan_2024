@@ -24,7 +24,7 @@ include_once (adminRootDir.'partials/header/main.php');
                             <a href="javascript:;" class="btn btn-sm btn-primary">View Sales</a>
                         </div>
                         <img
-                            src="../../assets/img/illustrations/trophy.png"
+                            src="<?=adminUrl?>assets/img/illustrations/trophy.png"
                             class="position-absolute bottom-0 end-0 me-3"
                             height="140"
                             alt="view sales" />
@@ -313,7 +313,7 @@ include_once (adminRootDir.'partials/header/main.php');
                                 <li class="d-flex mb-3">
                                     <div class="flex-shrink-0">
                                         <img
-                                            src="../../assets/img/icons/brands/facebook-rounded.png"
+                                            src="<?=adminUrl?>assets/img/icons/brands/facebook-rounded.png"
                                             alt="facebook"
                                             class="me-3"
                                             height="34" />
@@ -332,7 +332,7 @@ include_once (adminRootDir.'partials/header/main.php');
                                 <li class="d-flex mb-3">
                                     <div class="flex-shrink-0">
                                         <img
-                                            src="../../assets/img/icons/brands/dribbble-rounded.png"
+                                            src="<?=adminUrl?>assets/img/icons/brands/dribbble-rounded.png"
                                             alt="dribbble"
                                             class="me-3"
                                             height="34" />
@@ -351,7 +351,7 @@ include_once (adminRootDir.'partials/header/main.php');
                                 <li class="d-flex mb-3">
                                     <div class="flex-shrink-0">
                                         <img
-                                            src="../../assets/img/icons/brands/twitter-rounded.png"
+                                            src="<?=adminUrl?>assets/img/icons/brands/twitter-rounded.png"
                                             alt="facebook"
                                             class="me-3"
                                             height="34" />
@@ -370,7 +370,7 @@ include_once (adminRootDir.'partials/header/main.php');
                                 <li class="d-flex">
                                     <div class="flex-shrink-0">
                                         <img
-                                            src="../../assets/img/icons/brands/instagram-rounded.png"
+                                            src="<?=adminUrl?>assets/img/icons/brands/instagram-rounded.png"
                                             alt="instagram"
                                             class="me-3"
                                             height="34" />
@@ -454,7 +454,7 @@ include_once (adminRootDir.'partials/header/main.php');
                             <ul class="p-0 m-0">
                                 <li class="d-flex mb-4 pb-1">
                                     <div class="avatar flex-shrink-0 me-3">
-                                        <img src="../../assets/img/avatars/4.png" alt="avatar" class="rounded" />
+                                        <img src="<?=adminUrl?>assets/img/avatars/4.png" alt="avatar" class="rounded" />
                                     </div>
                                     <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                                         <div class="me-2">
@@ -469,7 +469,7 @@ include_once (adminRootDir.'partials/header/main.php');
                                 </li>
                                 <li class="d-flex mb-4 pb-1">
                                     <div class="avatar flex-shrink-0 me-3">
-                                        <img src="../../assets/img/avatars/5.png" alt="avatar" class="rounded" />
+                                        <img src="<?=adminUrl?>assets/img/avatars/5.png" alt="avatar" class="rounded" />
                                     </div>
                                     <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                                         <div class="me-2">
@@ -484,7 +484,7 @@ include_once (adminRootDir.'partials/header/main.php');
                                 </li>
                                 <li class="d-flex mb-4 pb-1">
                                     <div class="avatar flex-shrink-0 me-3">
-                                        <img src="../../assets/img/avatars/3.png" alt="avatar" class="rounded" />
+                                        <img src="<?=adminUrl?>assets/img/avatars/3.png" alt="avatar" class="rounded" />
                                     </div>
                                     <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                                         <div class="me-2">
@@ -499,7 +499,7 @@ include_once (adminRootDir.'partials/header/main.php');
                                 </li>
                                 <li class="d-flex mb-4 pb-1">
                                     <div class="avatar flex-shrink-0 me-3">
-                                        <img src="../../assets/img/avatars/14.png" alt="avatar" class="rounded" />
+                                        <img src="<?=adminUrl?>assets/img/avatars/14.png" alt="avatar" class="rounded" />
                                     </div>
                                     <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                                         <div class="me-2">
@@ -514,7 +514,7 @@ include_once (adminRootDir.'partials/header/main.php');
                                 </li>
                                 <li class="d-flex mb-4 pb-1">
                                     <div class="avatar flex-shrink-0 me-3">
-                                        <img src="../../assets/img/avatars/8.png" alt="avatar" class="rounded" />
+                                        <img src="<?=adminUrl?>assets/img/avatars/8.png" alt="avatar" class="rounded" />
                                     </div>
                                     <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                                         <div class="me-2">
@@ -529,7 +529,7 @@ include_once (adminRootDir.'partials/header/main.php');
                                 </li>
                                 <li class="d-flex">
                                     <div class="avatar flex-shrink-0 me-3">
-                                        <img src="../../assets/img/avatars/1.png" alt="avatar" class="rounded" />
+                                        <img src="<?=adminUrl?>assets/img/avatars/1.png" alt="avatar" class="rounded" />
                                     </div>
                                     <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                                         <div class="me-2">
@@ -655,7 +655,7 @@ include_once (adminRootDir.'partials/header/main.php');
                                     <td class="d-flex pt-3">
                                         <div class="px-2 rounded bg-lighter d-flex align-items-center h-px-30">
                                             <img
-                                                src="../../assets//img/icons/payments/logo-visa.png"
+                                                src="<?=adminUrl?>assets//img/icons/payments/logo-visa.png"
                                                 alt="credit-card"
                                                 width="30" />
                                         </div>
@@ -677,7 +677,7 @@ include_once (adminRootDir.'partials/header/main.php');
                                     <td class="d-flex">
                                         <div class="px-2 rounded bg-lighter d-flex align-items-center h-px-30">
                                             <img
-                                                src="../../assets//img/icons/payments/logo-mastercard.png"
+                                                src="<?=adminUrl?>assets//img/icons/payments/logo-mastercard.png"
                                                 alt="debit-card"
                                                 width="30" />
                                         </div>
@@ -699,7 +699,7 @@ include_once (adminRootDir.'partials/header/main.php');
                                     <td class="d-flex">
                                         <div class="px-2 rounded bg-lighter d-flex align-items-center h-px-30">
                                             <img
-                                                src="../../assets//img/icons/payments/logo-american-express.png"
+                                                src="<?=adminUrl?>assets//img/icons/payments/logo-american-express.png"
                                                 alt="atm-card"
                                                 width="30" />
                                         </div>
@@ -720,7 +720,7 @@ include_once (adminRootDir.'partials/header/main.php');
                                 <tr>
                                     <td class="d-flex">
                                         <div class="px-2 rounded bg-lighter d-flex align-items-center h-px-30">
-                                            <img src="../../assets//img/icons/payments/logo-visa.png" alt="debit-card" width="30" />
+                                            <img src="<?=adminUrl?>assets//img/icons/payments/logo-visa.png" alt="debit-card" width="30" />
                                         </div>
                                         <div class="ms-3">
                                             <h6 class="mb-0">*4300</h6>
@@ -740,7 +740,7 @@ include_once (adminRootDir.'partials/header/main.php');
                                     <td class="d-flex">
                                         <div class="px-2 rounded bg-lighter d-flex align-items-center h-px-30">
                                             <img
-                                                src="../../assets//img/icons/payments/logo-mastercard.png"
+                                                src="<?=adminUrl?>assets//img/icons/payments/logo-mastercard.png"
                                                 alt="credit-card"
                                                 width="30" />
                                         </div>
@@ -762,7 +762,7 @@ include_once (adminRootDir.'partials/header/main.php');
                                     <td class="d-flex">
                                         <div class="px-2 rounded bg-lighter d-flex align-items-center h-px-30">
                                             <img
-                                                src="../../assets//img/icons/payments/logo-visa.png"
+                                                src="<?=adminUrl?>assets//img/icons/payments/logo-visa.png"
                                                 alt="credit-card"
                                                 width="30" />
                                         </div>
