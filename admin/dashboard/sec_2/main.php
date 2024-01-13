@@ -1,7 +1,7 @@
 <!-- Social Network Visits -->
 <div class="col-xl-4 col-md-6">
     <div class="card h-100">
-        <div class="card-header d-flex align-items-center justify-content-between">
+        <div class="pt-3 px-3 d-flex align-items-center justify-content-between">
             <h5 class="card-title m-0 me-2">Deposit Request</h5>
             <div class="dropdown">
                 <button
@@ -22,7 +22,7 @@
         </div>
         <div class="card-body">
             <div class="mb-3">
-                <small onclick="location.href='/admin/deposit';">view all request</small>
+                <small style="cursor: pointer" onclick="location.href='/admin/deposit';">view all request</small>
             </div>
             <div class="my-3"></div>
             <ul class="p-0 m-0">
