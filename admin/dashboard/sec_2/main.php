@@ -22,15 +22,9 @@
         </div>
         <div class="card-body">
             <div class="mb-3">
-                <div class="d-flex align-items-center mb-1">
-<!--                    <h4 class="mb-0">28,468</h4>-->
-<!--                    <span class="text-success ms-2 fw-medium">-->
-<!--                            <i class="mdi mdi-menu-up"></i>-->
-<!--                            <small>62%</small>-->
-<!--                          </span>-->
-                </div>
                 <small onclick="location.href='/admin/deposit';">view all request</small>
             </div>
+            <div class="my-3"></div>
             <ul class="p-0 m-0">
                 <li class="d-flex mb-3">
                     <div class="flex-shrink-0">
