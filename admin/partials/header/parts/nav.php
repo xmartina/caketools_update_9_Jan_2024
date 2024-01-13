@@ -38,9 +38,9 @@
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons mdi mdi-shield-outline"></i>
-                <div data-i18n="Roles & Permissions">Roles & Permissions</div>
+                <div data-i18n="Roles & Permissions">Wallet</div>
             </a>
-            <ul class="menu-sub">
+            <!--<ul class="menu-sub">
                 <li class="menu-item">
                     <a href="app-access-roles.html" class="menu-link">
                         <div data-i18n="Roles">Roles</div>
@@ -51,14 +51,14 @@
                         <div data-i18n="Permission">Permission</div>
                     </a>
                 </li>
-            </ul>
+            </ul> -->
         </li>
         <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons mdi mdi-cart-outline"></i>
-                <div data-i18n="eCommerce">eCommerce</div>
+                <div data-i18n="eCommerce">Deposit</div>
             </a>
-            <ul class="menu-sub">
+            <!--<ul class="menu-sub">
                 <li class="menu-item">
                     <a href="app-ecommerce-dashboard.html" class="menu-link">
                         <div data-i18n="Dashboard">Dashboard</div>
@@ -189,7 +189,7 @@
                         </li>
                     </ul>
                 </li>
-            </ul>
+            </ul>-->
         </li>
     </ul>
 </aside>
