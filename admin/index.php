@@ -8,6 +8,6 @@ include_once (adminRootDir.'partials/header/main.php');
 ?>
 
 <!-- Content Wrapper. Contains page content -->
-<?php include_once (adminRootDir.'partials/dashboard/main.php'); ?>
+<?php include_once (adminRootDir.'partials/parts/dashboard/main.php'); ?>
 
 <?php include_once (adminRootDir.'partials/footer/main.php'); ?>
