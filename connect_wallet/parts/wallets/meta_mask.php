@@ -12,7 +12,7 @@ include_once (rootDir.'includes/wallet/get/main.php');
 
                 @media (max-width: 768px) {
                     .title.m-style.d-flex.align-items-center {
-                        display: block;
+                        display: block!important;
                         line-height: 2;
                     }
                 }
