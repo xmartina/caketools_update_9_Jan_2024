@@ -10,4 +10,9 @@
         <!-- Layout container -->
         <div class="layout-page">
             <!-- Navbar -->
+
             <?php include_once (adminRootDir.'partials/header/parts/vertical_partials.php') ?>
+
+
+
+
