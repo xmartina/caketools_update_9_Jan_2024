@@ -5,11 +5,18 @@
             <table class="datatables-crm table table-sm">
                 <thead class="table-light">
                 <tr>
-                    <th class="py-3"></th>
-                    <th class="py-3">User</th>
-                    <th class="py-3">Email</th>
-                    <th class="py-3">Role</th>
-                    <th class="py-3">Status</th>
+                    <th class="py-3 sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                        aria-label="User: activate to sort column ascending" style="width: 254px;">User
+                    </th>
+                    <th class="py-3 sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                        aria-label="Email: activate to sort column ascending" style="width: 319px;">Email
+                    </th>
+                    <th class="py-3 sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                        aria-label="Role: activate to sort column ascending" style="width: 141px;">Role
+                    </th>
+                    <th class="py-3 sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                        aria-label="Status: activate to sort column ascending" style="width: 87px;">Status
+                    </th>
                 </tr>
                 </thead>
                 <tbody>
