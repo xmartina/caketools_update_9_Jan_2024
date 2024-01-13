@@ -1,60 +1,14 @@
 <div class="card">
-    <div class="card-header border-bottom">
-        <h5 class="card-title">Search Filter</h5>
-        <div class="d-flex justify-content-between align-items-center row py-3 gap-3 gap-md-0">
-            <div class="col-md-4 user_role"><select id="UserRole" class="form-select text-capitalize">
-                    <option value=""> Select Role</option>
-                    <option value="Admin">Admin</option>
-                    <option value="Author">Author</option>
-                    <option value="Editor">Editor</option>
-                    <option value="Maintainer">Maintainer</option>
-                    <option value="Subscriber">Subscriber</option>
-                </select></div>
-            <div class="col-md-4 user_plan"><select id="UserPlan" class="form-select text-capitalize">
-                    <option value=""> Select Plan</option>
-                    <option value="Basic">Basic</option>
-                    <option value="Company">Company</option>
-                    <option value="Enterprise">Enterprise</option>
-                    <option value="Team">Team</option>
-                </select></div>
-            <div class="col-md-4 user_status"><select id="FilterTransaction" class="form-select text-capitalize">
-                    <option value=""> Select Status</option>
-                    <option value="Pending" class="text-capitalize">Pending</option>
-                    <option value="Active" class="text-capitalize">Active</option>
-                    <option value="Inactive" class="text-capitalize">Inactive</option>
-                </select></div>
-        </div>
-    </div>
     <div class="card-datatable table-responsive">
         <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
             <div class="row mx-2">
                 <div class="col-md-2">
-                    <div class="me-3">
-                        <div class="dataTables_length" id="DataTables_Table_0_length"><label>Show <select
-                                    name="DataTables_Table_0_length" aria-controls="DataTables_Table_0"
-                                    class="form-select">
-                                    <option value="10">10</option>
-                                    <option value="25">25</option>
-                                    <option value="50">50</option>
-                                    <option value="100">100</option>
-                                </select></label></div>
-                    </div>
+
                 </div>
                 <div class="col-md-10">
                     <div
                         class="dt-action-buttons text-xl-end text-lg-start text-md-end text-start d-flex align-items-center justify-content-end flex-md-row flex-column mb-3 mb-md-0 gap-3">
-                        <div id="DataTables_Table_0_filter" class="dataTables_filter"><label><input type="search"
-                                                                                                    class="form-control"
-                                                                                                    placeholder="Search.."
-                                                                                                    aria-controls="DataTables_Table_0"></label>
-                        </div>
                         <div class="dt-buttons">
-                            <button
-                                class="dt-button buttons-collection dropdown-toggle btn btn-label-secondary me-3 waves-effect waves-light"
-                                tabindex="0" aria-controls="DataTables_Table_0" type="button" aria-haspopup="dialog"
-                                aria-expanded="false"><span><i class="mdi mdi-export-variant me-1"></i> <span
-                                        class="d-none d-sm-inline-block">Export</span></span><span
-                                    class="dt-down-arrow">▼</span></button>
                             <button class="dt-button add-new btn btn-primary waves-effect waves-light" tabindex="0"
                                     aria-controls="DataTables_Table_0" type="button" data-bs-toggle="offcanvas"
                                     data-bs-target="#offcanvasAddUser"><span><i
