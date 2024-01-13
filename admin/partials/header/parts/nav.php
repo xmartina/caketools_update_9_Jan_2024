@@ -30,7 +30,7 @@
             </a>
         </li>
         <li class="menu-item <?php if ($pageUrl == '/admin/users/') { echo 'active open'; } ?>">
-            <a href="javascript:void(0);" class="menu-link menu-toggle">
+            <a href="javascript:void(0);" class="menu-link menu-toggle" onclick="location.href='/admin/users'">
                 <i class="menu-icon tf-icons mdi mdi-account-outline"></i>
                 <div data-i18n="Users">Users</div>
             </a>
