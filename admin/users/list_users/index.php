@@ -1,7 +1,7 @@
 <div class="card">
     <div class="card-datatable table-responsive">
         <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
-            <div class="row mx-2">
+            <div class="row mx-2 my-3">
                 <div class="col-md-2">
 
                 </div>
