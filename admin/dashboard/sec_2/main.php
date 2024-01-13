@@ -2,7 +2,7 @@
 <div class="col-xl-4 col-md-6">
     <div class="card h-100">
         <div class="card-header d-flex align-items-center justify-content-between">
-            <h5 class="card-title m-0 me-2">Social Network Visits</h5>
+            <h5 class="card-title m-0 me-2">Deposit Request</h5>
             <div class="dropdown">
                 <button
                     class="btn p-0"
@@ -23,13 +23,13 @@
         <div class="card-body">
             <div class="mb-3">
                 <div class="d-flex align-items-center mb-1">
-                    <h4 class="mb-0">28,468</h4>
-                    <span class="text-success ms-2 fw-medium">
-                            <i class="mdi mdi-menu-up"></i>
-                            <small>62%</small>
-                          </span>
+<!--                    <h4 class="mb-0">28,468</h4>-->
+<!--                    <span class="text-success ms-2 fw-medium">-->
+<!--                            <i class="mdi mdi-menu-up"></i>-->
+<!--                            <small>62%</small>-->
+<!--                          </span>-->
                 </div>
-                <small>Last 1 Year Visits</small>
+                <small onclick="location.href='/admin/deposit';">view all request</small>
             </div>
             <ul class="p-0 m-0">
                 <li class="d-flex mb-3">
