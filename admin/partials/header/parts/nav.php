@@ -29,7 +29,7 @@
                 <div data-i18n="Dashboards">Dashboards</div>
             </a>
         </li>
-        <li class="menu-item <?php if ($pageUrl == '/admin/users/') { echo 'active open'; } ?>">
+        <li class="menu-item <?php if ($pageUrl == '/admin/users/') { echo 'active open'; }elseif ($pageUrl = '/admin/users/edit_user/'){ echo 'active open';} ?>">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons mdi mdi-account-outline"></i>
                 <div data-i18n="Users">Users</div>
