@@ -939,7 +939,7 @@
   // --------------------------------------------------------------------
   var dt_crm = $('.datatables-crm');
 
-  if (dt_crm.length) {
+  /* if (dt_crm.length) {
     dt_crm = dt_crm.DataTable({
       ajax: assetsPath + 'json/table-dashboards.json',
       dom: 't',
@@ -1034,5 +1034,5 @@
       ],
       order: [[0, 'asc']]
     });
-  }
+  } */
 })();
