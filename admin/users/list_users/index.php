@@ -58,7 +58,7 @@
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
-                                <div class="avatar avatar-sm me-3"><img src="../../assets/img/avatars/4.png"
+                                <div class="avatar avatar-sm me-3"><img src="<?=adminUrl?>assets/img/avatars/4.png"
                                                                         alt="Avatar" class="rounded-circle"></div>
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
@@ -98,7 +98,7 @@
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
-                                <div class="avatar avatar-sm me-3"><img src="../../assets/img/avatars/9.png"
+                                <div class="avatar avatar-sm me-3"><img src="<?=adminUrl?>assets/img/avatars/9.png"
                                                                         alt="Avatar" class="rounded-circle"></div>
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
@@ -137,7 +137,7 @@
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
-                                <div class="avatar avatar-sm me-3"><img src="../../assets/img/avatars/8.png"
+                                <div class="avatar avatar-sm me-3"><img src="<?=adminUrl?>assets/img/avatars/8.png"
                                                                         alt="Avatar" class="rounded-circle"></div>
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
@@ -215,7 +215,7 @@
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
-                                <div class="avatar avatar-sm me-3"><img src="../../assets/img/avatars/4.png"
+                                <div class="avatar avatar-sm me-3"><img src="<?=adminUrl?>assets/img/avatars/4.png"
                                                                         alt="Avatar" class="rounded-circle"></div>
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
@@ -254,7 +254,7 @@
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
-                                <div class="avatar avatar-sm me-3"><img src="../../assets/img/avatars/10.png"
+                                <div class="avatar avatar-sm me-3"><img src="<?=adminUrl?>assets/img/avatars/10.png"
                                                                         alt="Avatar" class="rounded-circle"></div>
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
@@ -292,7 +292,7 @@
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
-                                <div class="avatar avatar-sm me-3"><img src="../../assets/img/avatars/1.png"
+                                <div class="avatar avatar-sm me-3"><img src="<?=adminUrl?>assets/img/avatars/1.png"
                                                                         alt="Avatar" class="rounded-circle"></div>
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
@@ -369,7 +369,7 @@
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
-                                <div class="avatar avatar-sm me-3"><img src="../../assets/img/avatars/10.png"
+                                <div class="avatar avatar-sm me-3"><img src="<?=adminUrl?>assets/img/avatars/10.png"
                                                                         alt="Avatar" class="rounded-circle"></div>
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
@@ -407,7 +407,7 @@
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
-                                <div class="avatar avatar-sm me-3"><img src="../../assets/img/avatars/2.png"
+                                <div class="avatar avatar-sm me-3"><img src="<?=adminUrl?>assets/img/avatars/2.png"
                                                                         alt="Avatar" class="rounded-circle"></div>
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
@@ -446,7 +446,7 @@
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
-                                <div class="avatar avatar-sm me-3"><img src="../../assets/img/avatars/6.png"
+                                <div class="avatar avatar-sm me-3"><img src="<?=adminUrl?>assets/img/avatars/6.png"
                                                                         alt="Avatar" class="rounded-circle"></div>
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
@@ -522,7 +522,7 @@
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
-                                <div class="avatar avatar-sm me-3"><img src="../../assets/img/avatars/9.png"
+                                <div class="avatar avatar-sm me-3"><img src="<?=adminUrl?>assets/img/avatars/9.png"
                                                                         alt="Avatar" class="rounded-circle"></div>
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
@@ -559,7 +559,7 @@
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
-                                <div class="avatar avatar-sm me-3"><img src="../../assets/img/avatars/3.png"
+                                <div class="avatar avatar-sm me-3"><img src="<?=adminUrl?>assets/img/avatars/3.png"
                                                                         alt="Avatar" class="rounded-circle"></div>
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
@@ -598,7 +598,7 @@
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
-                                <div class="avatar avatar-sm me-3"><img src="../../assets/img/avatars/2.png"
+                                <div class="avatar avatar-sm me-3"><img src="<?=adminUrl?>assets/img/avatars/2.png"
                                                                         alt="Avatar" class="rounded-circle"></div>
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
@@ -636,7 +636,7 @@
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
-                                <div class="avatar avatar-sm me-3"><img src="../../assets/img/avatars/7.png"
+                                <div class="avatar avatar-sm me-3"><img src="<?=adminUrl?>assets/img/avatars/7.png"
                                                                         alt="Avatar" class="rounded-circle"></div>
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
@@ -868,7 +868,7 @@
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
-                                <div class="avatar avatar-sm me-3"><img src="../../assets/img/avatars/9.png"
+                                <div class="avatar avatar-sm me-3"><img src="<?=adminUrl?>assets/img/avatars/9.png"
                                                                         alt="Avatar" class="rounded-circle"></div>
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
@@ -906,7 +906,7 @@
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
-                                <div class="avatar avatar-sm me-3"><img src="../../assets/img/avatars/7.png"
+                                <div class="avatar avatar-sm me-3"><img src="<?=adminUrl?>assets/img/avatars/7.png"
                                                                         alt="Avatar" class="rounded-circle"></div>
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
@@ -944,7 +944,7 @@
                     <td class="sorting_1">
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
-                                <div class="avatar avatar-sm me-3"><img src="../../assets/img/avatars/6.png"
+                                <div class="avatar avatar-sm me-3"><img src="<?=adminUrl?>assets/img/avatars/6.png"
                                                                         alt="Avatar" class="rounded-circle"></div>
                             </div>
                             <div class="d-flex flex-column"><a href="app-user-view-account.html"
