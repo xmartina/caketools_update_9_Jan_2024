@@ -21,10 +21,10 @@
                                                     Defind, Coll<span>ect</span> and Sell Sup<span>er</span> Rate NFT
                                                     <img src="/assets/images/slider/bg-slider.png" alt="Image">
                                                 </h1>
-                                                <p class="sub-heading">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                                                <p class="sub-heading">Embrace the Digital Renaissance: Explore the World of NFTs.</p>
                                                 <div class="btn-slider ">
-                                                    <a href="explore-banner.html" class="tf-button style-2">Explore now</a>
-                                                    <a href="add-NFT.html" class="tf-button style-3">Creat</a>
+                                                    <a href="javascript:void(0);" class="tf-button style-2">Explore now</a>
+                                                    <a href="/add_nft" class="tf-button style-3">Creat</a>
                                                 </div>
                                             </div>
                                             <div class="image">
@@ -433,8 +433,8 @@
                             <div class="icon">
                                 <img src="/assets/images/svg/icon-create-1.svg" alt="Image">
                             </div>
-                            <h6 class="title"><a href="#"> Set up your wallet</a></h6>
-                            <p class="content">Sed Ut Perspiciatis Unde Omnis Iste Natus Error Sit Voluptatem Accusantium Doloremque</p>
+                            <h6 class="title"><a href="#">Set up your wallet</a></h6>
+                            <p class="content">Establish a digital wallet for transactions.</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -443,7 +443,7 @@
                                 <img src="/assets/images/svg/icon-create-2.svg" alt="Image">
                             </div>
                             <h6 class="title"><a href="#">Create Your collection</a> </h6>
-                            <p class="content">Sed Ut Perspiciatis Unde Omnis Iste Natus Error Sit Voluptatem Accusantium Doloremque</p>
+                            <p class="content">Develop a series of unique digital assets.</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -452,7 +452,7 @@
                                 <img src="/assets/images/svg/icon-create-3.svg" alt="Image">
                             </div>
                             <h6 class="title"><a href="#">Add Your NFTs</a> </h6>
-                            <p class="content">Sed Ut Perspiciatis Unde Omnis Iste Natus Error Sit Voluptatem Accusantium Doloremque</p>
+                            <p class="content">Tokenize your creations using platforms like OpenSea.</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6">
@@ -461,7 +461,7 @@
                                 <img src="/assets/images/svg/icon-create-4.svg" alt="Image">
                             </div>
                             <h6 class="title"><a href="#"> List them for sale</a></h6>
-                            <p class="content">Sed Ut Perspiciatis Unde Omnis Iste Natus Error Sit Voluptatem Accusantium Doloremque</p>
+                            <p class="content">Offer NFTs for purchase, setting prices and details for potential buyers</p>
                         </div>
                     </div>
                 </div>
