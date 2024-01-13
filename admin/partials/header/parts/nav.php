@@ -23,7 +23,7 @@
     <ul class="menu-inner py-1">
         <?php $pageUrl = $_SERVER['REQUEST_URI']; ?>
         <!-- Dashboards -->
-        <li class="menu-item <?= $pageUrl == 'admin' ? 'active open' : '' ?>">
+        <li class="menu-item <?php if ($pageUrl) { echo 'active open'; } ?> ">
             <a href="javascript:void(0);" class="menu-link menu-toggle" onclick="location.href='/admin'">
                 <i class="menu-icon tf-icons mdi mdi-home-outline"></i>
                 <div data-i18n="Dashboards">Dashboards</div>
