@@ -1,4 +1,4 @@
-<div class="col-xl-8 col-lg-7 col-md-7 order-0 order-md-1">
+<div class="col-xl-8 col-lg-7 col-md-7 order-0 order-sm-1 order-md-1">
     <!-- Project table -->
     <div class="card mb-4">
         <h5 class="card-header">User Wallets</h5>
