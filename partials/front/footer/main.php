@@ -8,7 +8,7 @@
                     <div class="logo">
                         <img id="logo_footer" src="/assets/images/logo/logo_dark.png" alt="Image">
                     </div>
-                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                    <p class="content">Embrace the Digital Renaissance: Explore the World of NFTs by creating, minting, and selling your unique digital collections seamlessly.</p>
                     <ul class="social-item">
                         <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fab fa-facebook"></i></a></li>
@@ -17,7 +17,7 @@
                         <li><a href="#"><i class="icon-fl-tik-tok-2"></i></a></li>
                         <li><a href="#"><i class="icon-fl-vt"></i></a></li>
                     </ul>
-                    <p class="copy-right">Copyright © 2022 Themesflat. All Rights Reserved.
+                    <p class="copy-right">Copyright © 2024 <?=siteName?>. All Rights Reserved.
 
                     </p>
                 </div>
