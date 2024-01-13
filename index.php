@@ -25,7 +25,7 @@
                                                     Embrace the Digital Renaissance: Explore the World of NFTs by creating, minting, and selling your unique digital collections seamlessly.</p>
                                                 <div class="btn-slider ">
                                                     <a href="javascript:void(0);" class="tf-button style-2">Explore now</a>
-                                                    <a href="/add_nft" class="tf-button style-3">Creat</a>
+                                                    <a href="/add_nft" class="tf-button style-3">Create</a>
                                                 </div>
                                             </div>
                                             <div class="image">
