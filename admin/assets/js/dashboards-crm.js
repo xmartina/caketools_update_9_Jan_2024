@@ -2,6 +2,7 @@
 
 (function () {
   let cardColor, labelColor, headingColor, borderColor, bodyColor, grayColor;
+  const toolTip = 'tooltip';
 
   if (isDarkStyle) {
     cardColor = config.colors_dark.cardColor;
@@ -241,7 +242,7 @@
         offsetY: 0
       },
       labels: ['USA', 'India', 'Canada', 'Japan', 'France'],
-      tooltip: { enabled: false },
+      toolTip: { enabled: false },
       dataLabels: { enabled: false },
       stroke: {
         width: 3,

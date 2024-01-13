@@ -21,7 +21,14 @@
     <div class="menu-inner-shadow"></div>
 
     <ul class="menu-inner py-1">
+        <?php $pageUrl = $_SERVER['REQUEST_URI']; ?>
         <!-- Dashboards -->
+        <li class="menu-item <?= $pageUrl == 'admin' ? 'active open' : '' ?>">
+            <a href="javascript:void(0);" class="menu-link menu-toggle" onclick="location.href='/admin'">
+                <i class="menu-icon tf-icons mdi mdi-home-outline"></i>
+                <div data-i18n="Dashboards">Dashboards</div>
+            </a>
+        </li>
         <li class="menu-item active open">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons mdi mdi-account-outline"></i>
