@@ -1,3 +1,6 @@
+</div>
+<!-- / Layout page -->
+</div>
 <!-- Overlay -->
 <div class="layout-overlay layout-menu-toggle"></div>
 
@@ -8,6 +11,6 @@
 
 <!-- Core JS -->
 <!-- build:js assets/vendor/js/core.js -->
-<?php include_once (adminRootDir.'partials/footer/parts/core-js.php')  ?>
+<?php include_once(adminRootDir . 'partials/footer/parts/core-js.php') ?>
 </body>
 </html>
