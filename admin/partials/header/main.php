@@ -13,6 +13,8 @@
 
             <?php include_once (adminRootDir.'partials/header/parts/vertical_partials.php') ?>
 
+            <div class="container-xxl flex-grow-1 container-p-y">
+                <div class="row gy-4 mb-4">
 
 
 

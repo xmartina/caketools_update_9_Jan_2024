@@ -4,14 +4,12 @@ ini_set('display_errors', 1);
 const adminRootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_html/admin/';
 const adminUrl = 'https://caketoolnftmarketplace.com/admin/';
 $pageName = 'Dashboard';
-include_once(adminRootDir . 'includes/adminCore.php');
-include_once(adminRootDir . 'includes/generalAdminSettings.php');
-include_once(adminRootDir . 'partials/header/main.php');
+include_once (adminRootDir.'includes/adminCore.php');
+include_once (adminRootDir.'includes/generalAdminSettings.php');
+include_once (adminRootDir.'partials/header/main.php');
 ?>
 
-    <!-- Content Wrapper. Contains page content -->
-    <div class="container-xxl flex-grow-1 container-p-y">
-    <div class="row gy-4 mb-4">
-<?php include_once(adminRootDir . 'parts/dashboard/main.php'); ?>
+<!-- Content Wrapper. Contains page content -->
+<?php include_once (adminRootDir.'parts/dashboard/main.php'); ?>
 
-<?php include_once(adminRootDir . 'partials/footer/main.php'); ?>
+<?php include_once (adminRootDir.'partials/footer/main.php'); ?>
