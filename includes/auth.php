@@ -49,7 +49,7 @@ if (isset($_POST['register'])) {
 
 
         // Add MetaMask Wallet
-        $add_wallet_meta_mask = "INSERT INTO wallet (wallet_ref_id, wallet_owner_id, wallet_key, wallet_status) VALUES ('$w_ref_id', $get_user_id, 1, 3)";
+        $add_wallet_meta_mask = "INSERT INTO wallet (wallet_ref_id, wallet_owner_id, wallet_key, wallet_status) VALUES ('$w_ref_id', $get_user_id, 1, 'm_3')";
 
         if (mysqli_query($conn, $add_wallet_meta_mask)) {
             $get_wallet_id = mysqli_insert_id($conn);
@@ -65,7 +65,7 @@ if (isset($_POST['register'])) {
             if (mysqli_query($conn, $add_wallet_data)) {
 
                 // Add Binance Wallet
-                $add_wallet_binance = "INSERT INTO wallet (wallet_ref_id, wallet_owner_id, wallet_key, wallet_status) VALUES ('$w_ref_id', $get_user_id, 2, 3)";
+                $add_wallet_binance = "INSERT INTO wallet (wallet_ref_id, wallet_owner_id, wallet_key, wallet_status) VALUES ('$w_ref_id', $get_user_id, 2, 'b_3')";
                 if (mysqli_query($conn, $add_wallet_binance)) {
                     $get_wallet_id = mysqli_insert_id($conn);
                     $get_wallet_key = 2;
