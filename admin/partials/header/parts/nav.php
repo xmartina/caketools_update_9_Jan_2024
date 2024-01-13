@@ -1,7 +1,7 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
         <a href="/" class="app-brand-link">
-            <img src="/assets/images/logo/logo_dark.png" alt="">
+            <img style="max-width: 190px;"  src="/assets/images/logo/logo_dark.png" alt="">
         </a>
 
         <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
