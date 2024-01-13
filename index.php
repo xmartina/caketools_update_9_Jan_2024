@@ -21,7 +21,8 @@
                                                     Defind, Coll<span>ect</span> and Sell Sup<span>er</span> Rate NFT
                                                     <img src="/assets/images/slider/bg-slider.png" alt="Image">
                                                 </h1>
-                                                <p class="sub-heading">Embrace the Digital Renaissance: Explore the World of NFTs.</p>
+                                                <p class="sub-heading">
+                                                    Embrace the Digital Renaissance: Explore the World of NFTs by creating, minting, and selling your unique digital collections seamlessly.</p>
                                                 <div class="btn-slider ">
                                                     <a href="javascript:void(0);" class="tf-button style-2">Explore now</a>
                                                     <a href="/add_nft" class="tf-button style-3">Creat</a>
