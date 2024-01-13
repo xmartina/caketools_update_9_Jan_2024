@@ -10,5 +10,6 @@ include_once (adminRootDir.'partials/header/main.php');
 ?>
 
     <!-- Content Wrapper. Contains page content -->
+<?php include_once (adminRootDir.'list_users/index.php'); ?>
 
 <?php include_once (adminRootDir.'partials/footer/main.php'); ?>
