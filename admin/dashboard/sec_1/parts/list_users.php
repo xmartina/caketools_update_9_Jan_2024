@@ -55,7 +55,7 @@ if (!$result) {
                 <?php }?>
                 </tbody>
             </table>
-            <div class="py-3 px-3 bg-info text-">view more</div>
+            <div class="py-2 px-3 bg-info text-white text-center mt-3">view more</div>
         </div>
     </div>
 </div>
