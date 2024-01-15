@@ -42,7 +42,7 @@ if (!$result) {
                             </div>
                             <div class="d-flex flex-column ps-1">
                                 <span class="name text-truncate h6 mb-0 mt-1"><?= $data['first_name']. ' '.$data['last_name'] ?></span>
-                                <small class="user_name text-truncate mb-1">@<?= $data['username'] ?></small>
+                                <small class="user_name text-truncate mb-1">@<?= $data['user_name'] ?></small>
                             </div>
                         </div>
                     </td>
