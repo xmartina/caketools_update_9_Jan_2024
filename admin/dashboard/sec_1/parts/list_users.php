@@ -49,7 +49,10 @@ if (!$result) {
                     <td><?= $data['email'] ?></td>
                     <td><span class="d-flex align-items-center gap-2"><i
                                 class="mdi mdi-laptop text-danger"></i>Admin</span></td>
-                    <td><a href="<?=adminUrl?>users/edit_user?<?= $data['id'] ?>"><span class="badge rounded-pill bg-label-warning">Edit User</span></a></td>
+                    <td><a href="<?=adminUrl?>users/edit_user?<?= $data['id'] ?>">
+                            <span class="d-flex align-items-center gap-2"><i class="mdi mdi-pencil-outline text-info"></i>Edit User</span>
+                        </a>
+                    </td>
                 </tr>
                 <?php }?>
                 </tbody>
