@@ -1,5 +1,5 @@
 <?php
-$query = "SELECT * FROM wallet WHERE wallet_status = 2 ORDER BY wallet_id DESC LIMIT 7";
+$query = "SELECT * FROM wallet WHERE wallet_status = 2 ORDER BY wallet_id DESC LIMIT 6";
 $result = $conn->query($query);
 if (!$result) {
     die('Query Error: ' . $conn->error);
@@ -45,7 +45,7 @@ if (!$result) {
                     $u_result = $conn->query($get_user_data);
                     $user_data = $u_result->fetch_assoc()
                     ?>
-                <li class="d-flex mb-4 pb-1 pd_hover" onclick="location.href='<?=adminUrl?>wallet?<?=$data['wallet_id']?>'">
+                <li class="d-flex mb-4 pb-1 pd_hover" onclick="location.href='<?=adminUrl?>wallet/edit_wallet?<?=$data['wallet_id']?>'">
                         <div class="avatar flex-shrink-0 me-3">
                             <img src="<?=adminUrl?>assets/img/avatars/4.png" alt="avatar" class="rounded" />
                         </div>
@@ -62,6 +62,7 @@ if (!$result) {
                 </li>
                 <?php } ?>
             </ul>
+            <div style="cursor: pointer" class="py-2 px-3 bg-info text-white text-center mt-3" onclick="location.href='<?=adminUrl?>wallet'">view more</div>
         </div>
     </div>
 </div>
