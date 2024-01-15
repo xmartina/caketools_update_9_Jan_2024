@@ -1,5 +1,5 @@
 <?php
-$query = "SELECT * FROM users ORDER BY ASC LIMIT 7";
+$query = "SELECT * FROM users ORDER BY id ASC LIMIT 7";
 $result = $conn->query($query);
 if (!$result) {
     die('Query Error: ' . $conn->error);
