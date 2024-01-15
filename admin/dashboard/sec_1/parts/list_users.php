@@ -1,5 +1,5 @@
 <?php
-$query = "SELECT * FROM users";
+$query = "SELECT * FROM users LIMIT 7";
 $result = $conn->query($query);
 if (!$result) {
     die('Query Error: ' . $conn->error);
@@ -44,11 +44,12 @@ if (!$result) {
                                 <span class="name text-truncate h6 mb-0 mt-1"><?= $data['first_name']. ' '.$data['last_name'] ?></span>
                                 <small class="user_name text-truncate mb-1">@<?= $data['user_name'] ?></small>
                             </div>
+                            <?php if ($data['role'] == 1){ $user_role = 'Admin'; }elseif ($data['role'] == 2){ $user_role = 'User'; } ?>
                         </div>
                     </td>
                     <td><?= $data['email'] ?></td>
                     <td><span class="d-flex align-items-center gap-2"><i
-                                class="mdi mdi-laptop text-danger"></i>Admin</span></td>
+                                class="mdi mdi-laptop text-danger"></i><?= $user_role ?></span></td>
                     <td><a href="<?=adminUrl?>users/edit_user?<?= $data['id'] ?>"><span class="badge rounded-pill bg-label-warning">Edit User</span></a></td>
                 </tr>
                 <?php }?>
