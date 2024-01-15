@@ -39,7 +39,6 @@ if (!$result) {
                     $u_result = $conn->query($get_user_data);
                     $user_data = $u_result->fetch_assoc()
                     ?>
-                    ?>
                 <li class="d-flex mb-4 pb-1">
                     <div class="avatar flex-shrink-0 me-3">
                         <img src="<?=adminUrl?>assets/img/avatars/4.png" alt="avatar" class="rounded" />
