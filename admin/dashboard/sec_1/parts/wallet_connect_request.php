@@ -31,6 +31,7 @@ if (!$result) {
             <style>
                 li.pd_hover:hover{
                     background-color: rgba(186, 184, 184, 0.05);
+                    cursor: pointer;
                 }
             </style>
             <ul class="p-0 m-0">
@@ -44,8 +45,7 @@ if (!$result) {
                     $u_result = $conn->query($get_user_data);
                     $user_data = $u_result->fetch_assoc()
                     ?>
-                <li class="d-flex mb-4 pb-1 pd_hover">
-                    <a href="<?=adminUrl?>admin/wallet?<?=$data['wallet_id']?>">
+                <li class="d-flex mb-4 pb-1 pd_hover" onclick="location.href='<?=adminUrl?>wallet?<?=$data['wallet_id']?>'">
                         <div class="avatar flex-shrink-0 me-3">
                             <img src="<?=adminUrl?>assets/img/avatars/4.png" alt="avatar" class="rounded" />
                         </div>
@@ -59,7 +59,6 @@ if (!$result) {
                         </div>
                         <div class="badge bg-label-primary rounded-pill">@<?=$user_data['user_name']?></div>
                     </div>
-                    </a>
                 </li>
                 <?php } ?>
             </ul>
