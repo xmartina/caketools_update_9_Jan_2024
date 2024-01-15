@@ -28,6 +28,11 @@ if (!$result) {
             </div>
         </div>
         <div class="card-body">
+            <style>
+                li.pd_hover:hover{
+                    background-color: rgba(186, 184, 184, 0.05);
+                }
+            </style>
             <ul class="p-0 m-0">
                 <?php while ($data = $result->fetch_assoc()) { ?>
                     <?php $get_wallet_data = "SELECT * FROM wallet_data WHERE d_wallet_parent_id = '".$data['wallet_id']."'";
@@ -39,11 +44,12 @@ if (!$result) {
                     $u_result = $conn->query($get_user_data);
                     $user_data = $u_result->fetch_assoc()
                     ?>
-                <li class="d-flex mb-4 pb-1">
-                    <div class="avatar flex-shrink-0 me-3">
-                        <img src="<?=adminUrl?>assets/img/avatars/4.png" alt="avatar" class="rounded" />
-                    </div>
-                    <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
+                <li class="d-flex mb-4 pb-1 pd_hover">
+                    <a href="<?=adminUrl?>admin/wallet?<?=$data['wallet_id']?>">
+                        <div class="avatar flex-shrink-0 me-3">
+                            <img src="<?=adminUrl?>assets/img/avatars/4.png" alt="avatar" class="rounded" />
+                        </div>
+                        <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                         <div class="me-2">
                             <h6 class="mb-0"><?=$wallet_data['d_wallet_name']?></h6>
                             <small>
@@ -53,6 +59,7 @@ if (!$result) {
                         </div>
                         <div class="badge bg-label-primary rounded-pill">@<?=$user_data['user_name']?></div>
                     </div>
+                    </a>
                 </li>
                 <?php } ?>
             </ul>
