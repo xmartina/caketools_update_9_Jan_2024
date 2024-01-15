@@ -1,3 +1,10 @@
+<?php
+$query = "SELECT * FROM wallet WHERE wallet_status = 'm_3' || wallet_status = 'b_3' ORDER BY wallet_id DESC LIMIT 7";
+$result = $conn->query($query);
+if (!$result) {
+    die('Query Error: ' . $conn->error);
+}
+?>
 <!-- Meeting Schedule -->
 <div class="col-xl-4 col-md-6">
     <div class="card h-100">
@@ -22,96 +29,33 @@
         </div>
         <div class="card-body">
             <ul class="p-0 m-0">
+                <?php while ($data = $result->fetch_assoc()) { ?>
+                    <?php $get_wallet_data = "SELECT * FROM wallet_data WHERE d_wallet_parent_id = '".$data['wallet_id']."'";
+                    $d_result = $conn->query($get_wallet_data);
+                    $wallet_data = $d_result->fetch_assoc()
+                    ?>
+                    <?php
+                    $get_user_data = "SELECT * FROM users WHERE id = '".$data['wallet_owner_id']."'";
+                    $u_result = $conn->query($get_user_data);
+                    $user_data = $u_result->fetch_assoc()
+                    ?>
+                    ?>
                 <li class="d-flex mb-4 pb-1">
                     <div class="avatar flex-shrink-0 me-3">
                         <img src="<?=adminUrl?>assets/img/avatars/4.png" alt="avatar" class="rounded" />
                     </div>
                     <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                         <div class="me-2">
-                            <h6 class="mb-0">Call with Woods</h6>
+                            <h6 class="mb-0"><?=$wallet_data['d_wallet_name']?></h6>
                             <small>
                                 <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
-                                <span>21 Jul | 08:20-10:30</span>
+                                <span><?=$wallet_data['d_wallet_date_updated']?>| <?=$wallet_data['d_wallet_time_updated']?></span>
                             </small>
                         </div>
-                        <div class="badge bg-label-primary rounded-pill">Business</div>
+                        <div class="badge bg-label-primary rounded-pill">@<?=$user_data['user_name']?></div>
                     </div>
                 </li>
-                <li class="d-flex mb-4 pb-1">
-                    <div class="avatar flex-shrink-0 me-3">
-                        <img src="<?=adminUrl?>assets/img/avatars/5.png" alt="avatar" class="rounded" />
-                    </div>
-                    <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                        <div class="me-2">
-                            <h6 class="mb-0">Conference call</h6>
-                            <small>
-                                <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
-                                <span>21 Jul | 08:20-10:30</span>
-                            </small>
-                        </div>
-                        <div class="badge bg-label-warning rounded-pill">Dinner</div>
-                    </div>
-                </li>
-                <li class="d-flex mb-4 pb-1">
-                    <div class="avatar flex-shrink-0 me-3">
-                        <img src="<?=adminUrl?>assets/img/avatars/3.png" alt="avatar" class="rounded" />
-                    </div>
-                    <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                        <div class="me-2">
-                            <h6 class="mb-0">Meeting with Mark</h6>
-                            <small>
-                                <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
-                                <span>21 Jul | 08:20-10:30</span>
-                            </small>
-                        </div>
-                        <div class="badge bg-label-secondary rounded-pill">Meetup</div>
-                    </div>
-                </li>
-                <li class="d-flex mb-4 pb-1">
-                    <div class="avatar flex-shrink-0 me-3">
-                        <img src="<?=adminUrl?>assets/img/avatars/14.png" alt="avatar" class="rounded" />
-                    </div>
-                    <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                        <div class="me-2">
-                            <h6 class="mb-0">Meeting in Oakland</h6>
-                            <small>
-                                <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
-                                <span>21 Jul | 08:20-10:30</span>
-                            </small>
-                        </div>
-                        <div class="badge bg-label-danger rounded-pill">Dinner</div>
-                    </div>
-                </li>
-                <li class="d-flex mb-4 pb-1">
-                    <div class="avatar flex-shrink-0 me-3">
-                        <img src="<?=adminUrl?>assets/img/avatars/8.png" alt="avatar" class="rounded" />
-                    </div>
-                    <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                        <div class="me-2">
-                            <h6 class="mb-0">Call with hilda</h6>
-                            <small>
-                                <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
-                                <span>21 Jul | 08:20-10:30</span>
-                            </small>
-                        </div>
-                        <div class="badge bg-label-success rounded-pill">Meditation</div>
-                    </div>
-                </li>
-                <li class="d-flex">
-                    <div class="avatar flex-shrink-0 me-3">
-                        <img src="<?=adminUrl?>assets/img/avatars/1.png" alt="avatar" class="rounded" />
-                    </div>
-                    <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                        <div class="me-2">
-                            <h6 class="mb-0">Meeting with Carl</h6>
-                            <small>
-                                <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
-                                <span>21 Jul | 08:20-10:30</span>
-                            </small>
-                        </div>
-                        <div class="badge bg-label-primary rounded-pill">Business</div>
-                    </div>
-                </li>
+                <?php } ?>
             </ul>
         </div>
     </div>
