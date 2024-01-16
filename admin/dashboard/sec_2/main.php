@@ -35,7 +35,10 @@ if (!$result) {
             <ul class="p-0 m-0">
                 <style>
                     li.pd_hover:hover{
-                        background-color: rgba(186, 184, 184, 0.05);
+                        background-color: rgba(90, 85, 85, 0.05);
+                        color: #aea8a8;
+                        transition: all 320ms ease-in-out;
+                        border-radius: 0.65em;
                     }
                 </style>
                 <?php while ($data = $result->fetch_assoc()) {
