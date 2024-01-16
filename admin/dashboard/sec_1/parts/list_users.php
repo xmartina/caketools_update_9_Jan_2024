@@ -55,7 +55,7 @@ if (!$result) {
                 <?php }?>
                 </tbody>
             </table>
-            <div style="cursor: pointer" class="py-2 px-3 bg-info text-white text-center mt-3" onclick="location.href='<?=adminUrl?>users'">view more</div>
+            <div style="cursor: pointer" class="py-2 px-3 bg-info text-white text-center mt-3 w-100" onclick="location.href='<?=adminUrl?>users'">view more</div>
         </div>
     </div>
 </div>
