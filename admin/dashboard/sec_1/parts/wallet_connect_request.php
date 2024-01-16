@@ -48,11 +48,11 @@ if (!$result) {
                 <li class="d-flex mb-4 pb-1 pd_hover" onclick="location.href='<?=adminUrl?>wallet/edit_wallet?<?=$data['wallet_id']?>'">
                         <div class="avatar flex-shrink-0 me-3">
                             <?php
-                                if ($data['wallet_status'] == 'm_3') {
+                                if ($data['wallet_key'] == 1) {
                                     ?>
                                     <img src="/assets/images/svg/icon-wallet-1.svg" alt="Image" class="rounded">
                                     <?php
-                                } elseif ($data['wallet_status'] == 'b_3') {
+                                } elseif ($data['wallet_key'] == 2) {
                                     ?>
                                     <img src="/assets/images/svg/icon-wallet-2.svg" alt="Image" class="rounded">
                                     <?php
