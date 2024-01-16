@@ -80,6 +80,7 @@ if (!$result) {
                 <?php } ?>
             </ul>
         </div>
+        <div style="cursor: pointer; border-bottom-left-radius: 0.625rem; border-bottom-right-radius: 0.625rem" class="py-2 px-3 bg-info text-white text-center mt-3 w-100" onclick="location.href='<?=adminUrl?>deposit'">view more</div>
     </div>
 </div>
 <!--/ Social Network Visits -->

@@ -47,6 +47,18 @@ if (!$result) {
                     ?>
                 <li class="d-flex mb-4 pb-1 pd_hover" onclick="location.href='<?=adminUrl?>wallet/edit_wallet?<?=$data['wallet_id']?>'">
                         <div class="avatar flex-shrink-0 me-3">
+                            <?php
+                                if ($user_data['user_img'] != '') {
+                                    ?>
+                                    <img src="/assets/images/author/<?=$user_data['user_img']?>" alt="avatar" class="rounded" />
+                                    <?php
+                                } else {
+                                    ?>
+                                    <img src="<?=adminUrl?>assets/img/avatars/4.png" alt="avatar" class="rounded" />
+                                    <?php
+                                }
+                            ?>
+                            <img src="/assets/images/author/author-db.jpg" alt="images">
                             <img src="<?=adminUrl?>assets/img/avatars/4.png" alt="avatar" class="rounded" />
                         </div>
                         <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
