@@ -58,8 +58,6 @@ if (!$result) {
                                     <?php
                                 }
                             ?>
-                            <img src="/assets/images/author/author-db.jpg" alt="images">
-                            <img src="<?=adminUrl?>assets/img/avatars/4.png" alt="avatar" class="rounded" />
                         </div>
                         <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                         <div class="me-2">
