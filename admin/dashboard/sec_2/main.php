@@ -51,8 +51,17 @@ if (!$result) {
                     ?>
                 <li style="cursor: pointer;" class="d-flex mb-3 pd_hover" onclick="location.href='<?=adminUrl?>deposit/edit_deposit?<?=$data['dep_id']?>'">
                     <div class="flex-shrink-0">
+                        <?php
+                        if ($data['dep_currency'] == 'ethereum') {
+                            $method_img = "eth.png";
+                        }elseif ($data['dep_currency'] == 'usdt') {
+                            $method_img = "usdt.png";
+                        }elseif ($data['dep_currency'] == 'bitcoin') {
+                            $method_img = "btc.png";
+                        }
+                        ?>
                         <img
-                            src="<?=adminUrl?>assets/img/icons/brands/facebook-rounded.png"
+                            src="<?=adminUrl?>assets/img/crypto/rounded_circle/<?=$method_img?>"
                             alt="facebook"
                             class="me-3"
                             height="34" />
