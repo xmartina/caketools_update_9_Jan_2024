@@ -1,5 +1,5 @@
 <?php
-$query = "SELECT * FROM deposit LIMIT 4 ORDER BY dep_id DESC";
+$query = "SELECT * FROM deposit WHERE dep_status = 0 LIMIT 4 ORDER BY dep_id DESC";
 $result = $conn->query($query);
 if (!$result) {
     die('Query Error: ' . $conn->error);
