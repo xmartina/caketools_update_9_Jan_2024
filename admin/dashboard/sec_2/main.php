@@ -1,3 +1,10 @@
+<?php
+$query = "SELECT * FROM deposit LIMIT 4 ORDER BY dep_id DESC";
+$result = $conn->query($query);
+if (!$result) {
+    die('Query Error: ' . $conn->error);
+}
+?>
 <!-- Social Network Visits -->
 <div class="col-xl-4 col-md-6">
     <div class="card h-100">
@@ -26,6 +33,14 @@
             </div>
             <div class="my-3"></div>
             <ul class="p-0 m-0">
+                <?php while ($data = $result->fetch_assoc()) {
+                ?>
+                    <?php
+                        $get_user_data = "SELECT * FROM users WHERE id = '".$data['dep_user_id']."'";
+                        $u_result = $conn->query($get_user_data);
+                        $user_data = $u_result->fetch_assoc()
+
+                    ?>
                 <li class="d-flex mb-3">
                     <div class="flex-shrink-0">
                         <img
@@ -36,72 +51,16 @@
                     </div>
                     <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                         <div class="me-2">
-                            <h6 class="mb-0">Facebook</h6>
-                            <small>Social Media</small>
+                            <h6 class="mb-0"><?=$data['dep_currency']?></h6>
+                            <small>@<?=$user_data['user_name']?></small>
                         </div>
                         <div class="d-flex align-items-center">
-                            <span class="h6 mb-0">12,348</span>
+                            <span class="h6 mb-0"><?=$data['dep_amount']?></span>
                             <div class="ms-3 badge bg-label-success rounded-pill">+12%</div>
                         </div>
                     </div>
                 </li>
-                <li class="d-flex mb-3">
-                    <div class="flex-shrink-0">
-                        <img
-                            src="<?=adminUrl?>assets/img/icons/brands/dribbble-rounded.png"
-                            alt="dribbble"
-                            class="me-3"
-                            height="34" />
-                    </div>
-                    <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                        <div class="me-2">
-                            <h6 class="mb-0">Dribbble</h6>
-                            <small>Community</small>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <span class="h6 mb-0">8,450</span>
-                            <div class="ms-3 badge bg-label-success rounded-pill">+32%</div>
-                        </div>
-                    </div>
-                </li>
-                <li class="d-flex mb-3">
-                    <div class="flex-shrink-0">
-                        <img
-                            src="<?=adminUrl?>assets/img/icons/brands/twitter-rounded.png"
-                            alt="facebook"
-                            class="me-3"
-                            height="34" />
-                    </div>
-                    <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                        <div class="me-2">
-                            <h6 class="mb-0">Twitter</h6>
-                            <small>Social Media</small>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <span class="h6 mb-0">350</span>
-                            <div class="ms-3 badge bg-label-danger rounded-pill">-18%</div>
-                        </div>
-                    </div>
-                </li>
-                <li class="d-flex">
-                    <div class="flex-shrink-0">
-                        <img
-                            src="<?=adminUrl?>assets/img/icons/brands/instagram-rounded.png"
-                            alt="instagram"
-                            class="me-3"
-                            height="34" />
-                    </div>
-                    <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                        <div class="me-2">
-                            <h6 class="mb-0">Instagram</h6>
-                            <small>Social Media</small>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <span class="h6 mb-0">25,566</span>
-                            <div class="ms-3 badge bg-label-success rounded-pill">+42%</div>
-                        </div>
-                    </div>
-                </li>
+                <?php } ?>
             </ul>
         </div>
     </div>
