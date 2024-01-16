@@ -50,7 +50,7 @@ if (!$result) {
                             <?php
                                 if ($user_data['user_img'] != '') {
                                     ?>
-                                    <img src="/assets/images/author/<?=$user_data['user_img']?>" alt="avatar" class="rounded" />
+                                    <img style="object-fit: contain" src="/assets/images/author/<?=$user_data['user_img']?>" alt="avatar" class="rounded" />
                                     <?php
                                 } else {
                                     ?>

@@ -36,8 +36,17 @@ if (!$result) {
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
                                 <div class="avatar avatar-sm me-2">
-                                    <img src="https://caketoolnftmarketplace.com/admin/assets/img/avatars/1.png"
-                                         alt="Avatar" class="rounded-circle">
+                                    <?php
+                                    if ($data['user_img'] != '') {
+                                        ?>
+                                        <img style="object-fit: contain" src="/assets/images/author/<?=$data['user_img']?>" alt="avatar" class="rounded-circle" />
+                                        <?php
+                                    } else {
+                                        ?>
+                                        <img src="<?=adminUrl?>assets/img/avatars/1.png" alt="Avatar" class="rounded-circle">
+                                        <?php
+                                    }
+                                    ?>
                                 </div>
                             </div>
                             <div class="d-flex flex-column ps-1">
