@@ -57,11 +57,11 @@ if (!$result) {
                         <div class="d-flex align-items-center">
                             <?php
                                 if ($data['dep_currency'] == 'ethereum') {
-                                    $currency_symbol = 'eth';
+                                    $currency_symbol = "<i class='fab fa-ethereum'></i>";
                                 }elseif ($data['dep_currency'] == 'usdt') {
-                                    $currency_symbol = 'usdt';
+                                    $currency_symbol = '₮';
                                 }elseif ($data['dep_currency'] == 'bitcoin') {
-                                    $currency_symbol = 'btc';
+                                    $currency_symbol = "<i class='fab fa-bitcoin'></i>";
                                 }
                             ?>
                             <span class="h6 mb-0"><?=$currency_symbol.$data['dep_amount']?></span>
