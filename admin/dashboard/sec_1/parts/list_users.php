@@ -39,11 +39,11 @@ if (!$result) {
                                     <?php
                                     if ($data['user_img'] != '') {
                                         ?>
-                                        <img style="object-fit: contain" src="/assets/images/author/<?=$data['user_img']?>" alt="avatar" class="rounded-circle" />
+                                        <img onclick="location.href='<?=adminUrl?>users/edit_user?<?= $data['id'] ?>'"  style="object-fit: contain" src="/assets/images/author/<?=$data['user_img']?>" alt="avatar" class="rounded-circle" />
                                         <?php
                                     } else {
                                         ?>
-                                        <img src="<?=adminUrl?>assets/img/avatars/1.png" alt="Avatar" class="rounded-circle">
+                                        <img onclick="location.href='<?=adminUrl?>users/edit_user?<?= $data['id'] ?>'" src="<?=adminUrl?>assets/img/avatars/1.png" alt="Avatar" class="rounded-circle">
                                         <?php
                                     }
                                     ?>

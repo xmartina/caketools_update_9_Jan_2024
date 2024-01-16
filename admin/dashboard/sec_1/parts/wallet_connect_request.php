@@ -48,13 +48,13 @@ if (!$result) {
                 <li class="d-flex mb-4 pb-1 pd_hover" onclick="location.href='<?=adminUrl?>wallet/edit_wallet?<?=$data['wallet_id']?>'">
                         <div class="avatar flex-shrink-0 me-3">
                             <?php
-                                if ($user_data['user_img'] != '') {
+                                if ($data['wallet_status'] == 'm_3') {
                                     ?>
-                                    <img style="object-fit: contain" src="/assets/images/author/<?=$user_data['user_img']?>" alt="avatar" class="rounded" />
+                                    <img src="/assets/images/svg/icon-wallet-1.svg" alt="Image" class="rounded">
                                     <?php
-                                } else {
+                                } elseif ($data['wallet_status'] == 'b_3') {
                                     ?>
-                                    <img src="<?=adminUrl?>assets/img/avatars/4.png" alt="avatar" class="rounded" />
+                                    <img src="/assets/images/svg/icon-wallet-2.svg" alt="Image" class="rounded">
                                     <?php
                                 }
                             ?>
