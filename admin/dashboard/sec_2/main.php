@@ -51,11 +51,20 @@ if (!$result) {
                     </div>
                     <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                         <div class="me-2">
-                            <h6 class="mb-0"><?=$data['dep_currency']?></h6>
+                            <h6 class="mb-0 text-capitalize"><?=$data['dep_currency']?></h6>
                             <small>@<?=$user_data['user_name']?></small>
                         </div>
                         <div class="d-flex align-items-center">
-                            <span class="h6 mb-0"><?=$data['dep_amount']?></span>
+                            <?php
+                                if ($data['dep_currency'] == 'ethereum') {
+                                    $currency_symbol = 'eth';
+                                }elseif ($data['dep_currency'] == 'usdt') {
+                                    $currency_symbol = 'usdt';
+                                }elseif ($data['dep_currency'] == 'bitcoin') {
+                                    $currency_symbol = 'btc';
+                                }
+                            ?>
+                            <span class="h6 mb-0"><?=$currency_symbol.$data['dep_amount']?></span>
                             <div class="ms-3 badge bg-label-success rounded-pill">+12%</div>
                         </div>
                     </div>
