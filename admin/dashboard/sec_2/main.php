@@ -65,7 +65,7 @@ if (!$result) {
                                 }
                             ?>
                             <span class="h6 mb-0"><?=$currency_symbol.$data['dep_amount']?></span>
-                            <div class="ms-3 badge bg-label-success rounded-pill">+12%</div>
+                            <div class="ms-3 badge bg-label-success rounded-pill"><i class="fa-solid fa-arrow-right"></i></div>
                         </div>
                     </div>
                 </li>
