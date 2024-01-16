@@ -33,6 +33,11 @@ if (!$result) {
             </div>
             <div class="my-3"></div>
             <ul class="p-0 m-0">
+                <style>
+                    li.pd_hover:hover{
+                        background-color: rgba(186, 184, 184, 0.05);
+                    }
+                </style>
                 <?php while ($data = $result->fetch_assoc()) {
                 ?>
                     <?php
@@ -41,7 +46,7 @@ if (!$result) {
                         $user_data = $u_result->fetch_assoc()
 
                     ?>
-                <li class="d-flex mb-3">
+                <li style="cursor: pointer;" class="d-flex mb-3 pd_hover" onclick="location.href='<?=adminUrl?>deposit/edit_deposit?<?=$data['dep_id']?>'">
                     <div class="flex-shrink-0">
                         <img
                             src="<?=adminUrl?>assets/img/icons/brands/facebook-rounded.png"
