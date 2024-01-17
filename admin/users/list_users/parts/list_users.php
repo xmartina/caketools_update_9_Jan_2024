@@ -1,7 +1,7 @@
 <?php
 while ($data = $result->fetch_assoc()) {
     ?>
-    <tr class="odd">
+    <tr class="odd" data-page="<?= $page ?>">
         <td class="control dtr-hidden" tabindex="0" style="display: none;"></td>
         <td class="  dt-checkboxes-cell"><input type="checkbox" class="dt-checkboxes form-check-input">
         </td>

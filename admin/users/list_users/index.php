@@ -1,10 +1,13 @@
 <?php
-$query = "SELECT * FROM users ORDER BY id DESC LIMIT 7";
+$page = isset($_GET['page']) ? intval($_GET['page']) : 1;
+$perPage = 7;
+$offset = ($page - 1) * $perPage;
+
+$query = "SELECT * FROM users ORDER BY id DESC LIMIT $offset, $perPage";
 $result = $conn->query($query);
 if (!$result) {
     die('Query Error: ' . $conn->error);
 }
-
 ?>
 <div class="card">
     <div class="card-datatable table-responsive">
@@ -200,3 +203,30 @@ if (!$result) {
         </div>
     </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const tableBody = document.querySelector('.datatables-users tbody');
+        const paginationLinks = document.querySelectorAll('.pagination .page-link');
+
+        paginationLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+                const page = this.getAttribute('data-page');
+
+                // Load data for the selected page
+                fetchData(page);
+            });
+        });
+
+        function fetchData(page) {
+            const url = `<?=adminRootDir?>users/list_users/index.php?page=${page}`;
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    tableBody.innerHTML = data;
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    });
+</script>
