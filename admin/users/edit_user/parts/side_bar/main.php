@@ -22,7 +22,7 @@ if (!$result) {
                         src="/assets/images/author/<?=$user_data['user_img']?>" height="120" width="120" alt="User avatar" />
                     <?php }?>
                     <div class="user-info text-center">
-                        <h4><?=$user_data['first_name']." ".$user_data['last_name']?></h4>
+                        <h4 class="text-capitalize"><?=$user_data['first_name']." ".$user_data['last_name']?></h4>
                         <span class="badge bg-label-danger rounded-pill">@<?=$user_data['user_name']?></span>
                     </div>
                 </div>
