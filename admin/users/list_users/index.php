@@ -61,7 +61,12 @@ if (!$result) {
             </div>
             <div class="toast-body">User was deleted successfully</div>
         </div>
-<?php }elseif (isset($_GET['user_create_success'])) { ?>
+        <script>
+            setTimeout(function() {
+                window.location.href = "<?php echo adminUrl; ?>users/";
+            }, 4000); // 3000 milliseconds = 3 seconds
+        </script>
+    <?php }elseif (isset($_GET['user_create_success'])) { ?>
         <div class="bs-toast toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
                 <i class="mdi mdi-check-circle text-success me-2"></i>
@@ -71,6 +76,11 @@ if (!$result) {
             </div>
             <div class="toast-body">User was Created Successfully</div>
         </div>
+        <script>
+            setTimeout(function() {
+                window.location.href = "<?php echo adminUrl; ?>users/";
+            }, 4000); // 3000 milliseconds = 3 seconds
+        </script>
 
 <?php } ?>
 <div class="card">
