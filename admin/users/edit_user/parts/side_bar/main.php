@@ -88,7 +88,7 @@ if (!$result) {
                     </li>
                     <li class="mb-3">
                         <span class="fw-medium text-heading me-2">Status:</span>
-                        <?php if ($user_data['is_active'] == 0) { ?>
+                        <?php if ($user_data['user_status'] == 0) { ?>
                             <span class="badge bg-label-danger rounded-pill">Inactive</span>
                         <?php } elseif($user_data['user_status'] == 1) { ?>
                             <span class="badge bg-label-success rounded-pill">Active</span>
