@@ -9,24 +9,41 @@ while ($data = $result->fetch_assoc()) {
             <div class="d-flex justify-content-start align-items-center user-name">
                 <div class="avatar-wrapper">
                     <div class="avatar avatar-sm me-3">
-                        <img src="<?= adminUrl ?>assets/img/avatars/4.png" alt="Avatar" class="rounded-circle">
+                        <?php
+                        if ($data['user_img'] != '') {
+                            ?>
+                            <img onclick="location.href='<?=adminUrl?>users/edit_user?<?= $data['id'] ?>'"  style="object-fit: contain" src="/assets/images/author/<?=$data['user_img']?>" alt="avatar" class="rounded-circle" />
+                            <?php
+                        } else {
+                            ?>
+                            <img onclick="location.href='<?=adminUrl?>users/edit_user?<?= $data['id'] ?>'" src="<?=adminUrl?>assets/img/avatars/1.png" alt="Avatar" class="rounded-circle">
+                            <?php
+                        }
+                        ?>
                     </div>
                 </div>
-                <div class="d-flex flex-column"><a href="app-user-view-account.html"
-                                                   class="text-truncate"><span
-                            class="fw-medium text-heading">Jonah
-                                            Wharlton</span></a><small>jwharltona@oakley.com</small>
+                <div class="d-flex flex-column">
+                    <a href="app-user-view-account.html" class="text-truncate">
+                        <span class="fw-medium text-heading"><?= $data['first_name']. ' '.$data['last_name'] ?></span>
+                    </a>
+                    <small>@<?= $data['user_name'] ?></small>
                 </div>
             </div>
         </td>
-        <td><span class="text-truncate d-flex align-items-center"><i
-                    class="mdi mdi-account-outline mdi-20px text-primary me-2"></i>Subscriber</span>
+        <td>
+            <?php if ($data['role'] == 1){ $user_role = 'Admin'; }elseif ($data['role'] == 2){ $user_role = 'User'; } ?>
+            <span class="text-truncate d-flex align-items-center"><i class="mdi mdi-account-outline mdi-20px text-primary me-2"></i><?= $user_role ?></span>
         </td>
         <td><span class="text-heading">Team</span></td>
-        <td class="" style="">Manual - Paypal</td>
-        <td class="" style=""><span class="badge rounded-pill bg-label-secondary"
-                                    text-capitalized="">Inactive</span>
-        </td>
+        <td class="" style=""><?= $data['email'] ?></td>
+        <?php
+            if ($data['user_status'] == 1){
+                ?>
+                <td class="" style=""><span class="badge rounded-pill bg-label-success" text-capitalized="">Active</span></td>
+                <?php
+            }elseif ($data['user_status'] == 0){ ?>
+                <td class="" style=""><span class="badge rounded-pill bg-label-secondary" text-capitalized="">Inactive</span></td>
+        <?php } ?>
         <td class="" style="">
             <div class="d-inline-block text-nowrap">
                 <button
