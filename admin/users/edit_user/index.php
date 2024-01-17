@@ -11,7 +11,6 @@ include_once (adminRootDir.'partials/header/main.php');
 <?php
 if (isset($_GET['user_acct_id'])) {
     $user_acct_id = $_GET['user_acct_id'];
-    echo $user_acct_id;
 
     // Include the content and footer only if the edit_user parameter is set
     include_once(adminRootDir . 'users/edit_user/parts/main.php');
