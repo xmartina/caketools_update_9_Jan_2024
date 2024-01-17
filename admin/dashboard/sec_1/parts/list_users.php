@@ -39,11 +39,11 @@ if (!$result) {
                                     <?php
                                     if ($data['user_img'] != '') {
                                         ?>
-                                        <img onclick="location.href='<?=adminUrl?>users/edit_user?<?= $data['id'] ?>'"  style="object-fit: contain" src="/assets/images/author/<?=$data['user_img']?>" alt="avatar" class="rounded-circle" />
+                                        <img onclick="location.href='<?=adminUrl?>users/edit_user?user_acct_id<?= $data['id'] ?>'"  style="object-fit: contain" src="/assets/images/author/<?=$data['user_img']?>" alt="avatar" class="rounded-circle" />
                                         <?php
                                     } else {
                                         ?>
-                                        <img onclick="location.href='<?=adminUrl?>users/edit_user?<?= $data['id'] ?>'" src="<?=adminUrl?>assets/img/avatars/1.png" alt="Avatar" class="rounded-circle">
+                                        <img onclick="location.href='<?=adminUrl?>users/edit_user?user_acct_id<?= $data['id'] ?>'" src="<?=adminUrl?>assets/img/avatars/1.png" alt="Avatar" class="rounded-circle">
                                         <?php
                                     }
                                     ?>
@@ -59,7 +59,7 @@ if (!$result) {
                     <td><?= $data['email'] ?></td>
                     <td><span class="d-flex align-items-center gap-2"><i
                                 class="mdi mdi-laptop text-danger"></i><?= $user_role ?></span></td>
-                    <td><a href="<?=adminUrl?>users/edit_user?userId=<?= $data['id'] ?>"><span class="badge rounded-pill bg-label-warning">Edit User</span></a></td>
+                    <td><a href="<?=adminUrl?>users/edit_user?user_acct_id=<?= $data['id'] ?>"><span class="badge rounded-pill bg-label-warning">Edit User</span></a></td>
                 </tr>
                 <?php }?>
                 </tbody>

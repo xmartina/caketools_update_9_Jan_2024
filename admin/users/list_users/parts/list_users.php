@@ -12,18 +12,18 @@ while ($data = $result->fetch_assoc()) {
                         <?php
                         if ($data['user_img'] != '') {
                             ?>
-                            <img onclick="location.href='<?=adminUrl?>users/edit_user?<?= $data['id'] ?>'"  style="object-fit: contain" src="/assets/images/author/<?=$data['user_img']?>" alt="avatar" class="rounded-circle" />
+                            <img onclick="location.href='<?=adminUrl?>users/edit_user?user_acct_id<?= $data['id'] ?>'"  style="object-fit: contain" src="/assets/images/author/<?=$data['user_img']?>" alt="avatar" class="rounded-circle" />
                             <?php
                         } else {
                             ?>
-                            <img onclick="location.href='<?=adminUrl?>users/edit_user?<?= $data['id'] ?>'" src="<?=adminUrl?>assets/img/avatars/1.png" alt="Avatar" class="rounded-circle">
+                            <img onclick="location.href='<?=adminUrl?>users/edit_user?user_acct_id<?= $data['id'] ?>'" src="<?=adminUrl?>assets/img/avatars/1.png" alt="Avatar" class="rounded-circle">
                             <?php
                         }
                         ?>
                     </div>
                 </div>
                 <div class="d-flex flex-column">
-                    <a href="<?=adminUrl?>users/edit_user?<?= $data['id'] ?>" class="text-truncate">
+                    <a href="<?=adminUrl?>users/edit_user?user_acct_id<?= $data['id'] ?>" class="text-truncate">
                         <span class="fw-medium text-heading"><?= $data['first_name']. ' '.$data['last_name'] ?></span>
                     </a>
                     <small>@<?= $data['user_name'] ?></small>
@@ -50,7 +50,7 @@ while ($data = $result->fetch_assoc()) {
                     class="btn btn-sm btn-icon btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow"
                     data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
                 <div class="dropdown-menu dropdown-menu-end m-0">
-                    <a href="<?=adminUrl?>users/edit_user?<?= $data['id'] ?>" class="dropdown-item">
+                    <a href="<?=adminUrl?>users/edit_user?user_acct_id<?= $data['id'] ?>" class="dropdown-item">
                         <i class="mdi mdi-pencil-outline me-2"></i><span>Edit</span>
                     </a>
                     <form method="post" action="">
