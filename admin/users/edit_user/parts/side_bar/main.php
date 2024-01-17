@@ -1,3 +1,13 @@
+<?php
+    $get_user_info = "SELECT * FROM users WHERE user_acct_id = $user_acct_id";
+    $result = $mysqli->query($get_user_info);
+    $user_data = $result->fetch_assoc();
+    if ($user_data['user_status'] == 1){
+        $user_status = 'Active';
+    }elseif ($user_data['user_status'] == 0){
+        $user_status = 'Inactive';
+    }
+?>
 <!-- User Sidebar -->
 <div class="col-xl-4 col-lg-5 col-md-5 order-1 order-sm-0 order-md-0">
     <!-- User Card -->
@@ -7,10 +17,11 @@
                 <div class="d-flex align-items-center flex-column">
                     <img
                         class="img-fluid rounded mb-3 mt-4"
-                        src="../../assets/img/avatars/10.png"
-                        height="120"
-                        width="120"
-                        alt="User avatar" />
+                        <?php if ($user_data['user_img'] == '')  { ?>
+                        src="/assets/images/author/author-db.jpg" height="120" width="120" alt="User avatar" />
+                    <?php } else { ?>
+                        src="/assets/images/author/<?=$user_data['user_img']?>" height="120" width="120" alt="User avatar" />
+                    <?php }?>
                     <div class="user-info text-center">
                         <h4>Violet Mendoza</h4>
                         <span class="badge bg-label-danger rounded-pill">Author</span>
