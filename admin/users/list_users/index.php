@@ -213,7 +213,7 @@ if (!$result) {
         });
 
         function fetchData(page) {
-            const url = `<?=adminUrl?>users/list_users/index.php?page=${page}`;
+            const url = `<?=adminUrl?>users/index.php?page=${page}`;
             fetch(url)
                 .then(response => response.text())
                 .then(data => {
