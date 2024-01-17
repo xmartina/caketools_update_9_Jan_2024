@@ -64,9 +64,16 @@
                                 name="user_status"
                                 class="form-select"
                                 aria-label="Default select example">
-                                <option selected value="<?= $user_data['user_status'] ?>"><?= $user_data['user_status'] ?></option>
+                                <?php
+                                if ($user_data['user_status'] == 1){
+                                    $user_status_name = 'Active';
+                                }elseif ($user_data['user_status'] == 0){
+                                    $user_status_name = 'Inactive';
+                                }
+                                ?>
+                                <option selected value="<?= $user_data['user_status'] ?>"><?= $user_status_name ?></option>
                                 <option value="1">Active</option>
-                                <option value="2">Inactive</option>
+                                <option value="0">Inactive</option>
                             </select>
                             <label for="modalEditUserStatus">Status</label>
                         </div>
