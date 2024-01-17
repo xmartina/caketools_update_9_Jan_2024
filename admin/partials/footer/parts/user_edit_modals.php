@@ -80,21 +80,16 @@
                     </div>
                     <div class="col-12 col-md-6">
                         <div class="form-floating form-floating-outline">
-                            <select
-                                id="modalEditUserStatus"
-                                name="role"
-                                class="form-select"
-                                aria-label="Default select example">
+                            <select id="modalEditUserStatus" name="role" class="form-select" aria-label="Default select example">
                                 <?php
-                                if ($user_data['role'] == 1){
+                                if ($user_data['role'] == 1) {
                                     $role_name = 'Admin';
-                                }elseif ($user_data['role'] == 2){
+                                } elseif ($user_data['role'] == 2) {
                                     $role_name = 'User';
                                 }
                                 ?>
-                                <option selected value="<?= $user_data['role'] ?>" disabled> <?= $role_name ?></option>
-                                <option value="1">Admin</option>
-                                <option value="2">User</option>
+                                <option value="1" <?= ($user_data['role'] == 1) ? 'selected' : ''; ?>>Admin</option>
+                                <option value="2" <?= ($user_data['role'] == 2) ? 'selected' : ''; ?>>User</option>
                             </select>
                             <label for="modalEditUserStatus">Role</label>
                         </div>
