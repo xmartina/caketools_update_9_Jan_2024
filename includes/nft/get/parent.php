@@ -35,7 +35,7 @@
 // ... Your previous code ...
 // Assuming $_GET['nft_details'] is an integer; adjust the validation based on your needs
 // Assuming $_GET['nft_details'] is an integer; adjust the validation based on your needs
-$nft_ref_id = filter_input(INPUT_GET, 'nft_details', FILTER_VALIDATE_INT);
+//$nft_ref_id = filter_input(INPUT_GET, 'nft_details', FILTER_VALIDATE_INT);
 
 if ($nft_ref_id !== false && $nft_ref_id !== null) {
     // Sanitize and escape user input
