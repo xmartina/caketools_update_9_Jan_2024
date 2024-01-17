@@ -38,7 +38,6 @@ if (!$result) {
                         <?php
                         $user_total_balance = $user_data['eth_bal'] + $user_data['btc_bal'] + $user_data['usdt_bal'];
                         ?>
-                        ?>
                         <h4 class="mb-0"><?=$user_total_balance?></h4>
                         <span>Total Balance</span>
                     </div>
