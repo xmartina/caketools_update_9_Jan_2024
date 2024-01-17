@@ -5,6 +5,7 @@
 ////} else {
 ////Get NFT Parent data
 //
+//$sql = "SELECT * FROM nft_parent WHERE ref_id = $nft_ref_id";
 $sql = "SELECT * FROM nft_parent WHERE ref_id = $nft_ref_id";
 //
 ////    $sql = "SELECT * FROM nft_parent WHERE current_owner_id = $user_id";
