@@ -1,6 +1,4 @@
 <?php
-const adminRootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_html/admin/';
-const rootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_html/';
 include_once (adminRootDir.'includes/adminCore.php');
 
 if (!$conn) {
@@ -14,14 +12,6 @@ if (isset($_GET['user_acct_id'])) {
 
     if ($result) {
         $user_data = $result->fetch_assoc();
-
-        // Rest of your code for displaying modal...
-    } else {
-        // Handle query error
-        die('Query Error: ' . $conn->error);
-    }
-}
-
 ?>
 <!-- Edit User Modal -->
 <div class="modal fade" id="editUser" tabindex="-1" aria-hidden="true">
@@ -198,3 +188,8 @@ if (isset($_GET['user_acct_id'])) {
     </div>
 </div>
 <!--/ Upgrade Plan -->
+<?php  } else {
+        // Handle query error
+        die('Query Error: ' . $conn->error);
+    }
+}
