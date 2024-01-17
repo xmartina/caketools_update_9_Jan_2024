@@ -28,11 +28,11 @@ if (!$result) {
         <div class="bs-toast toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
                 <i class="mdi mdi-alert-circle text-danger me-2"></i>
-                <div class="me-auto fw-medium">Bootstrap</div>
-                <small class="text-muted">11 mins ago</small>
+                <div class="me-auto fw-medium">User Deleted</div>
+                <small class="text-muted">1 sec ago</small>
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
-            <div class="toast-body">Hello, world! This is a toast message.</div>
+    <div class="toast-body">User was deleted successfully</div>
         </div>
 <?php } ?>
 <div class="card">
