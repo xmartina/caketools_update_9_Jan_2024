@@ -23,7 +23,7 @@ if (!$result) {
 }
 ?>
 <?php
-    if ($_GET['user_delete_success']) { ?>
+    if (isset($_GET['user_delete_success'])) { ?>
 <div class="alert alert-success alert-dismissible fade show" role="alert">
 <?php } ?>
 <div class="card">
