@@ -26,6 +26,38 @@ if (isset($_GET['user_acct_id'])) {
             die('Error deleting user: ' . $conn->error);
         }
     }
+    elseif ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_user'])) {
+
+        // Get form data
+        $first_name = $_POST['first_name'];
+        $last_name = $_POST['last_name'];
+        $user_name = $_POST['user_name'];
+        $email = $_POST['email'];
+        $user_status = $_POST['user_status'];
+        $role = $_POST['role'];
+        $gender = $_POST['gender'];
+        $dob = $_POST['DOB'];
+
+        // Update user information in the database
+        $update_query = "UPDATE users SET 
+                    first_name = '$first_name',
+                    last_name = '$last_name',
+                    user_name = '$user_name',
+                    email = '$email',
+                    user_status = '$user_status',
+                    role = '$role',
+                    gender = '$gender',
+                    dob = '$dob'
+                    WHERE id = $user_acct_id";
+
+        if ($conn->query($update_query) === TRUE) {
+            header("Location: " . adminUrl . "users?update_user_success");
+            exit();
+        } else {
+            echo "Error updating user information: " . $conn->error;
+        }
+    }
+
 
     // Include the content and footer only if the edit_user parameter is set
     include_once(adminRootDir . 'users/edit_user/parts/main.php');

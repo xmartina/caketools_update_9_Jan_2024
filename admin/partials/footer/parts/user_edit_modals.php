@@ -17,7 +17,7 @@ if (!$result) {
                     <h3 class="mb-2">Edit User Information</h3>
                     <p class="pt-1">Updating user details will receive a privacy audit.</p>
                 </div>
-                <form id="editUserForm" class="row g-4" onsubmit="return false">
+                <form class="row g-4" method="post">
                     <div class="col-12 col-md-6">
                         <div class="form-floating form-floating-outline">
                             <input
@@ -91,7 +91,7 @@ if (!$result) {
                                 <option value="1">Admin</option>
                                 <option value="2">User</option>
                             </select>
-                            <label for="modalEditUserStatus">Status</label>
+                            <label for="modalEditUserStatus">Role</label>
                         </div>
                     </div>
                     <div class="col-12 col-md-6">
@@ -110,8 +110,20 @@ if (!$result) {
                             </div>
                         </div>
                     </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-floating form-floating-outline">
+                            <input
+                                type="text"
+                                id="modalEditUserEmail"
+                                name="DOB"
+                                class="form-control"
+                                value="<?= $user_data['dob'] ?>"
+                                placeholder="example@domain.com" />
+                            <label for="modalEditUserEmail">DOB</label>
+                        </div>
+                    </div>
                     <div class="col-12 text-center">
-                        <button type="submit" class="btn btn-primary me-sm-3 me-1">Submit</button>
+                        <button type="submit" class="btn btn-primary me-sm-3 me-1" name="update_user">Submit</button>
                         <button
                             type="reset"
                             class="btn btn-outline-secondary"

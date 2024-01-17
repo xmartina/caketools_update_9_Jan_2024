@@ -81,7 +81,22 @@ if (!$result) {
                 window.location.replace("<?php echo adminUrl; ?>users/");
             }, 4000); // 4000 milliseconds = 4 seconds
         </script>
-    <?php } ?>
+    <?php } elseif (isset($_GET['update_user_success'])) { ?>
+        <div class="bs-toast toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="mdi mdi-information text-info me-2"></i>
+                <div class="me-auto fw-medium">User Successfully Updated</div>
+                <small class="text-muted">1 sec ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">User was updated successfully</div>
+        </div>
+        <script>
+            setTimeout(function() {
+                window.location.replace("<?php echo adminUrl; ?>users/");
+            }, 4000); // 4000 milliseconds = 4 seconds
+        </script>
+<?php } ?>
 <div class="card">
     <div class="card-datatable table-responsive">
         <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
