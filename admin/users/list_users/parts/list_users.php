@@ -49,13 +49,15 @@ while ($data = $result->fetch_assoc()) {
                 <button
                     class="btn btn-sm btn-icon btn-text-secondary rounded-pill btn-icon dropdown-toggle hide-arrow"
                     data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical mdi-20px"></i></button>
-                <div class="dropdown-menu dropdown-menu-end m-0"><a href="app-user-view-account.html"
-                                                                    class="dropdown-item"><i
-                            class="mdi mdi-eye-outline me-2"></i><span>View</span></a><a
-                        href="javascript:;" class="dropdown-item"><i
-                            class="mdi mdi-pencil-outline me-2"></i><span>Edit</span></a><a
-                        href="javascript:;" class="dropdown-item delete-record"><i
-                            class="mdi mdi-delete-outline me-2"></i><span>Delete</span></a></div>
+                <div class="dropdown-menu dropdown-menu-end m-0">
+                    <a href="<?=adminUrl?>users/edit_user?<?= $data['id'] ?>" class="dropdown-item">
+                        <i class="mdi mdi-pencil-outline me-2"></i><span>Edit</span>
+                    </a>
+                    <a href="<?=adminUrl?>users/edit_user?<?= $data['id'] ?>" class="dropdown-item delete-record">
+                        <i class="mdi mdi-delete-outline me-2"></i>
+                        <span>Delete</span>
+                    </a>
+                </div>
             </div>
         </td>
     </tr>
