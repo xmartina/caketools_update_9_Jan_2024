@@ -3,7 +3,7 @@ $page = isset($_GET['page']) ? intval($_GET['page']) : 1;
 $perPage = 7;
 $offset = ($page - 1) * $perPage;
 
-$query = "SELECT * FROM users ORDER BY id DESC LIMIT $offset";
+$query = "SELECT * FROM users ORDER BY id DESC LIMIT $offset, $perPage";
 $result = $conn->query($query);
 
 if (!$result) {
