@@ -57,8 +57,12 @@ if (!$result) {
                         if ($result) {
                         $row = $result->fetch_assoc();
                         $user_total_nft = $row['total_rows'];
+                        ?><?php
+                            if ($user_total_nft == 0) {
+                                $user_total_nft = 0;
+                            }
                         ?>
-                        <h4 class="mb-0"><?=$user_total_nft?>></h4>
+                        <h4 class="mb-0"><?=$user_total_nft?></h4>
                         <span>Total NFTs</span>
                         <?php
                             $conn->close();
