@@ -1,4 +1,5 @@
 <?php
+
 $query = "SELECT * FROM users WHERE id = $user_acct_id ";
 $result = $conn->query($query);
 $user_data = $result->fetch_assoc();
