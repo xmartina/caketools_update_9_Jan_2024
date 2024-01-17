@@ -5,6 +5,7 @@ $offset = ($page - 1) * $perPage;
 
 $query = "SELECT * FROM users ORDER BY id DESC LIMIT $offset, $perPage";
 $result = $conn->query($query);
+
 if (!$result) {
     die('Query Error: ' . $conn->error);
 }
