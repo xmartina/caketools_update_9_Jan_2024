@@ -9,6 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_user'])) {
 
     if ($deleteResult) {
         header("Location: " . adminUrl . "users?user_delete_success");
+        exit();
     } else {
         die('Error deleting user: ' . $conn->error);
     }

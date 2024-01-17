@@ -1,4 +1,6 @@
-<?php include_once(adminRootDir . "partials/header/parts/page_meta.php");  ?>
+<?php
+ob_start();
+include_once(adminRootDir . "partials/header/parts/page_meta.php");  ?>
 <body>
 <!-- Layout wrapper -->
 <div class="layout-wrapper layout-content-navbar">
