@@ -80,19 +80,27 @@ if (!$result) {
                 <ul class="list-unstyled mb-4">
                     <li class="mb-3">
                         <span class="fw-medium text-heading me-2">Username:</span>
-                        <span>violet.dev</span>
+                        <span><?=$user_data['user_name']?></span>
                     </li>
                     <li class="mb-3">
                         <span class="fw-medium text-heading me-2">Email:</span>
-                        <span>vafgot@vultukir.org</span>
+                        <span><?=$user_data['email']?></span>
                     </li>
                     <li class="mb-3">
                         <span class="fw-medium text-heading me-2">Status:</span>
-                        <span class="badge bg-label-success rounded-pill">Active</span>
+                        <?php if ($user_data['is_active'] == 0) { ?>
+                            <span class="badge bg-label-danger rounded-pill">Inactive</span>
+                        <?php } elseif($user_data['user_status'] == 1) { ?>
+                            <span class="badge bg-label-success rounded-pill">Active</span>
+                        <?php } ?>
                     </li>
                     <li class="mb-3">
                         <span class="fw-medium text-heading me-2">Role:</span>
-                        <span>Author</span>
+                        <?php if ($user_data['role'] == 1) { ?>
+                            <span class="badge bg-label-primary rounded-pill">Admin</span>
+                        <?php } elseif ($user_data['role'] == 2) { ?>
+                            <span class="badge bg-label-secondary rounded-pill">User</span>
+                        <?php } ?>
                     </li>
                     <li class="mb-3">
                         <span class="fw-medium text-heading me-2">Tax id:</span>
