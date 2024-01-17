@@ -39,7 +39,7 @@
 
 if ($nft_ref_id !== false && $nft_ref_id !== null) {
     // Sanitize and escape user input
-    $nft_ref_id = intval($nft_ref_id);
+//    $nft_ref_id = intval($nft_ref_id);
 
     // Construct the SQL query with proper value
     $sql = "SELECT * FROM nft_parent WHERE ref_id = $nft_ref_id";
