@@ -49,8 +49,25 @@ if (!$result) {
                         </div>
                     </div>
                     <div>
-                        <h4 class="mb-0">568</h4>
+                        <?php
+                        $get_nft_count = "SELECT COUNT(*) as total_rows FROM nft_parent WHERE current_owner_id = $user_acct_id";
+                        $result = $conn->query($get_nft_count);
+
+                        // Check if the query was successful
+                        if ($result) {
+                        $row = $result->fetch_assoc();
+                        $user_total_nft = $row['total_rows'];
+                        ?>
+                        <h4 class="mb-0"><?=$user_total_nft?>></h4>
                         <span>Total NFTs</span>
+                        <?php
+                            $conn->close();
+                        } else {
+                            echo "Error executing the query: " . $conn->error;
+                        }
+
+                        ?>
+
                     </div>
                 </div>
             </div>
