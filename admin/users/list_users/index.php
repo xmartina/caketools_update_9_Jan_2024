@@ -29,8 +29,8 @@ elseif ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create_new_user']
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
     // Insert the data into the database
-    $insertQuery = "INSERT INTO users (user_name, password, first_name, last_name, email, gender, address, role)
-                    VALUES ('$username', '$hashedPassword', '$firstName', '$lastName', '$email', '$gender', '$address', '$role')";
+    $insertQuery = "INSERT INTO users (user_name, password, first_name, last_name, email, gender, address, role, user_status)
+                    VALUES ('$username', '$hashedPassword', '$firstName', '$lastName', '$email', '$gender', '$address', '$role', 1)";
 
     $insertResult = $conn->query($insertQuery);
 
