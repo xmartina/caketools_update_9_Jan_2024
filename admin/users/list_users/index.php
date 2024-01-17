@@ -14,7 +14,34 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_user'])) {
         die('Error deleting user: ' . $conn->error);
     }
 }
+elseif ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create_new_user'])) {
+    // Retrieve form data
+    $username = $_POST['user_name'];
+    $password = $_POST['password'];
+    $firstName = $_POST['first_name'];
+    $lastName = $_POST['last_name'];
+    $email = $_POST['userEmail'];
+    $gender = $_POST['gender'];
+    $address = $_POST['address'];
+    $role = $_POST['role'];
 
+    // Hash the password for security
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+    // Insert the data into the database
+    $insertQuery = "INSERT INTO users (user_name, password, first_name, last_name, email, gender, address, role)
+                    VALUES ('$username', '$hashedPassword', '$firstName', '$lastName', '$email', '$gender', '$address', '$role')";
+
+    $insertResult = $conn->query($insertQuery);
+
+    if ($insertResult) {
+        // Redirect or perform other actions after successful insertion
+        header("Location: " . adminUrl . "users?user_create_success");
+        exit();
+    } else {
+        die('Error creating new user: ' . $conn->error);
+    }
+}
 
 $query = "SELECT * FROM users ORDER BY id DESC ";
 $result = $conn->query($query);
@@ -32,8 +59,19 @@ if (!$result) {
                 <small class="text-muted">1 sec ago</small>
                 <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
             </div>
-    <div class="toast-body">User was deleted successfully</div>
+            <div class="toast-body">User was deleted successfully</div>
         </div>
+<?php }elseif (isset($_GET['user_create_success'])) { ?>
+        <div class="bs-toast toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <i class="mdi mdi-check-circle text-success me-2"></i>
+                <div class="me-auto fw-medium">User Created Successfully</div>
+                <small class="text-muted">1 sec ago</small>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">User was Created Successfully</div>
+        </div>
+
 <?php } ?>
 <div class="card">
     <div class="card-datatable table-responsive">
