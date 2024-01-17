@@ -7,11 +7,12 @@ $pageName = 'Edit User';
 include_once (adminRootDir.'includes/adminCore.php');
 include_once (adminRootDir.'includes/generalAdminSettings.php');
 include_once (adminRootDir.'partials/header/main.php');
-$user_acct_id = $_GET['edit_user'];
-echo $user_acct_id;
 ?>
-
+<?php
+if(isset($_GET['edit_user'])){ ?>
+    <?php $user_acct_id = $_GET['edit_user']; echo $user_acct_id;?>
     <!-- Content Wrapper. Contains page content -->
 <?php include_once (adminRootDir.'users/edit_user/parts/main.php'); ?>
 
 <?php include_once (adminRootDir.'partials/footer/main.php'); ?>
+<?php } ?>
