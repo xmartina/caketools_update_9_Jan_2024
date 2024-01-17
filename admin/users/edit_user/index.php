@@ -7,6 +7,8 @@ $pageName = 'Edit User';
 include_once (adminRootDir.'includes/adminCore.php');
 include_once (adminRootDir.'includes/generalAdminSettings.php');
 include_once (adminRootDir.'partials/header/main.php');
+$user_acct_id = $_GET['edit_user'];
+echo $user_acct_id;
 ?>
 
     <!-- Content Wrapper. Contains page content -->
