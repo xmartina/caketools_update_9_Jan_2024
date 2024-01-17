@@ -1,12 +1,11 @@
 <?php
-    $get_user_info = "SELECT * FROM users WHERE user_acct_id = $user_acct_id";
-    $result = $mysqli->query($get_user_info);
-    $user_data = $result->fetch_assoc();
-    if ($user_data['user_status'] == 1){
-        $user_status = 'Active';
-    }elseif ($user_data['user_status'] == 0){
-        $user_status = 'Inactive';
-    }
+$query = "SELECT * FROM users WHERE id = $user_acct_id ";
+$result = $conn->query($query);
+$user_data = $result->fetch_assoc();
+
+if (!$result) {
+    die('Query Error: ' . $conn->error);
+}
 ?>
 <!-- User Sidebar -->
 <div class="col-xl-4 col-lg-5 col-md-5 order-1 order-sm-0 order-md-0">
