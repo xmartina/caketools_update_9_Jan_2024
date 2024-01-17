@@ -1,9 +1,5 @@
 <?php
-$page = isset($_GET['page']) ? intval($_GET['page']) : 1;
-$perPage = 7;
-$offset = ($page - 1) * $perPage;
-
-$query = "SELECT * FROM users ORDER BY id DESC LIMIT $offset, $perPage";
+$query = "SELECT * FROM users ORDER BY id DESC ";
 $result = $conn->query($query);
 
 if (!$result) {
@@ -66,7 +62,7 @@ if (!$result) {
                 <?php include_once (adminRootDir.'users/list_users/parts/list_users.php'); ?>
                 </tbody>
             </table>
-            <div class="row mx-2">
+            <!--<div class="row mx-2">
                 <div class="col-sm-12 col-md-6">
                     <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing
                         26 to 50 of 50 entries
@@ -89,7 +85,7 @@ if (!$result) {
                         </ul>
                     </div>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
     <!-- Offcanvas to add new user -->
@@ -198,7 +194,7 @@ if (!$result) {
     </div>
 </div>
 
-<script>
+<!--<script>
     document.addEventListener("DOMContentLoaded", function () {
         const tableBody = document.querySelector('.datatables-users tbody');
         const paginationLinks = document.querySelectorAll('.pagination .page-link');
@@ -214,7 +210,7 @@ if (!$result) {
         });
 
         function fetchData(page) {
-            const url = `<?=adminUrl?>users/index.php?page=${page}`;
+            const url = `<?// =adminUrl ?>users/index.php?page=${page}`;
             fetch(url)
                 .then(response => response.text())
                 .then(data => {
@@ -223,4 +219,4 @@ if (!$result) {
                 .catch(error => console.error('Error:', error));
         }
     });
-</script>
+</script> -->
