@@ -4,8 +4,7 @@
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body mx-0 flex-grow-0 h-100">
-        <form class="add-new-user pt-0 fv-plugins-bootstrap5 fv-plugins-framework" id="addNewUserForm"
-              onsubmit="return false" novalidate="novalidate" method="post">
+        <form class="add-new-user pt-0 fv-plugins-bootstrap5 fv-plugins-framework" method="post">
             <div class="form-floating form-floating-outline mb-4 fv-plugins-icon-container">
                 <input type="text" class="form-control" id="add-user-fullname" placeholder="Username"
                        name="user_name" aria-label="Username">
