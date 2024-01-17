@@ -52,6 +52,14 @@
     <link rel="stylesheet" href="<?=adminUrl?>assets/vendor/css/pages/cards-statistics.css" />
     <link rel="stylesheet" href="<?=adminUrl?>assets/vendor/css/pages/cards-analytics.css" />
 
+    <?php
+    if (isset($_GET['user_delete_success'])) { ?>
+    <link rel="stylesheet" href="<?=adminUrl?>assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="<?=adminUrl?>assets/vendor/libs/typeahead-js/typeahead.css" />
+    <link rel="stylesheet" href="<?=adminUrl?>assets/vendor/libs/toastr/toastr.css" />
+    <link rel="stylesheet" href="<?=adminUrl?>assets/vendor/libs/animate-css/animate.css" />
+    <?php } ?>
+
     <!-- Helpers -->
     <script src="<?=adminUrl?>assets/vendor/js/helpers.js"></script>
     <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->

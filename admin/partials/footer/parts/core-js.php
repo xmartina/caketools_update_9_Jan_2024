@@ -28,3 +28,9 @@
 <script src="<?=adminUrl?>assets/js/app-user-view.js"></script>
 <script src="<?=adminUrl?>assets/js/app-user-view-account.js"></script>
 <?php }?>
+
+<?php
+if (isset($_GET['user_delete_success'])) { ?>
+<!-- Page JS -->
+<script src="<?=adminUrl?>assets/js/ui-toasts.js"></script>
+<?php } ?>
