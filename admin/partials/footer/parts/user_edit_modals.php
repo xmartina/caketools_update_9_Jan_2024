@@ -1,27 +1,27 @@
 <?php
+const adminRootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_html/admin/';
+const rootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_html/';
+include_once (adminRootDir.'includes/adminCore.php');
+
+if (!$conn) {
+    die('Database Connection Error: ' . mysqli_connect_error());
+}
 if (isset($_GET['user_acct_id'])) {
     $user_acct_id = $_GET['user_acct_id'];
 
-    // Check if the database connection is established
-    if ($conn) {
-        $query = "SELECT * FROM users WHERE id = $user_acct_id ";
-        $result = $conn->query($query);
+    $query = "SELECT * FROM users WHERE id = $user_acct_id ";
+    $result = $conn->query($query);
 
-        // Check if the query was successful
-        if ($result) {
-            $user_data = $result->fetch_assoc();
+    if ($result) {
+        $user_data = $result->fetch_assoc();
 
-            // Your existing code for the modal goes here...
-
-        } else {
-            // Handle query error
-            die('Query Error: ' . $conn->error);
-        }
+        // Rest of your code for displaying modal...
     } else {
-        // Handle database connection error
-        die('Database Connection Error: ' . mysqli_connect_error());
+        // Handle query error
+        die('Query Error: ' . $conn->error);
     }
 }
+
 ?>
 <!-- Edit User Modal -->
 <div class="modal fade" id="editUser" tabindex="-1" aria-hidden="true">
