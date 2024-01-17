@@ -1,5 +1,6 @@
 <?php
-
+if (isset($_GET['user_acct_id'])) {
+$user_acct_id = $_GET['user_acct_id'];
 $query = "SELECT * FROM users WHERE id = $user_acct_id ";
 $result = $conn->query($query);
 $user_data = $result->fetch_assoc();
@@ -183,3 +184,4 @@ if (!$result) {
     </div>
 </div>
 <!--/ Upgrade Plan -->
+<?php } ?>
