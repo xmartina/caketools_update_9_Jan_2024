@@ -71,7 +71,7 @@
                                     $user_status_name = 'Inactive';
                                 }
                                 ?>
-                                <option selected value="<?= $user_data['user_status'] ?>"><?= $user_status_name ?></option>
+                                <option selected value="<?= $user_data['user_status'] ?>" disabled><?= $user_status_name ?></option>
                                 <option value="1">Active</option>
                                 <option value="0">Inactive</option>
                             </select>
@@ -92,7 +92,7 @@
                                     $role_name = 'User';
                                 }
                                 ?>
-                                <option selected value="<?= $user_data['role'] ?>"><?= $role_name ?></option>
+                                <option selected value="<?= $user_data['role'] ?>" disabled> <?= $role_name ?></option>
                                 <option value="1">Admin</option>
                                 <option value="2">User</option>
                             </select>
