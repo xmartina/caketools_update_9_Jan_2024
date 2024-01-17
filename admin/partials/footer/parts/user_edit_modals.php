@@ -198,4 +198,3 @@ if (isset($_GET['user_acct_id'])) {
     </div>
 </div>
 <!--/ Upgrade Plan -->
-<?php } ?>
