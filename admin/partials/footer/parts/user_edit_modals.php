@@ -1,12 +1,26 @@
 <?php
 if (isset($_GET['user_acct_id'])) {
-$user_acct_id = $_GET['user_acct_id'];
-$query = "SELECT * FROM users WHERE id = $user_acct_id ";
-$result = $conn->query($query);
-$user_data = $result->fetch_assoc();
+    $user_acct_id = $_GET['user_acct_id'];
 
-if (!$result) {
-    die('Query Error: ' . $conn->error);
+    // Check if the database connection is established
+    if ($conn) {
+        $query = "SELECT * FROM users WHERE id = $user_acct_id ";
+        $result = $conn->query($query);
+
+        // Check if the query was successful
+        if ($result) {
+            $user_data = $result->fetch_assoc();
+
+            // Your existing code for the modal goes here...
+
+        } else {
+            // Handle query error
+            die('Query Error: ' . $conn->error);
+        }
+    } else {
+        // Handle database connection error
+        die('Database Connection Error: ' . mysqli_connect_error());
+    }
 }
 ?>
 <!-- Edit User Modal -->
