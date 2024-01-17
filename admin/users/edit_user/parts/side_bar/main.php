@@ -123,7 +123,7 @@ if (!$result) {
                         <?php if ($user_data['dob'] == '') { ?>
                             <span>DOB not set</span>
                         <?php } else { ?>
-                            <span><?=$user_data['gender']?></span>
+                            <span><?=$user_data['dob']?></span>
                         <?php } ?>
                     </li>
                 </ul>
