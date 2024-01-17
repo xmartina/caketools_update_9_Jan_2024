@@ -23,7 +23,7 @@ while ($data = $result->fetch_assoc()) {
                     </div>
                 </div>
                 <div class="d-flex flex-column">
-                    <a href="app-user-view-account.html" class="text-truncate">
+                    <a href="<?=adminUrl?>users/edit_user?<?= $data['id'] ?>" class="text-truncate">
                         <span class="fw-medium text-heading"><?= $data['first_name']. ' '.$data['last_name'] ?></span>
                     </a>
                     <small>@<?= $data['user_name'] ?></small>
