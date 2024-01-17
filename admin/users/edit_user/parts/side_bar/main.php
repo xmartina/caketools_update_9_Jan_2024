@@ -15,7 +15,7 @@ if (!$result) {
             <div class="user-avatar-section">
                 <div class="d-flex align-items-center flex-column">
                     <img
-                        class="img-fluid rounded mb-3 mt-4"
+                        class="img-fluid rounded-circle mb-3 mt-4" style="object-fit:cover;"
                         <?php if ($user_data['user_img'] == '')  { ?>
                         src="/assets/images/author/author-db.jpg" height="120" width="120" alt="User avatar" />
                     <?php } else { ?>
