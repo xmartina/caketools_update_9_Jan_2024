@@ -24,7 +24,7 @@ if (!$result) {
 }
 ?>
 <?php
-    if (isset($_GET['user_delete_success'])) { ?>
+    if (isset($_GET['user_delete_success']) && $_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_user'])) { ?>
         <div class="bs-toast toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
                 <i class="mdi mdi-alert-circle text-danger me-2"></i>
