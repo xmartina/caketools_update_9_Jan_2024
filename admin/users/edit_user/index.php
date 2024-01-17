@@ -9,10 +9,12 @@ include_once (adminRootDir.'includes/generalAdminSettings.php');
 include_once (adminRootDir.'partials/header/main.php');
 ?>
 <?php
-if(isset($_GET['edit_user'])){ ?>
-    <?php $user_acct_id = $_GET['edit_user']; echo $user_acct_id;?>
-    <!-- Content Wrapper. Contains page content -->
-<?php include_once (adminRootDir.'users/edit_user/parts/main.php'); ?>
+if (isset($_GET['edit_user'])) {
+    $user_acct_id = $_GET['edit_user'];
+    echo $user_acct_id;
 
-<?php include_once (adminRootDir.'partials/footer/main.php'); ?>
-<?php } ?>
+    // Include the content and footer only if the edit_user parameter is set
+    include_once(adminRootDir . 'users/edit_user/parts/main.php');
+    include_once(adminRootDir . 'partials/footer/main.php');
+}
+?>
