@@ -104,7 +104,7 @@
                                     aria-label="Default select example">
                                     <option selected value="<?= $user_data['gender'] ?>"><?= $user_data['gender'] ?></option>
                                     <option value="Male">Male</option>
-                                    <option value="Female">User</option>
+                                    <option value="Female">Female</option>
                                 </select>
                                 <label for="modalEditUserStatus">Gender</label>
                             </div>
