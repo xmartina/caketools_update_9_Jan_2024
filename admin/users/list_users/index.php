@@ -1,4 +1,20 @@
 <?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_user'])) {
+    $userToDelete = intval($_POST['delete_user']);
+
+    // Add appropriate validation and error handling here if needed
+
+    $deleteQuery = "DELETE FROM users WHERE id = $userToDelete";
+    $deleteResult = $conn->query($deleteQuery);
+
+    if ($deleteResult) {
+        header("Location: " . adminUrl . "users?user_delete_success");
+    } else {
+        die('Error deleting user: ' . $conn->error);
+    }
+}
+
+
 $query = "SELECT * FROM users ORDER BY id DESC ";
 $result = $conn->query($query);
 
@@ -6,6 +22,10 @@ if (!$result) {
     die('Query Error: ' . $conn->error);
 }
 ?>
+<?php
+    if ($_GET['user_delete_success']) { ?>
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+<?php } ?>
 <div class="card">
     <div class="card-datatable table-responsive">
         <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">

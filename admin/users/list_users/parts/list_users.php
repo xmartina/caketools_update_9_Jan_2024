@@ -53,10 +53,13 @@ while ($data = $result->fetch_assoc()) {
                     <a href="<?=adminUrl?>users/edit_user?<?= $data['id'] ?>" class="dropdown-item">
                         <i class="mdi mdi-pencil-outline me-2"></i><span>Edit</span>
                     </a>
-                    <a href="<?=adminUrl?>users/edit_user?<?= $data['id'] ?>" class="dropdown-item delete-record">
-                        <i class="mdi mdi-delete-outline me-2"></i>
-                        <span>Delete</span>
-                    </a>
+                    <form method="post" action="">
+                        <input type="hidden" name="delete_user" value="<?= $data['id'] ?>">
+                        <button type="submit" class="dropdown-item delete-record">
+                            <i class="mdi mdi-delete-outline me-2"></i>
+                            <span>Delete</span>
+                        </button>
+                    </form>
                 </div>
             </div>
         </td>
