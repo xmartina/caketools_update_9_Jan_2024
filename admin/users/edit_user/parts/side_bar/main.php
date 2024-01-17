@@ -135,7 +135,13 @@ if (!$result) {
                         data-bs-toggle="modal"
                     >Edit</a
                     >
-                    <a href="javascript:;" class="btn btn-outline-danger suspend-user">Suspended</a>
+                    <form method="post" action="">
+                        <input type="hidden" name="delete_user" value="<?= $user_data['id'] ?>">
+                        <button type="submit" class="btn btn-outline-danger suspend-user">
+                            <i class="mdi mdi-delete-outline me-2"></i>
+                            <span>Delete User</span>
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
