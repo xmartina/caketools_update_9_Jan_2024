@@ -103,20 +103,28 @@ if (!$result) {
                         <?php } ?>
                     </li>
                     <li class="mb-3">
-                        <span class="fw-medium text-heading me-2">Tax id:</span>
-                        <span>Tax-8965</span>
+                        <span class="fw-medium text-heading me-2">Address:</span>
+                        <?php if ($user_data['address'] == '') { ?>
+                            <span>No address set</span>
+                        <?php } else { ?>
+                            <span><?=$user_data['address']?></span>
+                        <?php } ?>
                     </li>
                     <li class="mb-3">
-                        <span class="fw-medium text-heading me-2">Contact:</span>
-                        <span>(123) 456-7890</span>
+                        <span class="fw-medium text-heading me-2">Gender:</span>
+                        <?php if ($user_data['gender'] == '') { ?>
+                            <span>Gender not set</span>
+                        <?php } else { ?>
+                            <span><?=$user_data['gender']?></span>
+                        <?php } ?>
                     </li>
                     <li class="mb-3">
-                        <span class="fw-medium text-heading me-2">Languages:</span>
-                        <span>French</span>
-                    </li>
-                    <li class="mb-3">
-                        <span class="fw-medium text-heading me-2">Country:</span>
-                        <span>England</span>
+                        <span class="fw-medium text-heading me-2">Gender:</span>
+                        <?php if ($user_data['dob'] == '') { ?>
+                            <span>DOB not set</span>
+                        <?php } else { ?>
+                            <span><?=$user_data['gender']?></span>
+                        <?php } ?>
                     </li>
                 </ul>
                 <div class="d-flex justify-content-center">
