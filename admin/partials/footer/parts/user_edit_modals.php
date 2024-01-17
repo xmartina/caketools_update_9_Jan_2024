@@ -1,18 +1,3 @@
-<?php
-include_once (adminRootDir.'includes/adminCore.php');
-
-if (!$conn) {
-    die('Database Connection Error: ' . mysqli_connect_error());
-}
-if (isset($_GET['user_acct_id'])) {
-    $user_acct_id = $_GET['user_acct_id'];
-
-    $query = "SELECT * FROM users WHERE id = $user_acct_id ";
-    $result = $conn->query($query);
-
-    if ($result) {
-        $user_data = $result->fetch_assoc();
-?>
 <!-- Edit User Modal -->
 <div class="modal fade" id="editUser" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-simple modal-edit-user">
@@ -188,8 +173,3 @@ if (isset($_GET['user_acct_id'])) {
     </div>
 </div>
 <!--/ Upgrade Plan -->
-<?php  } else {
-        // Handle query error
-        die('Query Error: ' . $conn->error);
-    }
-}
