@@ -63,7 +63,7 @@ if (!$result) {
         </div>
         <script>
             setTimeout(function() {
-                window.location.href = "<?php echo adminUrl; ?>users/";
+                window.location.replace = "<?php echo adminUrl; ?>users/";
             }, 4000); // 3000 milliseconds = 3 seconds
         </script>
     <?php }elseif (isset($_GET['user_create_success'])) { ?>
@@ -78,7 +78,7 @@ if (!$result) {
         </div>
         <script>
             setTimeout(function() {
-                window.location.href = "<?php echo adminUrl; ?>users/";
+                window.location.replace = "<?php echo adminUrl; ?>users/";
             }, 4000); // 3000 milliseconds = 3 seconds
         </script>
 
