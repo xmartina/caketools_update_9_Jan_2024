@@ -22,8 +22,8 @@ if (!$result) {
                         src="/assets/images/author/<?=$user_data['user_img']?>" height="120" width="120" alt="User avatar" />
                     <?php }?>
                     <div class="user-info text-center">
-                        <h4>Violet Mendoza</h4>
-                        <span class="badge bg-label-danger rounded-pill">Author</span>
+                        <h4><?=$user_data['first_name']." ".$user_data['last_name']?></h4>
+                        <span class="badge bg-label-danger rounded-pill">@<?=$user_data['user_name']?></span>
                     </div>
                 </div>
             </div>
@@ -31,23 +31,27 @@ if (!$result) {
                 <div class="d-flex align-items-center me-4 mt-3 gap-3">
                     <div class="avatar">
                         <div class="avatar-initial bg-label-primary rounded">
-                            <i class="mdi mdi-check mdi-24px"></i>
+                            <i class="mdi mdi-cash mdi-24px"></i>
                         </div>
                     </div>
                     <div>
-                        <h4 class="mb-0">1.23k</h4>
-                        <span>Tasks Done</span>
+                        <?php
+                        $user_total_balance = $user_data['eth_bal'] + $user_data['btc_bal'] + $user_data['usdt_bal'];
+                        ?>
+                        ?>
+                        <h4 class="mb-0"><?=$user_total_balance?></h4>
+                        <span>Total Balance</span>
                     </div>
                 </div>
                 <div class="d-flex align-items-center mt-3 gap-3">
                     <div class="avatar">
                         <div class="avatar-initial bg-label-primary rounded">
-                            <i class="mdi mdi-star-outline mdi-24px"></i>
+                            <i class="mdi mdi-briefcase mdi-24px"></i>
                         </div>
                     </div>
                     <div>
                         <h4 class="mb-0">568</h4>
-                        <span>Projects Done</span>
+                        <span>Total NFTs</span>
                     </div>
                 </div>
             </div>
