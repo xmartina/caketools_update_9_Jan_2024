@@ -63,8 +63,8 @@ if (!$result) {
         </div>
         <script>
             setTimeout(function() {
-                window.location.replace = "<?php echo adminUrl; ?>users/";
-            }, 4000); // 3000 milliseconds = 3 seconds
+                window.location.replace("<?php echo adminUrl; ?>users/");
+            }, 4000); // 4000 milliseconds = 4 seconds
         </script>
     <?php }elseif (isset($_GET['user_create_success'])) { ?>
         <div class="bs-toast toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
@@ -78,11 +78,10 @@ if (!$result) {
         </div>
         <script>
             setTimeout(function() {
-                window.location.replace = "<?php echo adminUrl; ?>users/";
-            }, 4000); // 3000 milliseconds = 3 seconds
+                window.location.replace("<?php echo adminUrl; ?>users/");
+            }, 4000); // 4000 milliseconds = 4 seconds
         </script>
-
-<?php } ?>
+    <?php } ?>
 <div class="card">
     <div class="card-datatable table-responsive">
         <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
