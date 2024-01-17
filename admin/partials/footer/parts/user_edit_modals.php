@@ -85,7 +85,14 @@
                                 name="role"
                                 class="form-select"
                                 aria-label="Default select example">
-                                <option selected value="<?= $user_data['role'] ?>"><?= $user_data['role'] ?></option>
+                                <?php
+                                if ($user_data['role'] == 1){
+                                    $role_name = 'Admin';
+                                }elseif ($user_data['role'] == 2){
+                                    $role_name = 'User';
+                                }
+                                ?>
+                                <option selected value="<?= $user_data['role'] ?>"><?= $role_name ?></option>
                                 <option value="1">Admin</option>
                                 <option value="2">User</option>
                             </select>
