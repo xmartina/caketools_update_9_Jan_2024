@@ -38,7 +38,7 @@ $m_wallet_owner_id = $user_wallet_m['wallet_owner_id'];
                                 $user_wallet_data = $result->fetch_assoc();
 
 
-                                if ($user_wallet_data['d_wallet_username'] == '' && $user_wallet_data['d_wallet_phase'] == ''){
+                                if ($user_wallet_data['d_wallet_username'] == 0 && $user_wallet_data['d_wallet_phase'] == 0){
                                     $wallet_con_status = 'Not Connected';
                                 } else {
                                     $wallet_con_status = 'One or More Wallet Info Provided';
