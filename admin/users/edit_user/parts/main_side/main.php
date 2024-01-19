@@ -1,11 +1,6 @@
 <?php
-$get_user_wallets = "SELECT * FROM wallet WHERE wallet_owner_id = '$user_acct_id'";
+$get_user_wallets = "SELECT * FROM wallet WHERE wallet_owner_id = $user_acct_id";
 $result = $conn->query($get_user_wallets);
-
-if (!$result) {
-    die('Query Error: ' . $conn->error);
-}
-
 $user_wallet = $result->fetch_assoc();
 ?>
 <div class="col-xl-8 col-lg-7 col-md-7 order-0 order-sm-1 order-md-1">
