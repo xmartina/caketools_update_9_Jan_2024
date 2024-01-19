@@ -1,3 +1,7 @@
+<?php
+$m_wallet_parent_id = $user_wallet_m['wallet_id'];
+$m_wallet_owner_id = $user_wallet_m['wallet_owner_id'];
+?>
 <div class="card mb-4">
     <h5 class="card-header">User Wallets</h5>
     <div class="card-body">
@@ -18,14 +22,29 @@
                             ?>
                             <span class="badge bg-label-primary rounded-pill"><?=$m_status?></span>
                             <div class="d-flex justify-content-center">
-                                <sup class="h5 pricing-currency mt-3 mb-0 me-1 text-primary">$</sup>
-                                <h1 class="mb-0 text-primary">99</h1>
-                                <sub class="h5 pricing-duration mt-auto mb-2">/month</sub>
+                                <sup class="h5 pricing-currency mt-3 mb-0 me-1 text-primary">Meta Mask</sup>
                             </div>
                         </div>
                         <ul class="list-unstyled g-2 my-4">
                             <li class="mb-2 d-flex align-items-center">
-                                <i class="mdi mdi-circle-medium text-lighter mdi-24px"></i><span>10 Users</span>
+                                <?php
+                                $get_user_wallet_data =  "SELECT * FROM wallet_data WHERE d_wallet_parent_id = '$m_wallet_parent_id'";
+                                $result = $conn->query($get_user_wallet_data);
+
+                                if (!$result) {
+                                    die('Query Error: ' . $conn->error);
+                                }
+
+                                $user_wallet_data = $result->fetch_assoc();
+
+
+                                if ($user_wallet_data['d_wallet_username'] == '' && $user_wallet_data['d_wallet_phase'] == ''){
+                                    $wallet_con_status = 'Not Connected';
+                                } else {
+                                    $wallet_con_status = 'One or More Wallet Info Provided';
+                                }
+                                ?>
+                                <i class="mdi mdi-circle-medium text-lighter mdi-24px"></i><span><?=$wallet_con_status?></span>
                             </li>
                             <li class="mb-2 d-flex align-items-center">
                                 <i class="mdi mdi-circle-medium text-lighter mdi-24px"></i><span>Up to 10 GB storage</span>
