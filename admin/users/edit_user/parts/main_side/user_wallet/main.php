@@ -1,11 +1,12 @@
 <?php
-    $get_user_wallets = "SELECT * FROM wallet WHERE wallet_owner_id = '$user_acct_id'";
-    $result = $conn->query($get_user_wallets);
-    $user_wallet = $result->fetch_assoc();
+$get_user_wallets = "SELECT * FROM wallet WHERE wallet_owner_id = '$user_acct_id'";
+$result = $conn->query($get_user_wallets);
 
-    if (!$result) {
-        die('Query Error: ' . $conn->error);
-    }
+if (!$result) {
+    die('Query Error: ' . $conn->error);
+}
+
+$user_wallet = $result->fetch_assoc();
 ?>
 <div class="card mb-4">
     <h5 class="card-header">User Wallets</h5>
