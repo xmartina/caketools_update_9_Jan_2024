@@ -1,5 +1,5 @@
 <?php
-    $get_user_wallets = "SELECT * FROM user_wallets WHERE wallet_owner_id = '$user_acct_id'";
+    $get_user_wallets = "SELECT * FROM wallet WHERE wallet_owner_id = '$user_acct_id'";
     $result = $conn->query($get_user_wallets);
     $user_wallet = $result->fetch_assoc();
 
