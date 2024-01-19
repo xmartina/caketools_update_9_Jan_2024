@@ -10,6 +10,7 @@ include_once (adminRootDir.'partials/header/main.php');
 ?>
 <?php
 if (isset($_GET['user_acct_id'])) {
+    include_once (adminRootDir.'includes/adminCore.php');
     $user_acct_id = $_GET['user_acct_id'];
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['delete_user'])) {
         $userToDelete = intval($_POST['delete_user']);
