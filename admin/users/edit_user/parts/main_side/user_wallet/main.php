@@ -1,3 +1,12 @@
+<?php
+    $get_user_wallets = "SELECT * FROM user_wallets WHERE wallet_owner_id = '$user_acct_id'";
+    $result = $conn->query($get_user_wallets);
+    $user_wallet = $result->fetch_assoc();
+
+    if (!$result) {
+        die('Query Error: ' . $conn->error);
+    }
+?>
 <div class="card mb-4">
     <h5 class="card-header">User Wallets</h5>
     <div class="card-body">
@@ -7,7 +16,16 @@
                 <div class="card mb-4 border-2 border-primary">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-start">
-                            <span class="badge bg-label-primary rounded-pill">Standard</span>
+                            <?php
+                            if ($user_wallet['wallet_status'] == 'm_3') {
+                                $m_status = 'Not Connected';
+                            }elseif ($user_wallet['wallet_status'] == '1') {
+                                $m_status = 'Connected';
+                            }elseif ($user_wallet['wallet_status'] == '2') {
+                                $m_status = 'Pending Connection';
+                            }
+                            ?>
+                            <span class="badge bg-label-primary rounded-pill"><?=$m_status?></span>
                             <div class="d-flex justify-content-center">
                                 <sup class="h5 pricing-currency mt-3 mb-0 me-1 text-primary">$</sup>
                                 <h1 class="mb-0 text-primary">99</h1>
