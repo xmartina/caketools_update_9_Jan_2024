@@ -65,7 +65,6 @@ if (!$result) {
                         <h4 class="mb-0"><?=$user_total_nft?></h4>
                         <span>Total NFTs</span>
                         <?php
-                            $conn->close();
                         } else {
                             echo "Error executing the query: " . $conn->error;
                         }
