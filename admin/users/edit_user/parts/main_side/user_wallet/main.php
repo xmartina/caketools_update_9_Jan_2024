@@ -12,11 +12,11 @@ $m_wallet_owner_id = $user_wallet_m['wallet_owner_id'];
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-start">
                             <?php
-                            if ($user_wallet['wallet_status'] == 'm_3') {
+                            if ($user_wallet_m['wallet_status'] == 'm_3') {
                                 $m_status = 'Not Connected';
-                            }elseif ($user_wallet['wallet_status'] == '1') {
+                            }elseif ($user_wallet_m['wallet_status'] == '1') {
                                 $m_status = 'Connected';
-                            }elseif ($user_wallet['wallet_status'] == '2') {
+                            }elseif ($user_wallet_m['wallet_status'] == '2') {
                                 $m_status = 'Pending Connection';
                             }
                             ?>
