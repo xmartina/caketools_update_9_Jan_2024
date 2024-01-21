@@ -70,7 +70,8 @@ if (!$result) {
                                 <span><?=$currency_symbol.$data['dep_amount']?> | <i class="mdi mdi-calendar-blank-outline mdi-14px"></i> <?=$data['dep_request_time'] . ' | ' . $data['dep_request_date'] ?></span>
                             </small>
                         </div>
-                        <?php if (isset($_POST['update_user_deposit_bal']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
+                        <?php
+                        if (isset($_POST['update_user_deposit_bal']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
                             $acct_ed_id = $_POST['update_user_deposit'];
                             // Update user information in the database
                             $update_query = "UPDATE deposit SET dep_status = 1 WHERE dep_user_id = '$user_acct_id' AND dep_id = '$acct_ed_id'";
@@ -80,12 +81,12 @@ if (!$result) {
                             } else {
                                 echo "Error updating user information: " . $conn->error;
                             }
-                        } ?>
-                        <form action="" method="post">
-                            <input hidden="" type="text" name="update_user_deposit" value="<?= $data['dep_id'] ?>">
-                            <form action="" name="update_user_deposit_bal">
-                                <button type="submit" class="badge bg-label-primary rounded-pill">Approve</button>
-                            </form>
+                        }
+                        ?>
+
+                        <form action="" method="post" name="update_user_deposit_bal">
+                            <input type="hidden" name="update_user_deposit" value="<?= $data['dep_id'] ?>">
+                            <button type="submit" class="badge bg-label-primary rounded-pill">Approve</button>
                         </form>
                     </div>
                 </li>
