@@ -28,8 +28,10 @@ if (!$result) {
         </div>
         <div class="card-body">
             <ul class="p-0 m-0">
-                <?php while ($data = $result->fetch_assoc()) {
-                ?>
+                <?php while ($data = $result->fetch_assoc()) { if (empty($data['dep_currency'])) { ?>
+                    <li class="d-flex mb-4 pb-1">User has not made any deposit</li>
+                    <?php
+                } else { ?>
                 <?php
                 $get_user_data = "SELECT * FROM users WHERE id = '".$data['dep_user_id']."'";
                 $u_result = $conn->query($get_user_data);
@@ -87,7 +89,7 @@ if (!$result) {
                         </form>
                     </div>
                 </li>
-                <?php }?>
+                <?php } }?>
             </ul>
         </div>
     </div>
