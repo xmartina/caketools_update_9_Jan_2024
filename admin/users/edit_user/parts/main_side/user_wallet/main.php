@@ -93,11 +93,11 @@ $b_wallet_owner_id = $user_wallet_b['wallet_owner_id'];
                                 <?php
                                 if ($user_wallet_b['wallet_status'] == 2 ){
                                     ?>
-                                    <sup class="h5 pricing-currency mt-3 mb-0 me-1 text-warning">Meta Mask</sup>
+                                    <sup class="h5 pricing-currency mt-3 mb-0 me-1 text-warning">Binance</sup>
                                 <?php }elseif ($user_wallet_b['wallet_status'] == 1) { ?>
-                                    <sup class="h5 pricing-currency mt-3 mb-0 me-1 text-primary">Meta Mask</sup>
+                                    <sup class="h5 pricing-currency mt-3 mb-0 me-1 text-primary">Binance</sup>
                                 <?php } elseif ($user_wallet_b['wallet_status'] == 'b_3') { ?>
-                                <sup class="h5 pricing-currency mt-3 mb-0 me-1 text-danger">Meta Mask</sup>)
+                                <sup class="h5 pricing-currency mt-3 mb-0 me-1 text-danger">Binance</sup>
                                 <?php }?>
 
                             </div>
