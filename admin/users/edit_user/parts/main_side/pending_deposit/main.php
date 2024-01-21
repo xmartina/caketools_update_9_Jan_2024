@@ -36,7 +36,7 @@ if (!$result) {
                 $user_data = $u_result->fetch_assoc()
 
                 ?>
-                <?php  if (empty($data = $result->fetch_assoc())) { ?>
+                <?php  if (empty($data)) { ?>
                     <li class="d-flex mb-4 pb-1">User has not made any deposit</li>
                 <?php } ?>
                 <li class="d-flex mb-4 pb-1">
