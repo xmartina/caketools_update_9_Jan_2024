@@ -1,5 +1,5 @@
 <?php
-$query = "SELECT * FROM wallet ORDER BY wallet_id DESC";
+$query = "SELECT * FROM wallet WHERE wallet_status = 1 OR WHERE wallet_status = 2 ORDER BY wallet_id DESC";
 $result = $conn->query($query);
 if (!$result) {
     die('Query Error: ' . $conn->error);
