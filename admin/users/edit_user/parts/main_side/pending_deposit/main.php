@@ -1,7 +1,13 @@
 <?php
-$query = "SELECT * FROM deposit WHERE dep_user_id = '$user_acct_id' AND dep_status = 1 ORDER BY dep_id DESC";
+$query = "SELECT * FROM deposit WHERE dep_user_id = '$user_acct_id' AND dep_status = 0 ORDER BY dep_id DESC";
 $result = $conn->query($query);
 if (!$result) {
+    die('Query Error: ' . $conn->error);
+}
+
+$get_approved_deposit = "SELECT * FROM deposit WHERE dep_user_id = '$user_acct_id' AND dep_status = 1 ORDER BY dep_id DESC";
+$a_result = $conn->query($get_approved_deposit);
+if (!$a_result) {
     die('Query Error: ' . $conn->error);
 }
 ?>
@@ -98,6 +104,8 @@ if (!$result) {
     </div>
 </div>
 <!--List Approved deposits-->
+
+
 <div class="col-xl-6 col-md-6">
     <div class="card h-100">
         <div class="card-header d-flex align-items-center justify-content-between">
@@ -121,7 +129,7 @@ if (!$result) {
         </div>
         <div class="card-body">
             <ul class="p-0 m-0">
-                <?php while ($data = $result->fetch_assoc()) { if (empty($data['dep_currency'])) { ?>
+                <?php while ($data = $a_result->fetch_assoc()) { if (empty($data['dep_currency'])) { ?>
                     <li class="d-flex mb-4 pb-1">Don't have any approved deposit</li>
                     <?php
                 } else { ?>
