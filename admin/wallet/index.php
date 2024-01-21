@@ -10,5 +10,8 @@ include_once (adminRootDir.'partials/header/main.php');
 ?>
 
     <!-- Content Wrapper. Contains page content -->
+<?php
+include_once (adminRootDir.'wallet/list_wallet/list_wallet.php')
+?>
 
 <?php include_once (adminRootDir.'partials/footer/main.php'); ?>
