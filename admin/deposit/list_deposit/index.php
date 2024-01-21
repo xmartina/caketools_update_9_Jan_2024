@@ -70,13 +70,13 @@ if (!$result) {
                             $deposit_status = "Approved";
                         }
                         ?>
-                        <div class="flex-shrink-0">
-                            <span class="<?php if ($data['dep_status'] == 1){echo 'text-success';}elseif ($data['dep_status'] == 0){echo 'text-warning';} ?>"><?= $deposit_status ?></span>
-                        </div>
                         <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                             <div class="me-2">
                                 <h6 class="mb-0 text-capitalize"><?=$data['dep_currency']?></h6>
                                 <small>@<?=$user_data['user_name']?></small>
+                            </div>
+                            <div class="flex-shrink-0">
+                                <span class="<?php if ($data['dep_status'] == 1){echo 'text-success';}elseif ($data['dep_status'] == 0){echo 'text-warning';} ?>"><?= $deposit_status ?></span>
                             </div>
                             <div class="d-flex align-items-center">
                                 <?php
