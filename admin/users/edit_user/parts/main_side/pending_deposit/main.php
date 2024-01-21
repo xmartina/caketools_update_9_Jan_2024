@@ -11,7 +11,7 @@ if (!$a_result) {
     die('Query Error: ' . $conn->error);
 }
 ?>
-<div class="col-xl-6 col-md-6">
+<div class="col-xl-6 mb-4 col-md-6">
     <div class="card h-100">
         <div class="card-header d-flex align-items-center justify-content-between">
             <h5 class="card-title m-0 me-2">Pending Deposits</h5>
@@ -140,7 +140,7 @@ if (!$a_result) {
 <!--List Approved deposits-->
 
 
-<div class="col-xl-6 col-md-6">
+<div class="col-xl-6  col-md-6">
     <div class="card h-100">
         <div class="card-header d-flex align-items-center justify-content-between">
             <h5 class="card-title m-0 me-2">Approved Deposits</h5>
