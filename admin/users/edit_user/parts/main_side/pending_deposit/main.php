@@ -84,7 +84,7 @@ if (!$result) {
                         <form action="">
                             <input hidden="" type="text" name="<?=$data['dep_id']?>">
                             <form action="" name="update_user_deposit_bal">
-                                <div type="submit" class="badge bg-label-primary rounded-pill">Approve</div>
+                                <button type="submit" class="badge bg-label-primary rounded-pill">Approve</button>
                             </form>
                         </form>
                     </div>
