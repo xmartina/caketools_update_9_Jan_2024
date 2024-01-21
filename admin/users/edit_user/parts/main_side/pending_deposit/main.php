@@ -28,9 +28,6 @@ if (!$result) {
         </div>
         <div class="card-body">
             <ul class="p-0 m-0">
-                <?php  if (empty($data = $result->fetch_assoc())) { ?>
-                    <li class="d-flex mb-4 pb-1">User has not made any deposit</li>
-                <?php } else {  ?>
                 <?php while ($data = $result->fetch_assoc()) {
                 ?>
                 <?php
@@ -39,6 +36,9 @@ if (!$result) {
                 $user_data = $u_result->fetch_assoc()
 
                 ?>
+                <?php  if (empty($data = $result->fetch_assoc())) { ?>
+                    <li class="d-flex mb-4 pb-1">User has not made any deposit</li>
+                <?php } ?>
                 <li class="d-flex mb-4 pb-1">
                     <div class="avatar flex-shrink-0 me-3">
                         <?php
@@ -88,7 +88,6 @@ if (!$result) {
                     </div>
                 </li>
                 <?php }?>
-                <?php } ?>
             </ul>
         </div>
     </div>
