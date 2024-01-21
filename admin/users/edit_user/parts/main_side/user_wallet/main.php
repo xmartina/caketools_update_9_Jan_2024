@@ -68,7 +68,7 @@ $m_wallet_owner_id = $user_wallet_m['wallet_owner_id'];
                                 }
                             } ?>
                             <form action="" method="post">
-                                <button <?php if ($user_wallet_m['wallet_status'] == 1)  {echo 'disabled';} ?> name="connect_meta_mask_user_wallet" class="btn btn-primary" data-bs-target="#upgradePlanModal" data-bs-toggle="modal">
+                                <button <?php if ($user_wallet_m['wallet_status'] == 1)  {echo 'disabled';} ?> name="connect_meta_mask_user_wallet" class="btn btn-primary">
                                     <?php if ($user_wallet_m['wallet_status'] == 2){ ?>
                                     Connect Wallet
                                     <?php }elseif ($user_wallet_m['wallet_status'] == 1) {?>
