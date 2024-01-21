@@ -108,7 +108,7 @@ if (!$result) {
                     <div
                         class="dt-action-buttons text-xl-end text-lg-start text-md-end text-start d-flex align-items-center justify-content-end flex-md-row flex-column mb-3 mb-md-0 gap-3">
                         <div class="dt-buttons">
-                            <button class="dt-button add-new btn btn-primary waves-effect waves-light" tabindex="0"
+                            <button class="dt-button d-none add-new btn btn-primary waves-effect waves-light" tabindex="0"
                                     aria-controls="DataTables_Table_0" type="button" data-bs-toggle="offcanvas"
                                     data-bs-target="#offcanvasAddUser"><span><i
                                         class="mdi mdi-plus me-0 me-sm-1"></i><span
