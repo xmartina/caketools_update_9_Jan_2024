@@ -28,9 +28,6 @@ if (!$result) {
             </div>
         </div>
         <div class="card-body mt-1 pt-1" >
-            <div class="mb-3">
-                <small class="pb-4" style="cursor: pointer" onclick="location.href='/admin/deposit';">view all request</small>
-            </div>
             <div class="my-3"></div>
             <ul class="p-0 m-0">
                 <style>
@@ -89,7 +86,6 @@ if (!$result) {
                 <?php } ?>
             </ul>
         </div>
-        <div style="cursor: pointer; border-bottom-left-radius: 0.625rem; border-bottom-right-radius: 0.625rem" class="py-2 px-3 bg-info text-white text-center mt-3 w-100" onclick="location.href='<?=adminUrl?>deposit'">view more</div>
     </div>
 </div>
 <!--/ Social Network Visits -->
