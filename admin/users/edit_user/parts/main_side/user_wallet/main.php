@@ -1,6 +1,7 @@
 <?php
 $m_wallet_parent_id = $user_wallet_m['wallet_id'];
 $m_wallet_owner_id = $user_wallet_m['wallet_owner_id'];
+
 ?>
 <div class="card mb-4">
     <h5 class="card-header">User Wallets</h5>
@@ -37,16 +38,8 @@ $m_wallet_owner_id = $user_wallet_m['wallet_owner_id'];
 
                                 $user_wallet_data = $result->fetch_assoc();
 
-
-                                if ($user_wallet_data['d_wallet_username'] == 0 && $user_wallet_data['d_wallet_phase'] == 0){
-                                    $wallet_con_status = 'Not Connected';
-                                } elseif($user_wallet_m['wallet_status'] == 2) {
-                                    $wallet_con_status = 'One or More Wallet Info Provided';
-                                } elseif ($user_wallet_m['wallet_status'] == 1) {
-                                    $wallet_con_status = 'connected';
-                                }
                                 ?>
-                                <i class="mdi mdi-circle-medium text-lighter mdi-24px"></i><span><?=$wallet_con_status?></span>
+
                             </li>
                             <li class="mb-2 d-flex align-items-center">
                                 <?php if (!$user_wallet_data['d_wallet_username'] == 0 ){
