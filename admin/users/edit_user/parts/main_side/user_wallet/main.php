@@ -12,16 +12,6 @@ $m_wallet_owner_id = $user_wallet_m['wallet_owner_id'];
                 <div class="card mb-4 border-2 border-primary">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-start">
-                            <?php
-                            if ($user_wallet_m['wallet_status'] == 'm_3') {
-                                $m_status = 'Not Connected';
-                            }elseif ($user_wallet_m['wallet_status'] == '1') {
-                                $m_status = 'Connected';
-                            }elseif ($user_wallet_m['wallet_status'] == '2') {
-                                $m_status = 'Pending Connection';
-                            }
-                            ?>
-                            <span class="badge bg-label-primary rounded-pill"><?=$m_status?></span>
                             <div class="d-flex justify-content-center">
                                 <sup class="h5 pricing-currency mt-3 mb-0 me-1 text-primary">Meta Mask</sup>
                             </div>
