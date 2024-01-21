@@ -137,8 +137,8 @@ $b_wallet_owner_id = $user_wallet_b['wallet_owner_id'];
                         <div class="d-grid w-100 mt-4">
                             <?php if (isset($_POST['connect_binance_user_wallet']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
                                 // Update user information in the database
-                                $update_query = "UPDATE wallet SET wallet_status = 1 WHERE wallet_owner_id = '$user_acct_id' AND wallet_key = 2";
-                                if ($conn->query($update_query) === TRUE) {
+                                $update_user_b = "UPDATE wallet SET wallet_status = 1 WHERE wallet_owner_id = '$user_acct_id' AND wallet_key = 2";
+                                if ($conn->query($update_user_b) === TRUE) {
                                     header("Location: " . adminUrl . "users?update_user_success");
                                     exit();
                                 } else {
