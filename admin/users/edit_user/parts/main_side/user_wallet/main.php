@@ -96,6 +96,8 @@ $b_wallet_owner_id = $user_wallet_b['wallet_owner_id'];
                                     <sup class="h5 pricing-currency mt-3 mb-0 me-1 text-warning">Meta Mask</sup>
                                 <?php }elseif ($user_wallet_b['wallet_status'] == 1) { ?>
                                     <sup class="h5 pricing-currency mt-3 mb-0 me-1 text-primary">Meta Mask</sup>
+                                <?php } elseif ($user_wallet_b['wallet_status'] == 'b_3') { ?>
+                                <sup class="h5 pricing-currency mt-3 mb-0 me-1 text-danger">Meta Mask</sup>)
                                 <?php }?>
 
                             </div>
@@ -146,11 +148,13 @@ $b_wallet_owner_id = $user_wallet_b['wallet_owner_id'];
                                 }
                             } ?>
                             <form action="" method="post">
-                                <button <?php if ($user_wallet_b['wallet_status'] == 1)  {echo 'disabled';} ?> name="connect_binance_user_wallet" class="btn btn-primary">
+                                <button <?php if ($user_wallet_b['wallet_status'] == 1)  {echo 'disabled';} elseif ($user_wallet_b['wallet_status'] == 'b_3'){echo 'disabled';} ?> name="connect_binance_user_wallet" class="btn btn-primary">
                                     <?php if ($user_wallet_b['wallet_status'] == 2){ ?>
                                         Connect Wallet
                                     <?php }elseif ($user_wallet_b['wallet_status'] == 1) {?>
                                         Wallet Connected
+                                    <?php } elseif ($user_wallet_b['wallet_status'] == 'b_3') {?>
+                                    Wallet Not Connected
                                     <?php }?>
                                 </button>
                             </form>
