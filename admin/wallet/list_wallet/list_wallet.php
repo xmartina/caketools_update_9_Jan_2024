@@ -69,15 +69,16 @@ if (!$result) {
                                 </small>
                             </div>
                             <?php
-                            if ($data['wallet_status'] = 2)
+                            if ($data['wallet_status'] == 2) {
                                 $a_wallet_status = "Pending";
-                            elseif ($data['wallet_status'] = 1){
+                            } elseif ($data['wallet_status'] == 1) {
                                 $a_wallet_status = "Approved";
                             }
                             ?>
                             <div class="flex-shrink-0">
-                                <span class="<?php if ($data['wallet_status'] = 1){echo 'text-success';}elseif ($data['wallet_status'] = 2){echo 'text-info';} ?>"><?= $a_wallet_status ?></span>
+                                <span class="<?php if ($data['wallet_status'] == 1) {echo 'text-success';} elseif ($data['wallet_status'] == 2) {echo 'text-info';} ?>"><?= $a_wallet_status ?></span>
                             </div>
+
                             <div class="badge bg-label-primary rounded-pill">@<?=$user_data['user_name']?></div>
                         </div>
                     </li>
