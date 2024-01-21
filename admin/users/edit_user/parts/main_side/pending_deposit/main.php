@@ -28,6 +28,9 @@ if (!$result) {
         </div>
         <div class="card-body">
             <ul class="p-0 m-0">
+                <?php  if (empty($data = $result->fetch_assoc())) { ?>
+                    <li class="d-flex mb-4 pb-1">User has not made any deposit</li>
+                <?php } else {  ?>
                 <?php while ($data = $result->fetch_assoc()) {
                 ?>
                 <?php
@@ -84,10 +87,8 @@ if (!$result) {
                         </form>
                     </div>
                 </li>
+                <?php }?>
                 <?php } ?>
-                <?php if (empty($data = $result->fetch_assoc())) { ?>
-                <li class="d-flex mb-4 pb-1">User has not made any deposit</li>
-                <?php } else{null;} ?>
             </ul>
         </div>
     </div>
