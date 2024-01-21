@@ -1,5 +1,5 @@
 <?php
-$query = "SELECT * FROM deposit WHERE wallet_owner_id = '$user_acct_id' AND dep_status = 0 ORDER BY dep_id DESC";
+$query = "SELECT * FROM deposit WHERE dep_user_id = '$user_acct_id' AND dep_status = 0 ORDER BY dep_id DESC";
 $result = $conn->query($query);
 if (!$result) {
     die('Query Error: ' . $conn->error);
