@@ -72,19 +72,23 @@ if (!$result) {
                         </div>
                         <?php
                         if (isset($_POST['update_user_deposit_bal']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
-                            // Update user information in the database
-                            $update_query = "UPDATE deposit SET dep_status = 1 WHERE dep_user_id = '$user_acct_id' AND dep_id = '$acct_ed_id'";
-                            if ($conn->query($update_query) === TRUE) {
+                            // Assuming $conn is your database connection object
+                            $stmt = $conn->prepare("UPDATE deposit SET dep_status = 1 WHERE dep_user_id = ? AND dep_id = ?");
+                            $stmt->bind_param("ii", $user_acct_id, $data['dep_id']);
+
+                            // Execute the update
+                            if ($stmt->execute()) {
                                 header("Location: " . adminUrl . "users?update_user_success");
                                 exit();
                             } else {
-                                echo "Error updating user information: " . $conn->error;
+                                echo "Error updating user information: " . $stmt->error;
                             }
                         }
                         ?>
 
+
                         <form action="" method="post">
-                            <button type="submit" class="badge bg-label-primary rounded-pill" name="update_user_deposit_bal">Approve <?=$user_acct_id?> | <?= $data['dep_id'] ?></button>
+                            <button type="submit" class="badge bg-label-primary rounded-pill" name="update_user_deposit_bal">Approve</button>
                         </form>
                     </div>
                 </li>
