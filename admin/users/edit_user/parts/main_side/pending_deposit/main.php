@@ -85,7 +85,7 @@ if (!$result) {
                     </div>
                 </li>
                 <?php } ?>
-                <?php if (empty($data)) { ?>
+                <?php if (!$data = $result->fetch_assoc() > 0) { ?>
                 <li class="d-flex mb-4 pb-1">User has not made any deposit</li>
                 <?php } ?>
             </ul>
