@@ -62,8 +62,7 @@ if (!$result) {
                             }
                             ?>
                             <small>
-                                <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
-                                <span><?=$currency_symbol.$data['dep_amount']?> | <?=$data['dep_request_time'] . ' | ' . $data['dep_request_date'] ?></span>
+                                <span><?=$currency_symbol.$data['dep_amount']?> | <i class="mdi mdi-calendar-blank-outline mdi-14px"></i> <?=$data['dep_request_time'] . ' | ' . $data['dep_request_date'] ?></span>
                             </small>
                         </div>
                         <?php if (isset($_POST['update_user_deposit_bal']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
