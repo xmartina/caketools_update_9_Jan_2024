@@ -78,19 +78,65 @@ if (!$a_result) {
                         </div>
                         <?php
                         if (isset($_POST['update_user_deposit_bal']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
-                            // Assuming $conn is your database connection object
-                            $stmt = $conn->prepare("UPDATE deposit SET dep_status = 1 WHERE dep_user_id = ? AND dep_id = ?");
+                            // Start a transaction
+                            $conn->begin_transaction();
+
+                            // Update deposit status
+                            $update_query = "UPDATE users SET dep_status = 1 WHERE dep_user_id = ? AND dep_id = ?";
+                            $stmt = $conn->prepare($update_query);
                             $stmt->bind_param("ii", $user_acct_id, $data['dep_id']);
 
-                            // Execute the update
                             if ($stmt->execute()) {
-                                header("Location: " . adminUrl . "users?update_user_success");
-                                exit();
+                                // Update user balance
+                                $depo_amount = $data['dep_amount'];
+
+                                $update_bal_query = "";
+                                switch ($data['dep_currency']) {
+                                    case 'ethereum':
+                                        $update_bal_query = "UPDATE users SET eth_bal = eth_bal + ? WHERE id = ?";
+                                        break;
+                                    case 'usdt':
+                                        $update_bal_query = "UPDATE users SET usdt_bal = usdt_bal + ? WHERE id = ?";
+                                        break;
+                                    case 'bitcoin':
+                                        $update_bal_query = "UPDATE users SET btc_bal = btc_bal + ? WHERE id = ?";
+                                        break;
+                                    // Add more cases as needed
+
+                                    default:
+                                        // Handle unsupported currency
+                                        break;
+                                }
+
+                                if (!empty($update_bal_query)) {
+                                    $update_bal_stmt = $conn->prepare($update_bal_query);
+                                    $update_bal_stmt->bind_param("ii", $depo_amount, $user_acct_id);
+
+                                    if ($update_bal_stmt->execute()) {
+                                        // Commit the transaction if everything is successful
+                                        $conn->commit();
+                                        header("Location: " . adminUrl . "users?update_user_success");
+                                        exit();
+                                    } else {
+                                        // Rollback the transaction in case of an error
+                                        $conn->rollback();
+                                        echo "Error updating user balance: " . $update_bal_stmt->error;
+                                    }
+                                } else {
+                                    // Handle unsupported currency
+                                }
                             } else {
                                 echo "Error updating user information: " . $stmt->error;
                             }
+
+                            // Close the statements
+//                            $stmt->close();
+                            if (isset($update_bal_stmt)) {
+                                $update_bal_stmt->close();
+                            }
                         }
                         ?>
+
 
 
                         <form action="" method="post">
