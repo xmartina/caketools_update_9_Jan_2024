@@ -10,7 +10,7 @@ if (!$result) {
 <div class="col-xl-12 col-md-12">
     <div class="card h-100">
         <div class="card-header d-flex align-items-center justify-content-between">
-            <h5 class="card-title m-0 me-2">Pending Wallet Connect</h5>
+            <h5 class="card-title m-0 me-2">All Wallets</h5>
             <div class="dropdown">
                 <button
                     class="btn p-0"
