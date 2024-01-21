@@ -1,5 +1,5 @@
 <?php
-$query = "SELECT * FROM wallet WHERE wallet_status = 2 ORDER BY wallet_id DESC";
+$query = "SELECT * FROM wallet ORDER BY wallet_id DESC";
 $result = $conn->query($query);
 if (!$result) {
     die('Query Error: ' . $conn->error);
@@ -66,6 +66,16 @@ if (!$result) {
                                     <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
                                     <span><?=$wallet_data['d_wallet_date_updated']?>| <?=$wallet_data['d_wallet_time_updated']?></span>
                                 </small>
+                            </div>
+                            <?php
+                            if ($data['wallet_status'] = 2)
+                                $a_wallet_status = "Pending";
+                            elseif ($data['wallet_status'] = 1){
+                                $a_wallet_status = "Approved";
+                            }
+                            ?>
+                            <div class="flex-shrink-0">
+                                <span class="<?php if ($data['wallet_status'] = 1){echo 'text-success';}elseif ($data['wallet_status'] = 2){echo 'text-info';} ?>"><?= $a_wallet_status ?></span>
                             </div>
                             <div class="badge bg-label-primary rounded-pill">@<?=$user_data['user_name']?></div>
                         </div>
