@@ -72,6 +72,9 @@ if (!$result) {
                     </div>
                 </li>
                 <?php } ?>
+                <?php if (empty($data)) { ?>
+                <li class="d-flex mb-4 pb-1">User has not made any deposit</li>
+                <?php } ?>
             </ul>
         </div>
     </div>
