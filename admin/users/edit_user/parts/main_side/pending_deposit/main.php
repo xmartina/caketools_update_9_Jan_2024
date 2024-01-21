@@ -81,7 +81,7 @@ if (!$result) {
                                 echo "Error updating user information: " . $conn->error;
                             }
                         } ?>
-                        <form action="">
+                        <form action="" method="post">
                             <input hidden="" type="text" name="<?=$data['dep_id']?>">
                             <form action="" name="update_user_deposit_bal">
                                 <button type="submit" class="badge bg-label-primary rounded-pill">Approve</button>
