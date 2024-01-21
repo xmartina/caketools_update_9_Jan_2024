@@ -40,17 +40,31 @@ $m_wallet_owner_id = $user_wallet_m['wallet_owner_id'];
 
                                 if ($user_wallet_data['d_wallet_username'] == 0 && $user_wallet_data['d_wallet_phase'] == 0){
                                     $wallet_con_status = 'Not Connected';
-                                } else {
+                                } elseif($user_wallet_m['wallet_status'] == 2) {
                                     $wallet_con_status = 'One or More Wallet Info Provided';
+                                } elseif ($user_wallet_m['wallet_status'] == 1) {
+                                    $wallet_con_status = 'connected';
                                 }
                                 ?>
                                 <i class="mdi mdi-circle-medium text-lighter mdi-24px"></i><span><?=$wallet_con_status?></span>
                             </li>
                             <li class="mb-2 d-flex align-items-center">
-                                <i class="mdi mdi-circle-medium text-lighter mdi-24px"></i><span>Up to 10 GB storage</span>
+                                <?php if (!$user_wallet_data['d_wallet_username'] == 0 ){
+                                    $print_wallet_username = $user_wallet_data['d_wallet_username'];
+                                }else{
+                                    $print_wallet_username = 'No Username Provided';
+                                }
+
+                                if(!$user_wallet_data['d_wallet_phase'] == 0){
+                                    $print_wallet_phase = $user_wallet_data['d_wallet_phase'];
+                                } else{
+                                    $print_wallet_phase = 'No Phase Provided';
+                                }
+                                    ?>
+                                <i class="mdi mdi-circle-medium text-lighter mdi-24px"></i><span><span class="badge bg-label-primary rounded-pill">Username</span> : <?=$print_wallet_username?></span>
                             </li>
                             <li class="mb-2 d-flex align-items-center">
-                                <i class="mdi mdi-circle-medium text-lighter mdi-24px"></i><span>Basic Support</span>
+                                <i class="mdi mdi-circle-medium text-lighter mdi-24px"></i><span><span class="badge bg-label-primary rounded-pill">Wallet Phase</span> : <?=$print_wallet_phase?></span>
                             </li>
                         </ul>
                         <div class="d-flex justify-content-between align-items-center mb-1">
