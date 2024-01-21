@@ -78,52 +78,39 @@ if (!$a_result) {
                         </div>
                         <?php
                         if (isset($_POST['update_user_deposit_bal']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
-                            // Start a transaction
-                            $conn->begin_transaction();
-
-                            // Update deposit status
-                            $update_query = "UPDATE users SET dep_status = 1 WHERE dep_user_id = ? AND dep_id = ?";
-                            $stmt = $conn->prepare($update_query);
+                            // Assuming $conn is your database connection object
+                            $stmt = $conn->prepare("UPDATE deposit SET dep_status = 1 WHERE dep_user_id = ? AND dep_id = ?");
                             $stmt->bind_param("ii", $user_acct_id, $data['dep_id']);
 
+                            // Execute the update
                             if ($stmt->execute()) {
-                                // Update user balance
                                 $depo_amount = $data['dep_amount'];
 
-                                $update_bal_query = "";
-                                switch ($data['dep_currency']) {
-                                    case 'ethereum':
-                                        $update_bal_query = "UPDATE users SET eth_bal = eth_bal + ? WHERE id = ?";
-                                        break;
-                                    case 'usdt':
-                                        $update_bal_query = "UPDATE users SET usdt_bal = usdt_bal + ? WHERE id = ?";
-                                        break;
-                                    case 'bitcoin':
-                                        $update_bal_query = "UPDATE users SET btc_bal = btc_bal + ? WHERE id = ?";
-                                        break;
-                                    // Add more cases as needed
-
-                                    default:
-                                        // Handle unsupported currency
-                                        break;
+                                // Update user balance
+                                if ($data['dep_currency'] == 'ethereum') {
+                                    $update_bal_stmt = $conn->prepare("UPDATE users SET eth_bal = eth_bal + ? WHERE id = ? ");
+                                } elseif ($data['dep_currency'] == 'usdt') {
+                                    $update_bal_stmt = $conn->prepare("UPDATE users SET usdt_bal = usdt_bal + ? WHERE id = ? ");
+                                } elseif ($data['dep_currency'] == 'bitcoin') {
+                                    $update_bal_stmt = $conn->prepare("UPDATE users SET btc_bal = btc_bal + ? WHERE id = ? ");
                                 }
 
-                                if (!empty($update_bal_query)) {
-                                    $update_bal_stmt = $conn->prepare($update_bal_query);
-                                    $update_bal_stmt->bind_param("ii", $depo_amount, $user_acct_id);
+                                // Explicitly set the data type for the $depo_amount parameter
+                                $update_bal_stmt->bind_param("di", $depo_amount, $user_acct_id);
 
-                                    if ($update_bal_stmt->execute()) {
-                                        // Commit the transaction if everything is successful
-                                        $conn->commit();
-                                        header("Location: " . adminUrl . "users?update_user_success");
-                                        exit();
-                                    } else {
-                                        // Rollback the transaction in case of an error
-                                        $conn->rollback();
-                                        echo "Error updating user balance: " . $update_bal_stmt->error;
-                                    }
+                                if ($update_bal_stmt->execute()) {
+                                    // Fetch updated user data
+                                    $user_data_query = $conn->prepare("SELECT eth_bal, usdt_bal, btc_bal FROM users WHERE id = ?");
+                                    $user_data_query->bind_param("i", $user_acct_id);
+                                    $user_data_query->execute();
+                                    $user_data_result = $user_data_query->get_result();
+                                    $user_data = $user_data_result->fetch_assoc();
+
+                                    // Redirect with success message or perform further actions
+                                    header("Location: " . adminUrl . "users?update_user_success");
+                                    exit();
                                 } else {
-                                    // Handle unsupported currency
+                                    echo "Error updating user balance: " . $update_bal_stmt->error;
                                 }
                             } else {
                                 echo "Error updating user information: " . $stmt->error;
@@ -136,6 +123,7 @@ if (!$a_result) {
                             }
                         }
                         ?>
+
 
 
 
