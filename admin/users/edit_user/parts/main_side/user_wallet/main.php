@@ -1,7 +1,6 @@
 <?php
 $m_wallet_parent_id = $user_wallet_m['wallet_id'];
 $m_wallet_owner_id = $user_wallet_m['wallet_owner_id'];
-
 ?>
 <div class="card mb-4">
     <h5 class="card-header">User Wallets</h5>
@@ -13,7 +12,14 @@ $m_wallet_owner_id = $user_wallet_m['wallet_owner_id'];
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-start">
                             <div class="d-flex justify-content-center">
+                                <?php
+                                if ($user_wallet_m['wallet_status'] == 2 ){
+                                ?>
+                                <sup class="h5 pricing-currency mt-3 mb-0 me-1 text-warning">Meta Mask</sup>
+                                <?php }elseif ($user_wallet_m['wallet_status'] == 1) { ?>
                                 <sup class="h5 pricing-currency mt-3 mb-0 me-1 text-primary">Meta Mask</sup>
+                                <?php }?>
+
                             </div>
                         </div>
                         <ul class="list-unstyled g-2 my-4">
