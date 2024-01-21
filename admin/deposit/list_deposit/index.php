@@ -76,7 +76,7 @@ if (!$result) {
                                 <small>@<?=$user_data['user_name']?></small>
                             </div>
                             <div class="flex-shrink-0">
-                                <span class="<?php if ($data['dep_status'] == 1){echo 'text-success';}elseif ($data['dep_status'] == 0){echo 'text-warning';} ?>"><?= $deposit_status ?></span>
+                                <span class="<?php if ($data['dep_status'] == 1){echo 'text-success';}elseif ($data['dep_status'] == 0){echo 'text-info';} ?>"><?= $deposit_status ?></span>
                             </div>
                             <div class="d-flex align-items-center">
                                 <?php
