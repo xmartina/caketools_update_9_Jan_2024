@@ -171,7 +171,7 @@ if (!$a_result) {
                                     <span><?=$currency_symbol.$data['dep_amount']?> | <i class="mdi mdi-calendar-blank-outline mdi-14px"></i> <?=$data['dep_request_time'] . ' | ' . $data['dep_request_date'] ?></span>
                                 </small>
                             </div>
-                             <div type="submit" class="badge bg-label-primary rounded-pill" >Successful</div>
+                             <div class="badge bg-label-primary rounded-pill" >Successful</div>
                         </div>
                     </li>
                 <?php } }?>
