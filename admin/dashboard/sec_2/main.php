@@ -49,7 +49,7 @@ if (!$result) {
                         $user_data = $u_result->fetch_assoc()
 
                     ?>
-                <li style="cursor: pointer;" class="d-flex mb-3 pd_hover" onclick="location.href='<?=adminUrl?>deposit/edit_deposit?<?=$data['dep_id']?>'">
+                <li style="cursor: pointer;" class="d-flex mb-3 pd_hover" onclick="location.href='<?=adminUrl?>users/edit_user?user_acct_id=<?= $user_data['id'] ?>'">
                     <div class="flex-shrink-0">
                         <?php
                         if ($data['dep_currency'] == 'ethereum') {
