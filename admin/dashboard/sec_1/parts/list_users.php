@@ -31,7 +31,7 @@ if (!$result) {
                 <?php
                 while ($data = $result->fetch_assoc()) {
                 ?>
-                <tr class="odd">
+                <tr class="odd <?php if ($data['id'] == 1)  { echo 'd-none'; }   ?>">
                     <td>
                         <div class="d-flex justify-content-start align-items-center user-name">
                             <div class="avatar-wrapper">
