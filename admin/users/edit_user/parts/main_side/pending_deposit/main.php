@@ -1,3 +1,10 @@
+<?php
+$query = "SELECT * FROM deposit WHERE wallet_owner_id = '$user_acct_id' AND dep_status = 0 ORDER BY dep_id DESC";
+$result = $conn->query($query);
+if (!$result) {
+    die('Query Error: ' . $conn->error);
+}
+?>
 <div class="col-xl-6 col-md-6">
     <div class="card h-100">
         <div class="card-header d-flex align-items-center justify-content-between">
@@ -21,96 +28,50 @@
         </div>
         <div class="card-body">
             <ul class="p-0 m-0">
+                <?php while ($data = $result->fetch_assoc()) {
+                ?>
+                <?php
+                $get_user_data = "SELECT * FROM users WHERE id = '".$data['dep_user_id']."'";
+                $u_result = $conn->query($get_user_data);
+                $user_data = $u_result->fetch_assoc()
+
+                ?>
                 <li class="d-flex mb-4 pb-1">
                     <div class="avatar flex-shrink-0 me-3">
-                        <img src="<?=adminUrl?>assets/img/avatars/4.png" alt="avatar" class="rounded" />
+                        <?php
+                        if ($data['dep_currency'] == 'ethereum') {
+                            $method_img = "eth.png";
+                        }elseif ($data['dep_currency'] == 'usdt') {
+                            $method_img = "usdt.png";
+                        }elseif ($data['dep_currency'] == 'bitcoin') {
+                            $method_img = "btc.png";
+                        }
+                        ?>
+                        <img src="<?=adminUrl?>assets/img/crypto/rounded_circle/<?=$method_img?>" alt="avatar" class="rounded" />
                     </div>
                     <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                         <div class="me-2">
-                            <h6 class="mb-0">Call with Woods</h6>
+                            <h6 class="mb-0"><?=$data['dep_currency']?></h6>
+                            <?php
+                            if ($data['dep_currency'] == 'ethereum') {
+                                $currency_symbol = "<i class='fab fa-ethereum'></i>";
+                            }elseif ($data['dep_currency'] == 'usdt') {
+                                $currency_symbol = '₮';
+                            }elseif ($data['dep_currency'] == 'bitcoin') {
+                                $currency_symbol = "<i class='fab fa-bitcoin'></i>";
+                            }
+                            ?>
                             <small>
                                 <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
-                                <span>21 Jul | 08:20-10:30</span>
+                                <span><?=$currency_symbol.$data['dep_amount']?> | <?=$data['dep_request_time'] . ' | ' . $data['dep_request_date'] ?></span>
                             </small>
                         </div>
-                        <div class="badge bg-label-primary rounded-pill">Business</div>
+                        <form action="">
+                            <div class="badge bg-label-primary rounded-pill">Approve</div>
+                        </form>
                     </div>
                 </li>
-                <li class="d-flex mb-4 pb-1">
-                    <div class="avatar flex-shrink-0 me-3">
-                        <img src="<?=adminUrl?>assets/img/avatars/5.png" alt="avatar" class="rounded" />
-                    </div>
-                    <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                        <div class="me-2">
-                            <h6 class="mb-0">Conference call</h6>
-                            <small>
-                                <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
-                                <span>21 Jul | 08:20-10:30</span>
-                            </small>
-                        </div>
-                        <div class="badge bg-label-warning rounded-pill">Dinner</div>
-                    </div>
-                </li>
-                <li class="d-flex mb-4 pb-1">
-                    <div class="avatar flex-shrink-0 me-3">
-                        <img src="<?=adminUrl?>assets/img/avatars/3.png" alt="avatar" class="rounded" />
-                    </div>
-                    <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                        <div class="me-2">
-                            <h6 class="mb-0">Meeting with Mark</h6>
-                            <small>
-                                <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
-                                <span>21 Jul | 08:20-10:30</span>
-                            </small>
-                        </div>
-                        <div class="badge bg-label-secondary rounded-pill">Meetup</div>
-                    </div>
-                </li>
-                <li class="d-flex mb-4 pb-1">
-                    <div class="avatar flex-shrink-0 me-3">
-                        <img src="<?=adminUrl?>assets/img/avatars/14.png" alt="avatar" class="rounded" />
-                    </div>
-                    <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                        <div class="me-2">
-                            <h6 class="mb-0">Meeting in Oakland</h6>
-                            <small>
-                                <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
-                                <span>21 Jul | 08:20-10:30</span>
-                            </small>
-                        </div>
-                        <div class="badge bg-label-danger rounded-pill">Dinner</div>
-                    </div>
-                </li>
-                <li class="d-flex mb-4 pb-1">
-                    <div class="avatar flex-shrink-0 me-3">
-                        <img src="<?=adminUrl?>assets/img/avatars/8.png" alt="avatar" class="rounded" />
-                    </div>
-                    <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                        <div class="me-2">
-                            <h6 class="mb-0">Call with hilda</h6>
-                            <small>
-                                <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
-                                <span>21 Jul | 08:20-10:30</span>
-                            </small>
-                        </div>
-                        <div class="badge bg-label-success rounded-pill">Meditation</div>
-                    </div>
-                </li>
-                <li class="d-flex">
-                    <div class="avatar flex-shrink-0 me-3">
-                        <img src="<?=adminUrl?>assets/img/avatars/1.png" alt="avatar" class="rounded" />
-                    </div>
-                    <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                        <div class="me-2">
-                            <h6 class="mb-0">Meeting with Carl</h6>
-                            <small>
-                                <i class="mdi mdi-calendar-blank-outline mdi-14px"></i>
-                                <span>21 Jul | 08:20-10:30</span>
-                            </small>
-                        </div>
-                        <div class="badge bg-label-primary rounded-pill">Business</div>
-                    </div>
-                </li>
+                <?php } ?>
             </ul>
         </div>
     </div>
