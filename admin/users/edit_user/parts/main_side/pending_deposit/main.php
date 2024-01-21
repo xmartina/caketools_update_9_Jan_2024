@@ -86,7 +86,7 @@ if (!$result) {
 
                         <form action="" method="post" name="update_user_deposit_bal">
                             <input type="hidden" name="update_user_deposit" value="<?= $data['dep_id'] ?>">
-                            <button type="submit" class="badge bg-label-primary rounded-pill">Approve</button>
+                            <button type="submit" class="badge bg-label-primary rounded-pill">Approve <?=$user_acct_id?> | <?= $data['dep_id'] ?></button>
                         </form>
                     </div>
                 </li>
