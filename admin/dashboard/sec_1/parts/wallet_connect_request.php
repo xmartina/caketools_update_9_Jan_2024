@@ -45,7 +45,7 @@ if (!$result) {
                     $u_result = $conn->query($get_user_data);
                     $user_data = $u_result->fetch_assoc()
                     ?>
-                <li class="d-flex mb-4 pb-1 pd_hover" onclick="location.href='<?=adminUrl?>wallet/edit_wallet?<?=$data['wallet_id']?>'">
+                <li class="d-flex mb-4 pb-1 pd_hover" onclick="location.href='<?=adminUrl?>users/edit_user?user_acct_id=<?= $user_data['id'] ?>'">
                         <div class="avatar flex-shrink-0 me-3">
                             <?php
                                 if ($data['wallet_key'] == 1) {
