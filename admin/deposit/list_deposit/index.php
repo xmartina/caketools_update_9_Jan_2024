@@ -1,5 +1,5 @@
 <?php
-$query = "SELECT * FROM deposit WHERE dep_status = 0 ORDER BY dep_id DESC";
+$query = "SELECT * FROM deposit ORDER BY dep_id DESC";
 $result = $conn->query($query);
 if (!$result) {
     die('Query Error: ' . $conn->error);
@@ -62,6 +62,16 @@ if (!$result) {
                                 alt="facebook"
                                 class="me-3"
                                 height="34" />
+                        </div>
+                        <?php
+                        if ($data['dep_status'] == 0){
+                            $deposit_status = "Pending";
+                        }elseif ($data['dep_status'] == 1){
+                            $deposit_status = "Approved";
+                        }
+                        ?>
+                        <div class="flex-shrink-0">
+                            <span class="<?php if ($data['dep_status'] == 1){echo 'text-success';}elseif ($data['dep_status'] == 0){echo 'text-warning';} ?>"><?= $deposit_status ?></span>
                         </div>
                         <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
                             <div class="me-2">
