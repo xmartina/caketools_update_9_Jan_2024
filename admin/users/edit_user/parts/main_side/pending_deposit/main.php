@@ -66,8 +66,22 @@ if (!$result) {
                                 <span><?=$currency_symbol.$data['dep_amount']?> | <?=$data['dep_request_time'] . ' | ' . $data['dep_request_date'] ?></span>
                             </small>
                         </div>
+                        <?php if (isset($_POST['update_user_deposit_bal']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
+                            $acct_ed_id = $data['dep_id'];
+                            // Update user information in the database
+                            $update_query = "UPDATE deposit SET dep_status = 1 WHERE dep_user_id = '$user_acct_id' AND dep_id = '$acct_ed_id'";
+                            if ($conn->query($update_query) === TRUE) {
+                                header("Location: " . adminUrl . "users?update_user_success");
+                                exit();
+                            } else {
+                                echo "Error updating user information: " . $conn->error;
+                            }
+                        } ?>
                         <form action="">
-                            <div class="badge bg-label-primary rounded-pill">Approve</div>
+                            <input hidden="" type="text" name="<?=$data['dep_id']?>">
+                            <form action="" name="update_user_deposit_bal">
+                                <div type="submit" class="badge bg-label-primary rounded-pill">Approve</div>
+                            </form>
                         </form>
                     </div>
                 </li>
