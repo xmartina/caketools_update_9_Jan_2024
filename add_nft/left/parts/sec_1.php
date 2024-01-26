@@ -3,7 +3,7 @@
     <div class="add-nft-inner">
         <h6 class="title">Choose Category</h6>
         <p class="sub">Connect With One Of Our Available Wallet Providers Or Create A New One.</p>
-        <select class="blockchain-button p-3" style="border-radius: 10px; background-color: #191820; color: #d7d7d7; width:250px; height: 43px; border: 1.3px solid #d7d7d7; text-align:center; font-weight: bold;">
+        <select class="blockchain-button p-3" style="border-radius: 3px; background-color: #191820; color: #d7d7d7; width:250px; height: 35px; border: .7px solid #d7d7d7; text-align:center; font-weight: bold;">
             <?php
             while ($g_c_row = $g_category_result->fetch_assoc()) {
                 ?>
@@ -55,7 +55,7 @@
                                 <div class="col-lg-12">
                                     <label >Nft Price</label>
                                     <div class="form-wrapper d-flex align-items-center">
-                                        <select name="nft_currency" class="pr-2" style="border-radius: 10px; background-color: #191820; color: #d7d7d7; width:40px; height: 43px; border: 1.3px solid #d7d7d7; text-align:center; font-weight: bold;">
+                                        <select name="nft_currency" class="mr-3" style="border-radius: 4px; background-color: #191820; color: #d7d7d7; width:110px; height: 33px; border: .7px solid #d7d7d7; text-align:center; font-weight: bold;">
                                             <?php
                                             while ($currency_row = $g_currency_result->fetch_assoc()) { ?>
                                                 <option value="<?= $currency_row['cur_id'] ?>" style="background-color: #191820; color: #888; border-radius: 10px;">
