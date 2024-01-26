@@ -52,17 +52,20 @@
 
                         <fieldset>
                             <div class="row">
-                                <div class="col-lg-6 d-flex align-items-center">
+                                <div class="col-lg-12">
                                     <label >Nft Price</label>
-                                    <select name="nft_currency" class="pr-2" style="border-radius: 10px; background-color: #191820; color: #d7d7d7; width:40px; height: 43px; border: 1.3px solid #d7d7d7; text-align:center; font-weight: bold;">
-                                        <?php
-                                        while ($currency_row = $g_currency_result->fetch_assoc()) { ?>
-                                            <option value="<?= $currency_row['cur_id'] ?>" style="background-color: #191820; color: #888; border-radius: 10px;">
-                                                <?= $currency_row['cur_abbreviation'] ?>
-                                            </option>
-                                        <?php } ?>
-                                    </select>
-                                    <input type="number" name="available_quantity" placeholder="E.G. 100"><br>service fee 0.0025%
+                                    <div class="form-wrapper d-flex align-items-center">
+                                        <select name="nft_currency" class="pr-2" style="border-radius: 10px; background-color: #191820; color: #d7d7d7; width:40px; height: 43px; border: 1.3px solid #d7d7d7; text-align:center; font-weight: bold;">
+                                            <?php
+                                            while ($currency_row = $g_currency_result->fetch_assoc()) { ?>
+                                                <option value="<?= $currency_row['cur_id'] ?>" style="background-color: #191820; color: #888; border-radius: 10px;">
+                                                    <?= $currency_row['cur_abbreviation'] ?>
+                                                </option>
+                                            <?php } ?>
+                                        </select>
+                                        <input type="number" name="available_quantity" placeholder="E.G. 100">
+                                    </div>
+                                    <br>service fee 0.0025%
                                 </div>
                             </div>
                         </fieldset>
