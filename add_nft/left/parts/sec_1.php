@@ -3,7 +3,7 @@
     <div class="add-nft-inner">
         <h6 class="title">Choose Category</h6>
         <p class="sub">Connect With One Of Our Available Wallet Providers Or Create A New One.</p>
-        <select class="blockchain-button p-3" style="border-radius: 10px; background-color: #191820; color: #d7d7d7; width:250px; height: 43px; border: 1px solid #d7d7d7; text-align:center; font-weight: bold;">
+        <select class="blockchain-button p-3" style="border-radius: 10px; background-color: #191820; color: #d7d7d7; width:250px; height: 43px; border: 2px solid #d7d7d7; text-align:center; font-weight: bold;">
             <?php
             while ($g_c_row = $g_category_result->fetch_assoc()) {
                 ?>
