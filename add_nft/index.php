@@ -12,6 +12,15 @@ const rootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_ht
 include_once (rootDir.'includes/generalConfig.php');
 include_once (rootDir.'includes/core.php');
 include_once (rootDir.'partials/front/header/main.php');
+
+//get Category data
+$g_category_sql = "SELECT * FROM category ORDER BY c_id";
+$g_category_result = $conn->query($g_category_sql);
+$g_c_row = $g_category_result->fetch_assoc();
+//$user_name = $g_c_row['user_name'];
+
+//get nft properties data
+
 ?>
 
 <!-- title page -->

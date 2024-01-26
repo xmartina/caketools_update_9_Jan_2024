@@ -1,13 +1,16 @@
+<form>
 <div class="col-xl-9 col-lg-8 ">
     <div class="add-nft-inner">
-        <h6 class="title">Choose Blockchain</h6>
+        <h6 class="title">Choose Category</h6>
         <p class="sub">Connect With One Of Our Available Wallet Providers Or Create A New One.</p>
         <ul class="blockchain-button">
-            <li><a href="#"><img src="/assets/images/svg/metamask.svg" alt="Image">MetaMask</a></li>
-            <li><a href="#"><img src="/assets/images/svg/coinbase.svg" alt="Image">Coinbase</a></li>
-            <li><a href="#"><img src="/assets/images/svg/torus.svg" alt="Image">Torus</a></li>
-            <li><a href="#"><img src="/assets/images/svg/fortmatic.svg" alt="Image">Fortmatic</a></li>
-            <li><a href="#">Show more options</a></li>
+            <?php
+            while ($g_c_row = $g_category_result->fetch_assoc()) {
+                ?>
+                <li name="<?=$g_c_row['c_id']?>"><a href="#"><img src="/assets/images/product-category/<?=$g_c_row['c_front_img']?>" alt="Image"><?=$g_c_row['c_name']?></a></li>
+                <?php
+            }
+            ?>
         </ul>
 
         <h6 class="title">Select Item Type</h6>
@@ -299,4 +302,3 @@
         </div>
 
     </div>
-</div>
