@@ -23,17 +23,8 @@
             <div class="content-tab">
                 <div class="content-inner active" >
                     <div class="tab-create-item">
-                        <h6 class="title">Upload An Item</h6>
-                        <p class="sub">But Each One Takes A Different Approach And Makes Different Tradeoffs.</p>
 
-                        <div class="drag-upload">
-                            <input type="file">
-                            <img src="/assets/images/svg/drap-upload.svg" alt="Image">
-                            <h6 class="title">Drag your item to upload</h6>
-                            <p class="sub-title">PNG, GIF, WebP, MP4 Or MP3. Maximum File Size 100 Mb.</p>
-                        </div>
-
-                        <h6 class="title">Upload An Item</h6>
+                        <h6 class="title">NFT Details</h6>
                         <p class="sub mb22">But Each One Takes A Different Approach And Makes Different Tradeoffs.</p>
 
                         <fieldset>
