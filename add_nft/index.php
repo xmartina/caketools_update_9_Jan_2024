@@ -20,7 +20,6 @@ $g_currency_result = $conn->query($g_currency_sql);
 //get Category data
 $g_category_sql = "SELECT * FROM category";
 $g_category_result = $conn->query($g_category_sql);
-$g_c_row = $g_category_result->fetch_assoc();
 //$user_name = $g_c_row['user_name'];
 
 //get nft properties data
