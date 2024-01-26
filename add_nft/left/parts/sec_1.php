@@ -56,9 +56,9 @@
                                     <label >Nft Price</label>
                                     <select name="nft_currency" class="px-3">
                                         <?php
-                                        while ($g_currency_row = $g_currency_result->fetch_assoc()) { ?>
-                                            <option value="<?=$g_currency_row['cur_id']?>" style="background-color: #191820; color: #888; border-radius: 10px;">
-                                                <?=$g_currency_row['cur_abbreviation']?>
+                                        while ($currency_row = $g_currency_result->fetch_assoc()) { ?>
+                                            <option value="<?= $currency_row['cur_id'] ?>" style="background-color: #191820; color: #888; border-radius: 10px;">
+                                                <?= $currency_row['cur_abbreviation'] ?>
                                             </option>
                                         <?php } ?>
                                     </select>
