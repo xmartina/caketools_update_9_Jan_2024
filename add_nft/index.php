@@ -13,6 +13,11 @@ include_once (rootDir.'includes/generalConfig.php');
 include_once (rootDir.'includes/core.php');
 include_once (rootDir.'partials/front/header/main.php');
 
+//get currency
+$g_currency_sql = "SELECT * FROM currency";
+$g_currency_result = $conn->query($g_currency_sql);
+$g_currency_row = $g_currency_result->fetch_assoc();
+
 //get Category data
 $g_category_sql = "SELECT * FROM category";
 $g_category_result = $conn->query($g_category_sql);
