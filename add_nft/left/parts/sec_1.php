@@ -3,11 +3,11 @@
     <div class="add-nft-inner">
         <h6 class="title">Choose Category</h6>
         <p class="sub">Connect With One Of Our Available Wallet Providers Or Create A New One.</p>
-        <select class="blockchain-button" style="border-radius: 10px; background-color: #333; color: #666;">
+        <select class="blockchain-button p-3" style="border-radius: 10px; background-color: #333; color: #666; width:250px; height: 23px;">
             <?php
             while ($g_c_row = $g_category_result->fetch_assoc()) {
                 ?>
-                <option name="<?=$g_c_row['c_id']?>" style="background-color: #444; color: #888;">
+                <option name="<?=$g_c_row['c_id']?>" style="background-color: #444; color: #888; ">
                     <img src="/assets/images/product-category/<?=$g_c_row['c_front_img']?>" alt="Image">
                     <?=$g_c_row['c_name']?>
                 </option>
