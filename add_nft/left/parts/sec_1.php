@@ -7,7 +7,7 @@
             <?php
             while ($g_c_row = $g_category_result->fetch_assoc()) {
                 ?>
-                <option name="<?=$g_c_row['c_id']?>" style="background-color: #444; color: #888; ">
+                <option name="<?=$g_c_row['c_id']?>" style="background-color: #444; color: #888; width:250px; height: 23px;">
                     <img src="/assets/images/product-category/<?=$g_c_row['c_front_img']?>" alt="Image">
                     <?=$g_c_row['c_name']?>
                 </option>
