@@ -54,7 +54,7 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <label >Nft Price</label>
-                                    <div class="form-wrapper d-flex align-items-center">
+                                    <div class="form-wrapper mb-0 pb-0 d-flex align-items-center">
                                         <select name="nft_currency" class="mr-3" style="border-radius: 4px; background-color: #191820; color: #d7d7d7; width:110px; height: 33px; border: .7px solid #d7d7d7; text-align:center; font-weight: bold;">
                                             <?php
                                             while ($currency_row = $g_currency_result->fetch_assoc()) { ?>
@@ -65,7 +65,7 @@
                                         </select>
                                         <input type="number" name="available_quantity" placeholder="E.G. 100">
                                     </div>
-                                    <br>service fee 0.0025%
+                                    <div class="mt-1 pt-0" style="font-size: 12px; font-style: italic;">service fee 0.0025%</div>
                                 </div>
                             </div>
                         </fieldset>
