@@ -52,7 +52,7 @@
 
                         <fieldset>
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg-6 d-flex align-items-center">
                                     <label >Nft Price</label>
                                     <select name="nft_currency" class="pr-2" style="border-radius: 10px; background-color: #191820; color: #d7d7d7; width:40px; height: 43px; border: 1.3px solid #d7d7d7; text-align:center; font-weight: bold;">
                                         <?php
