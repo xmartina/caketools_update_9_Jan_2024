@@ -37,8 +37,8 @@ include_once (rootDir.'partials/front/header/main.php');
     <div class="tf-container">
         <div class="row ">
             <?php
-            include_once (rootDir.'add_nft\left\main.php');
-            include_once (rootDir.'add_nft\right\main.php');
+            include_once (rootDir.'add_nft/left/main.php');
+            include_once (rootDir.'add_nft/right/main.php');
             ?>
         </div>
 
