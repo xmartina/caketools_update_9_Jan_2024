@@ -27,7 +27,6 @@
 
 <div class="bottom-button">
     <button type="submit" name="create_new_nft" class="tf-button active">Publish</button>
-    <a href="#" class="tf-button">Discard all</a>
 </div>
 </div>
 </div>
