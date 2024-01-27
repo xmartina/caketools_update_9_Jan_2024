@@ -1,7 +1,7 @@
 <!--NFT Properties-->
 <div class="infor">
-    <h6 class="py-3">NFT Properties</h6>
-    <p class="pb-2">Tell us about your NFT</p>
+    <h6 class="py-3 pb-2">NFT Properties</h6>
+    <p class="pb-3">Tell us about your NFT</p>
 </div>
 <div class="set-item">
     <fieldset>
