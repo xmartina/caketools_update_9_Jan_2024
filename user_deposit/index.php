@@ -8,7 +8,7 @@ if (!isset($_SESSION['user_id'])) { ?>
 <?php } ?>
 <?php
 $user_id = $_SESSION['user_id'];
-const pageName = 'Create New NFT';
+const pageName = 'Deposit Page';
 const rootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_html/';
 include_once (rootDir.'includes/generalConfig.php');
 include_once (rootDir.'includes/core.php');
