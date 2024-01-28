@@ -14,6 +14,40 @@ const rootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_ht
 include_once (rootDir.'includes/generalConfig.php');
 include_once (rootDir.'includes/core.php');
 include_once (rootDir.'partials/front/header/main.php');
+
+$get_currency_sql = "SELECT * FROM currency";
+$get_currency_result = $conn->query($get_currency_sql);
+$currency_row = $get_currency_result->fetch_assoc();
+
+if (isset($_POST['create_new_deposit'])) {
+
+    function generateAlphanumericCode($length = 10) {
+        $uniqueID = uniqid();
+        $alphanumericCode = strtoupper(substr($uniqueID, 0, $length));
+        return $alphanumericCode;
+    }
+
+//    $hot_pick_category = rand(1, 4);
+    $dep_ref_id = 'DEP_' . generateAlphanumericCode() . '_ccd';
+
+    $deposit_currency = $_POST['deposit_currency'];
+    $deposit_amount = $_POST['deposit_amount'];
+    $user_id = $_SESSION['user_id'];
+    $deposit_sql = "INSERT INTO deposit (dep_ref_id, dep_user_id, dep_currency, dep_amount, dep_status, dep_request_time, dep_request_date) VALUES ('$dep_ref_id', '$user_id', '$deposit_currency', '$deposit_amount', '0', CURTIME(), CURDATE())";
+    $deposit_result = $conn->query($deposit_sql);
+    if ($deposit_result) {
+        ?>
+        <script>
+            window.location.href = '/user_deposit?deposit_success';
+        </script>
+        <?php
+    } else {
+        ?>
+        <script>
+            window.location.href = '/user_deposit?deposit_failed';
+        </script>
+        <?php
+    }
 ?>
 
 <!-- title page -->
