@@ -3,17 +3,19 @@
     <div class="add-nft-inner">
         <h6 class="title">Choose Category</h6>
         <p class="sub">Connect With One Of Our Available Wallet Providers Or Create A New One.</p>
-        <select class="blockchain-button p-1" style="border-radius: 3px; background-color: #191820; color: #d7d7d7; width:250px; height: 39px; border: .7px solid #d7d7d7; text-align:center; font-weight: bold;">
+
+        <select class="blockchain-button p-1" name="category_id" style="border-radius: 3px; background-color: #191820; color: #d7d7d7; width:250px; height: 39px; border: .7px solid #d7d7d7; text-align:center; font-weight: bold;">
             <?php
             while ($g_c_row = $g_category_result->fetch_assoc()) {
                 ?>
-                <option name="category_id" value="<?=$g_c_row['c_id']?>" style="background-color: #191820; color: #888; border-radius: 10px;">
+                <option value="<?=$g_c_row['c_id']?>" style="background-color: #191820; color: #888; border-radius: 10px;">
                     <?=$g_c_row['c_name']?>
                 </option>
                 <?php
             }
             ?>
         </select>
+
 
         <h6 class="title">Select Item Type</h6>
         <p class="sub">They All Serve The Same Purpose, But Each One Takes.</p>
