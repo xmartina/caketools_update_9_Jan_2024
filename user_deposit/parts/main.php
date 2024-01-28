@@ -24,7 +24,7 @@
                                     <p class="sub mb22">Use the form below to make your deposit.</p>
 
                                     <div class="form-wrapper" id="form1">
-                                        <fieldset>
+                                        <fieldset class="activTab">
                                             <div class="row">
                                                 <div class="col-lg-12">
                                                     <label>Deposit Amount</label>
@@ -50,7 +50,7 @@
                                         <button type="button" class="tf-button active" onclick="showNextForm()">Next</button>
                                     </div>
 
-                                    <fieldset id="form2">
+                                    <fieldset id="form2" >
                                         <div class="row">
                                             <div class="col-lg-3">
                                                 <div class="py-2 px-3 bg-dark text-white rounded-3">
@@ -103,6 +103,7 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('form1').classList.add('active');
+        document.getElementsByClassName('activTab').classList.add('active');
     });
 
     function showNextForm() {
