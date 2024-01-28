@@ -36,12 +36,13 @@ if (isset($_POST['create_new_nft'])) {
     $available_quantity = $_POST['available_quantity'];
 
     // File upload mechanism
-    $uploadDirectory = '/assets/images/nfts/';
+    $uploadDirectory = rootDir.'assets/images/nfts/';
     $uploadedFile = $_FILES['nft_img'];
 
     if ($uploadedFile['error'] === UPLOAD_ERR_OK) {
         $filename = basename($uploadedFile['name']);
-        $targetPath = $_SERVER['DOCUMENT_ROOT'] . $uploadDirectory . $filename;
+//        $targetPath = $_SERVER['DOCUMENT_ROOT'] . $uploadDirectory . $filename;
+        $targetPath = $uploadDirectory . $filename;
 
         if (move_uploaded_file($uploadedFile['tmp_name'], $targetPath)) {
             // Continue processing
