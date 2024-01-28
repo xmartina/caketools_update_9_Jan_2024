@@ -1,4 +1,4 @@
-<form method="post">
+<form method="post" enctype="multipart/form-data">
 <div class="col-xl-9 col-lg-8 ">
     <div class="add-nft-inner">
         <h6 class="title">Choose Category</h6>
@@ -7,7 +7,7 @@
             <?php
             while ($g_c_row = $g_category_result->fetch_assoc()) {
                 ?>
-                <option name="<?=$g_c_row['c_id']?>" style="background-color: #191820; color: #888; border-radius: 10px;">
+                <option name="category_id" value="<?=$g_c_row['c_id']?>" style="background-color: #191820; color: #888; border-radius: 10px;">
                     <?=$g_c_row['c_name']?>
                 </option>
                 <?php

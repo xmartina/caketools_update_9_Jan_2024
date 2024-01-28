@@ -106,6 +106,7 @@ if (isset($_POST['create_new_nft'])) {
 
 
 
+
 ?>
 
 <!-- title page -->
