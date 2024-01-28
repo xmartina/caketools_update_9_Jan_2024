@@ -52,7 +52,7 @@ if (!$a_result) {
                         <?php
                         if ($data['dep_currency'] == 'ethereum') {
                             $method_img = "eth.png";
-                        }elseif ($data['dep_currency'] == 'usdt') {
+                        }elseif ($data['dep_currency'] == 'tether') {
                             $method_img = "usdt.png";
                         }elseif ($data['dep_currency'] == 'bitcoin') {
                             $method_img = "btc.png";
