@@ -1,4 +1,4 @@
-<form>
+<form method="post">
 <div class="col-xl-9 col-lg-8 ">
     <div class="add-nft-inner">
         <h6 class="title">Choose Category</h6>
@@ -14,7 +14,6 @@
             }
             ?>
         </select>
-
 
         <h6 class="title">Select Item Type</h6>
         <p class="sub">They All Serve The Same Purpose, But Each One Takes.</p>
