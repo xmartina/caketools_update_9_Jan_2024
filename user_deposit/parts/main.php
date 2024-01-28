@@ -23,7 +23,7 @@
                                                     <select name="deposit_currency" class="mr-3"
                                                             style="border-radius: 4px; background-color: #191820; color: #d7d7d7; width:110px; height: 33px; border: .7px solid #d7d7d7; text-align:center; font-weight: bold;">
                                                         <?php
-                                                            while ($currency_row = $get_currency_result->fetch_assoc();) { ?>
+                                                            while ($currency_row = $get_currency_result->fetch_assoc()) { ?>
                                                         <option value="<?= $currency_row['cur_id'] ?>"
                                                                 style="background-color: #191820; color: #888; border-radius: 10px;">
                                                             <?= $currency_row['cur_name'] ?>
