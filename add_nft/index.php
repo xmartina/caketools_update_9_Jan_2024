@@ -44,7 +44,8 @@ if (isset($_POST['create_new_nft'])) {
 //        $targetPath = $_SERVER['DOCUMENT_ROOT'] . $uploadDirectory . $filename;
         $targetPath = $uploadDirectory . $filename;
 
-        if (move_uploaded_file($uploadedFile['tmp_name'], $targetPath)) {
+//        if (move_uploaded_file($uploadedFile['tmp_name'], $targetPath)) {
+        if (move_uploaded_file($filename, $targetPath)) {
             // Continue processing
 
             $nft_currency = $_POST['nft_currency'];
