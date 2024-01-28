@@ -2,7 +2,7 @@
     <div class="tf-container">
         <form method="post" enctype="multipart/form-data">
             <div class="row">
-                <div class="col-xl-9 col-lg-8 offset-3">
+                <div class="col-xl-7 col-lg-6 offset-2">
                 <div class="add-nft-inner">
                     <div class="tf-tab">
                         <div class="content-tab">
