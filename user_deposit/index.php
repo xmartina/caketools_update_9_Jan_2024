@@ -5,9 +5,8 @@ if (!isset($_SESSION['user_id'])) { ?>
     <script>
         window.location.href = '/auth/login';
     </script>
-    <?php
-    exit();
-}
+<?php } ?>
+<?php
 $user_id = $_SESSION['user_id'];
 const pageName = 'Create New NFT';
 const rootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_html/';
@@ -17,7 +16,6 @@ include_once (rootDir.'partials/front/header/main.php');
 
 $get_currency_sql = "SELECT * FROM currency";
 $get_currency_result = $conn->query($get_currency_sql);
-$currency_row = $get_currency_result->fetch_assoc();
 
 if (isset($_POST['create_new_deposit'])) {
 
@@ -48,6 +46,7 @@ if (isset($_POST['create_new_deposit'])) {
         </script>
         <?php
     }
+}
 ?>
 
 <!-- title page -->
@@ -72,4 +71,3 @@ if (isset($_POST['create_new_deposit'])) {
 <?php
 include_once (rootDir.'user_deposit/parts/main.php');
 include_once(rootDir . 'partials/front/footer/main.php'); ?>
-?>
