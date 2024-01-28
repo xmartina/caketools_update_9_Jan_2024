@@ -76,7 +76,7 @@ if (!$result) {
                                 if ($data['dep_currency'] == 'ethereum') {
                                     $currency_symbol = "<i class='fab fa-ethereum'></i>";
                                 }elseif ($data['dep_currency'] == 'usdt') {
-                                    $currency_symbol = '₮';
+                                    $currency_symbol = 'fab fa-usdt';
                                 }elseif ($data['dep_currency'] == 'bitcoin') {
                                     $currency_symbol = "<i class='fab fa-bitcoin'></i>";
                                 }
