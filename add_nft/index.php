@@ -1,5 +1,6 @@
 <?php
 session_start();
+ob_start();
 if (!isset($_SESSION['user_id'])) { ?>
     <script>
         window.location.href = '/auth/login';
