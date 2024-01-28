@@ -3,17 +3,13 @@
         <form method="post" enctype="multipart/form-data">
             <div class="col-xl-9 col-lg-8 ">
                 <div class="add-nft-inner">
-                    <h6 class="title">Choose Category</h6>
-                    <p class="sub">Connect With One Of Our Available Wallet Providers Or Create A New One.</p>
-
                     <div class="tf-tab">
                         <div class="content-tab">
                             <div class="content-inner active">
                                 <div class="tab-create-item">
 
-                                    <h6 class="title">NFT Details</h6>
-                                    <p class="sub mb22">But Each One Takes A Different Approach And Makes Different
-                                        Tradeoffs.</p>
+                                    <h6 class="title">Deposit Form</h6>
+                                    <p class="sub mb22">Use the form below to make your deposit.</p>
 
                                     <fieldset>
                                         <div class="row">
