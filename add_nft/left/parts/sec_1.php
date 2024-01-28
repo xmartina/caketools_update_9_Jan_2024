@@ -1,5 +1,11 @@
 <form method="post" enctype="multipart/form-data">
 <div class="col-xl-9 col-lg-8 ">
+    <?php
+        if (strpos($_SERVER['REQUEST_URI'], 'nft_added_success=caketool') !== false) { ?>
+            <div class="alert alert-success" role="alert">
+                NFT Added Successfully
+            </div>
+    <?php } ?>
     <div class="add-nft-inner">
         <h6 class="title">Choose Category</h6>
         <p class="sub">Connect With One Of Our Available Wallet Providers Or Create A New One.</p>
