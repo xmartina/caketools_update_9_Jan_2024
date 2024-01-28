@@ -64,7 +64,7 @@
                                                 </option>
                                             <?php } ?>
                                         </select>
-                                        <input type="number" name="available_quantity" placeholder="E.G. 100">
+                                        <input type="number" name="nft_price" placeholder="E.G. 100">
                                     </div>
                                     <div class="mt-1 pt-0" style="font-size: 12px; font-style: italic;">service fee 0.0025%</div>
                                 </div>
