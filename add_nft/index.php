@@ -36,7 +36,7 @@ if (isset($_POST['create_new_nft'])) {
     $available_quantity = $_POST['available_quantity'];
 
     // File upload mechanism
-    $uploadDirectory = rootDir.'assets/images/nfts/';
+    $uploadDirectory = '/assets/images/nfts/';
     $uploadedFile = $_FILES['nft_img'];
 
     if ($uploadedFile['error'] === UPLOAD_ERR_OK) {
