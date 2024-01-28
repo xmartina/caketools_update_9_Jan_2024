@@ -21,7 +21,7 @@
                                     <h6 class="title">Deposit Form</h6>
                                     <p class="sub mb22">Use the form below to make your deposit.</p>
 
-                                    <div class="form-wrapper" id="form1">
+                                    <div class="formWrapper" id="form1">
                                         <fieldset class="activTab">
                                             <div class="row">
                                                 <div class="col-lg-12">
@@ -48,44 +48,47 @@
                                         <button type="button" class="tf-button active" onclick="showNextForm()">Next</button>
                                     </div>
 
-                                    <fieldset id="form2" >
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <div class="py-2 px-3 bg-dark text-white rounded-3">
-                                                    Bitcoin Wallet Address (BTC)
+                                    <div class="form2Wrapper" id="form2">
+                                        <fieldset  >
+                                            <div class="row">
+                                                <div class="col-lg-3">
+                                                    <div class="py-2 px-3 bg-dark text-white rounded-3">
+                                                        Bitcoin Wallet Address (BTC)
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-7">
+                                                    <div class="py-2 px-3 bg-outline-success text-success rounded-3">
+                                                        BTDDhsdksdllsdsdsdsdsderef
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <div class="py-2 px-3 bg-dark text-white rounded-3">
+                                                        Ethereum Wallet Address (ETH)
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-7">
+                                                    <div class="py-2 px-3 bg-outline-success text-success rounded-3">
+                                                        BTDDhsdksdllsdsdsdsdsderef
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-3">
+                                                    <div class="py-2 px-3 bg-dark text-white rounded-3">
+                                                        Tether Wallet Address (USDT)
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-7">
+                                                    <div class="py-2 px-3 bg-outline-success text-success rounded-3">
+                                                        BTDDhsdksdllsdsdsdsdsderef
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-7">
-                                                <div class="py-2 px-3 bg-outline-success text-success rounded-3">
-                                                    BTDDhsdksdllsdsdsdsdsderef
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="py-2 px-3 bg-dark text-white rounded-3">
-                                                Ethereum Wallet Address (ETH)
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-7">
-                                                <div class="py-2 px-3 bg-outline-success text-success rounded-3">
-                                                BTDDhsdksdllsdsdsdsdsderef
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-3">
-                                                <div class="py-2 px-3 bg-dark text-white rounded-3">
-                                                Tether Wallet Address (USDT)
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-7">
-                                                <div class="py-2 px-3 bg-outline-success text-success rounded-3">
-                                                BTDDhsdksdllsdsdsdsdsderef
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </fieldset>
+                                        </fieldset>
 
-                                    <div class="bottom-button d-flex align-items-center" id="submitWrapper">
-                                        <button type="button" class="tf-button" onclick="showPrevForm()">Prev</button>
-                                        <button type="submit" name="create_new_deposit" class="tf-button active">Deposit</button>
+
+                                        <div class="bottom-button d-flex align-items-center" id="submitWrapper">
+                                            <button type="button" class="tf-button" onclick="showPrevForm()">Prev</button>
+                                            <button type="submit" name="create_new_deposit" class="tf-button active">Deposit</button>
+                                        </div>
                                     </div>
 
                                 </div>
@@ -101,7 +104,8 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('form1').classList.add('active');
-        document.getElementById('submitWrapper').classList.add('d-none');
+        document.getElementById('form1').classList.remove('d-none');
+        document.getElementById('form2').classList.add('d-none');
     });
 
     function showNextForm() {
