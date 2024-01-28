@@ -51,7 +51,7 @@ if (!$result) {
                             <?php
                             if ($data['dep_currency'] == 'ethereum') {
                                 $method_img = "eth.png";
-                            }elseif ($data['dep_currency'] == 'usdt') {
+                            }elseif ($data['dep_currency'] == 'tether') {
                                 $method_img = "usdt.png";
                             }elseif ($data['dep_currency'] == 'bitcoin') {
                                 $method_img = "btc.png";
@@ -82,7 +82,7 @@ if (!$result) {
                                 <?php
                                 if ($data['dep_currency'] == 'ethereum') {
                                     $currency_symbol = "<i class='fab fa-ethereum'></i>";
-                                }elseif ($data['dep_currency'] == 'usdt') {
+                                }elseif ($data['dep_currency'] == 'tether') {
                                     $currency_symbol = '₮';
                                 }elseif ($data['dep_currency'] == 'bitcoin') {
                                     $currency_symbol = "<i class='fab fa-bitcoin'></i>";
