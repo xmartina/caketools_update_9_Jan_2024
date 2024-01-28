@@ -1,0 +1,46 @@
+<section class="tf-add-nft">
+    <div class="tf-container">
+            <form method="post" enctype="multipart/form-data">
+                <div class="col-xl-9 col-lg-8 ">
+                    <div class="add-nft-inner">
+                        <h6 class="title">Choose Category</h6>
+                        <p class="sub">Connect With One Of Our Available Wallet Providers Or Create A New One.</p>
+
+                        <div class="tf-tab">
+                            <div class="content-tab">
+                                <div class="content-inner active" >
+                                    <div class="tab-create-item">
+
+                                        <h6 class="title">NFT Details</h6>
+                                        <p class="sub mb22">But Each One Takes A Different Approach And Makes Different Tradeoffs.</p>
+
+                                        <fieldset>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <label >Deposit Amount</label>
+                                                    <div class="form-wrapper mb-0 pb-0 d-flex align-items-center">
+                                                        <select name="nft_currency" class="mr-3" style="border-radius: 4px; background-color: #191820; color: #d7d7d7; width:110px; height: 33px; border: .7px solid #d7d7d7; text-align:center; font-weight: bold;">
+                                                            <?php
+                                                            while ($currency_row = $g_currency_result->fetch_assoc()) { ?>
+                                                                <option value="<?= $currency_row['cur_id'] ?>" style="background-color: #191820; color: #888; border-radius: 10px;">
+                                                                    <?= $currency_row['cur_abbreviation'] ?>
+                                                                </option>
+                                                            <?php } ?>
+                                                        </select>
+                                                        <input type="number" name="Deposit_amount" placeholder="E.G. 100">
+                                                    </div>
+                                                    <div class="mt-1 pt-0" style="font-size: 12px; font-style: italic;">service fee 0.0025%</div>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+    </div>
+</section>
+

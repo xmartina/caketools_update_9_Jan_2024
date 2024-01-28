@@ -14,8 +14,6 @@ const rootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_ht
 include_once (rootDir.'includes/generalConfig.php');
 include_once (rootDir.'includes/core.php');
 include_once (rootDir.'partials/front/header/main.php');
-
-include_once (rootDir.'user_deposit/parts/main.php');
 ?>
 
 <!-- title page -->
@@ -30,7 +28,7 @@ include_once (rootDir.'user_deposit/parts/main.php');
                 <!--                    <li>Create</li>-->
                 <!--                </ul>-->
 
-                <h4 class="page-title-heading">Add New NFT</h4>
+                <h4 class="page-title-heading">Deposit Funds</h4>
 
             </div>
         </div>
@@ -38,5 +36,6 @@ include_once (rootDir.'user_deposit/parts/main.php');
 </section>
 
 <?php
+include_once (rootDir.'user_deposit/parts/main.php');
 include_once(rootDir . 'partials/front/footer/main.php'); ?>
 ?>
