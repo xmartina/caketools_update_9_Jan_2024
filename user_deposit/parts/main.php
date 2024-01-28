@@ -10,12 +10,10 @@
                                     <style>
                                         /* Add your styling here */
                                         fieldset {
-                                            display: none;
                                             transition: opacity 0.5s;
                                         }
 
                                         fieldset.active {
-                                            display: block;
                                             opacity: 1;
                                         }
                                     </style>
@@ -85,7 +83,7 @@
                                         </div>
                                     </fieldset>
 
-                                    <div class="bottom-button d-flex align-items-center">
+                                    <div class="bottom-button d-flex align-items-center" id="submitWrapper">
                                         <button type="button" class="tf-button" onclick="showPrevForm()">Prev</button>
                                         <button type="submit" name="create_new_deposit" class="tf-button active">Deposit</button>
                                     </div>
@@ -103,16 +101,20 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         document.getElementById('form1').classList.add('active');
-        document.getElementsByClassName('activTab').classList.add('active');
+        document.getElementById('submitWrapper').classList.add('d-none');
     });
 
     function showNextForm() {
         document.getElementById('form1').classList.remove('active');
+        document.getElementById('form1').classList.add('d-none');
         document.getElementById('form2').classList.add('active');
+        document.getElementById('form2').classList.remove('d-none');
     }
 
     function showPrevForm() {
-        document.getElementById('form2').classList.remove('active');
         document.getElementById('form1').classList.add('active');
+        document.getElementById('form1').classList.remove('d-none');
+        document.getElementById('form2').classList.add('d-none');
+        document.getElementById('form2').classList.remove('active');
     }
 </script>
