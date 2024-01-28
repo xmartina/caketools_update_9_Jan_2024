@@ -36,7 +36,7 @@ if (isset($_POST['create_new_nft'])) {
     $available_quantity = $_POST['available_quantity'];
 
     // File upload mechanism
-    $uploadDirectory = '/assets/images/nfts/';
+    $uploadDirectory = rootDir.'assets/images/nfts/';
     $uploadedFile = $_FILES['nft_img'];
 
     if ($uploadedFile['error'] === UPLOAD_ERR_OK) {
@@ -56,8 +56,24 @@ if (isset($_POST['create_new_nft'])) {
 
             // Add your validation and sanitation logic here
 
+            function generateAlphanumericCode($length = 10)
+            {
+                // Generate a unique ID based on the current timestamp
+                $uniqueID = uniqid();
+
+                // Remove the prefix and convert to uppercase to make it alphanumeric
+                $alphanumericCode = strtoupper(substr($uniqueID, 0, $length));
+
+                return $alphanumericCode;
+            }
+            $hot_pick_category = rand(1, 4);
+
+            $ref_id = 'caketool_' . generateAlphanumericCode() . '_nft';
+
+
+
             // Insert data into the nft_parent table
-            $insertNftParentSql = "INSERT INTO nft_parent (category_id, name, description, available_quantity, nft_img, nft_currency, nft_price) VALUES ('$category_id', '$name', '$description', '$available_quantity', '$filename', '$nft_currency', '$nft_price')";
+            $insertNftParentSql = "INSERT INTO nft_parent (ref_id, created_user_id, current_owner_id, service_fee, is_hot_pick, hot_pick_category, category_id, name, description, available_quantity, nft_img, nft_currency, nft_price) VALUES ('$ref_id','$user_id','$user_id','0.0025','1','$hot_pick_category','$category_id', '$name', '$description', '$available_quantity', '$filename', '$nft_currency', '$nft_price')";
 
             if ($conn->query($insertNftParentSql) === TRUE) {
                 // Get the last inserted nft_parent ID
@@ -67,8 +83,20 @@ if (isset($_POST['create_new_nft'])) {
                 $insertNftPropertiesSql = "INSERT INTO nft_properties (p_parent_id, p_background, p_mouth_grade, p_head, p_body) VALUES ('$lastNftParentId', '$p_background', '$p_mouth_grade', '$p_head', '$p_body')";
 
                 if ($conn->query($insertNftPropertiesSql) === TRUE) {
-                    // Success! Do something here, e.g., redirect to a success page
-                    echo "Data inserted successfully!";
+
+                    $get_nft_sql = "SELECT * FROM nft_parent WHERE created_user_id = '$user_id' ORDER BY date_created DESC LIMIT 1";
+                    $get_nft_result = $conn->query($get_nft_sql);
+
+                    if ($get_nft_result->num_rows > 0) {
+                        $get_nft_row = $get_nft_result->fetch_assoc();
+                        $recent_nft_ref_id = $get_nft_row['ref_id'];
+
+                        // Success! Do something here, e.g., redirect to a success page
+                        header("Location: /add_nft?nft_added_success=$recent_nft_ref_id");
+                    } else {
+                        // Handle the case when no data is found
+                        echo "No recently added data found.";
+                    }
                 } else {
                     echo "Error inserting data into nft_properties table: " . $conn->error;
                 }
