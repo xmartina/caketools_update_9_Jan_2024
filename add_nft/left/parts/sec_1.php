@@ -5,7 +5,13 @@
             <div class="alert alert-success" role="alert">
                 NFT Added Successfully
             </div>
-    <?php } ?>
+            <script>
+                setTimeout(function() {
+                    window.location.replace('/add_nft');
+                }, 3000);
+            </script>
+
+        <?php } ?>
     <div class="add-nft-inner">
         <h6 class="title">Choose Category</h6>
         <p class="sub">Connect With One Of Our Available Wallet Providers Or Create A New One.</p>
