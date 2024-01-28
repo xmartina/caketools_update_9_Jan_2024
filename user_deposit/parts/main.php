@@ -1,7 +1,8 @@
 <section class="tf-add-nft">
     <div class="tf-container">
         <form method="post" enctype="multipart/form-data">
-            <div class="col-xl-9 col-lg-8 ">
+            <div class="row">
+                <div class="col-xl-9 col-lg-8 offset-3">
                 <div class="add-nft-inner">
                     <div class="tf-tab">
                         <div class="content-tab">
@@ -96,6 +97,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
         </form>
     </div>
