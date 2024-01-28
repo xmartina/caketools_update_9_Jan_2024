@@ -3,6 +3,20 @@
         <form method="post" enctype="multipart/form-data">
             <div class="row">
                 <div class="col-xl-7 col-lg-6 offset-2">
+                    <?php
+                    if (isset($_GET['deposit_success'])) {
+                        ?>
+                        <div class="alert alert-success" role="alert">
+                            Deposit Successful
+                        </div>
+                        <script>
+                            setTimeout(function() {
+                                window.location.replace('/user_deposit');
+                            }, 3000);
+                        </script>
+                        <?php
+                    }
+                    ?>
                 <div class="add-nft-inner">
                     <div class="tf-tab">
                         <div class="content-tab">
