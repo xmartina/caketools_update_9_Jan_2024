@@ -67,7 +67,7 @@ if (isset($_POST['create_new_nft'])) {
             $ref_id = 'caketool_' . generateAlphanumericCode() . '_nft';
 
             // Insert data into the nft_parent table
-            $insertNftParentSql = "INSERT INTO nft_parent (date_created, time_created, ref_id, created_user_id, current_owner_id, service_fee, is_hot_pick, hot_pick_category, category_id, name, description, available_quantity, nft_img, price_currency, nft_price) VALUES ('CURDATE()','CURTIME()','$ref_id','$ref_id','$user_id','$user_id','0.0025','1','$hot_pick_category','$category_id', '$name', '$description', '$available_quantity', '$filename', '$nft_currency', '$nft_price')";
+            $insertNftParentSql = "INSERT INTO nft_parent (date_created, time_created, ref_id, created_user_id, current_owner_id, service_fee, is_hot_pick, hot_pick_category, category_id, name, description, available_quantity, nft_img, price_currency, nft_price) VALUES (CURDATE(), CURTIME(), '$ref_id', '$user_id', '$user_id', '0.0025', '1', '$hot_pick_category', '$category_id', '$name', '$description', '$available_quantity', '$filename', '$nft_currency', '$nft_price')";
 
             if ($conn->query($insertNftParentSql) === TRUE) {
                 // Get the last inserted nft_parent ID
