@@ -6,13 +6,13 @@
                     <?php
                     if (isset($_GET['deposit_success'])) {
                         ?>
-                        <div class="alert alert-success" role="alert">
-                            Deposit Successful
+                        <div class="alert alert-info" role="alert">
+                            Deposit Submitted Successful Awaiting Confirmation
                         </div>
                         <script>
                             setTimeout(function() {
                                 window.location.replace('/user_deposit');
-                            }, 3000);
+                            }, 5000);
                         </script>
                         <?php
                     }
