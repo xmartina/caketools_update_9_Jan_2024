@@ -89,7 +89,7 @@ if (!$a_result) {
                                 // Update user balance
                                 if ($data['dep_currency'] == 'ethereum') {
                                     $update_bal_stmt = $conn->prepare("UPDATE users SET eth_bal = eth_bal + ? WHERE id = ? ");
-                                } elseif ($data['dep_currency'] == 'usdt') {
+                                } elseif ($data['dep_currency'] == 'tether') {
                                     $update_bal_stmt = $conn->prepare("UPDATE users SET usdt_bal = usdt_bal + ? WHERE id = ? ");
                                 } elseif ($data['dep_currency'] == 'bitcoin') {
                                     $update_bal_stmt = $conn->prepare("UPDATE users SET btc_bal = btc_bal + ? WHERE id = ? ");
