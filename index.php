@@ -18,7 +18,7 @@
                                         <div class="tf-slider-item">
                                             <div class="content-inner">
                                                 <h1 class="heading">
-                                                    Defind, Coll<span>ect</span> and Sell Sup<span>er</span> Rate NFT
+                                                    Define, Coll<span>ect</span> and Sell Sup<span>er</span> Rate NFT
                                                     <img src="/assets/images/slider/bg-slider.png" alt="Image">
                                                 </h1>
                                                 <p class="sub-heading">
