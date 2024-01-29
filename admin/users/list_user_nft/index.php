@@ -14,7 +14,7 @@ include_once (adminRootDir.'partials/header/main.php');
 if (isset($_GET['user_nft_id'])) {
     include_once(adminRootDir . 'includes/adminCore.php');
     $user_nft_id = $_GET['user_nft_id'];
-    $get_user_nft_sql = "SELECT * FROM user_nft WHERE id = '$user_nft_id'";
+    $get_user_nft_sql = "SELECT * FROM nft_parent WHERE created_user_id = '$user_nft_id'";
     $nft_result = $conn->query($get_user_nft_sql);
 
 
