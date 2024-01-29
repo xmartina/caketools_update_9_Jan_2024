@@ -1,6 +1,7 @@
 
 <h6 class="pb-1 mb-4 text-muted">Masonry</h6>
-<div class="row" data-masonry='{"percentPosition": true }'>
+<!--<div class="row" data-masonry='{"percentPosition": true }'>-->
+<div class="row">
     <?php
     while ($nft_data = $nft_result->fetch_assoc()) {
     ?>
