@@ -7,7 +7,7 @@
     ?>
     <div class="col-sm-6 col-lg-4 mb-4">
         <div class="card">
-            <img class="card-img-top" src="<?=adminRootDir?>assets/img/elements/5.jpg" alt="Card image cap" />
+            <img class="card-img-top" src="<?=rootDir?>assets/images/nfts/<?=$nft_data['nft_image']?>" alt="<?=$nft_data['name']?>" />
             <div class="card-body">
                 <h5 class="card-title">Card title that wraps to a new line</h5>
                 <p class="card-text">

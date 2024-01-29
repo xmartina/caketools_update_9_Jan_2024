@@ -2,6 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 const adminRootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_html/admin/';
+const rootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_html/';
 const adminUrl = 'https://caketoolnftmarketplace.com/admin/';
 $pageName = 'Edit User';
 include_once (adminRootDir.'includes/adminCore.php');
