@@ -16,17 +16,20 @@
                 </p>
             </div>
         </div>
-    </div>
-    <div class="col-sm-6 col-lg-4 mb-4">
-        <div class="card p-3">
-            <figure class="p-3 mb-0">
-                <blockquote class="blockquote">
-                    <p>A well-known quote, contained in a blockquote element.</p>
-                </blockquote>
-                <figcaption class="blockquote-footer mb-0 text-muted">
-                    Someone famous in <cite title="Source Title">Source Title</cite>
-                </figcaption>
-            </figure>
+
+        <div class="row">
+            <div class="col-sm-12 col-lg-12 mb-12 py-3">
+                <div class="card p-3">
+                    <figure class="p-3 mb-0">
+                        <blockquote class="blockquote">
+                            <p>A well-known quote, contained in a blockquote element.</p>
+                        </blockquote>
+                        <figcaption class="blockquote-footer mb-0 text-muted">
+                            Someone famous in <cite title="Source Title">Source Title</cite>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
         </div>
     </div>
     <?php } ?>
