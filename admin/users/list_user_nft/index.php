@@ -21,7 +21,7 @@ if (isset($_GET['user_nft_id'])) {
 
 
 // Include the content and footer only if the edit_user parameter is set
-    include_once(adminRootDir . 'users/list_user_nft/parts/card.php');
+    include_once(adminRootDir . 'users/list_user_nft/parts/nft_card.php');
     include_once(adminRootDir . 'partials/footer/main.php');
 }
 ?>
