@@ -26,8 +26,6 @@
                 }
             }
          ?>
-
-            ?>
             <div class="col-sm-6 col-lg-4 mb-4">
                 <div class="card">
                     <img class="card-img-top" src="<?=siteUrl?>assets/images/nfts/<?=$nft_parent['nft_img']?>" alt="<?=$nft_parent['name']?>" style="height: 300px; object-fit: cover" />
