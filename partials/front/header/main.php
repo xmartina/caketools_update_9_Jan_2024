@@ -4,7 +4,7 @@
 
 <!-- preloade -->
 <div class="preload preload-container">
-    <div class="preload-logo"></div>
+    <div class="p-3 preload-logo"></div>
 </div>
 <!-- /preload -->
 
