@@ -19,6 +19,31 @@ include_once (rootDir . 'admin_auth/login/parts/header.php');
                 <!-- /Logo -->
 
                 <div class="card-body mt-2">
+                    <div class="py-4">
+                        <?php
+                        if (isset($_GET['wrong-pass'])) {
+                            echo '<div class="error-msg text-danger pb-3 mb-2 text-center">
+                            your password is incorrect, please check and try again
+                      </div>';
+                        } elseif (isset($_GET['no-user'])) {
+                            echo '<div class="error-msg text-danger pb-3 mb-2 text-center">
+                                    Sorry this user was not found, please check and try again
+                                  </div>';
+                        } elseif (isset($_GET['login-success'])){
+                            echo '<div class="success-msg text-success pb-3 mb-2 text-center">
+                                    login successful, <a href="/admin">redirecting to dashboard</a>
+                                  </div>';
+                            ?>
+                            <script>
+                                function redirectToDashboard() {
+                                    setTimeout(function () {
+                                        window.location.href = '/admin';
+                                    }, 3000);
+                                }
+                                window.onload = redirectToDashboard;
+                            </script>
+                        <?php } ?>
+                    </div>
                     <h4 class="mb-2">Welcome Admin 👋</h4>
                     <p class="mb-4">Please sign-in to your account </p>
 
@@ -28,7 +53,7 @@ include_once (rootDir . 'admin_auth/login/parts/header.php');
                                 type="text"
                                 class="form-control"
                                 id="email"
-                                name="email-username"
+                                name="user_input"
                                 placeholder="Enter your email or username"
                                 autofocus />
                             <label for="email">Email or Username</label>
@@ -55,12 +80,12 @@ include_once (rootDir . 'admin_auth/login/parts/header.php');
                                 <input class="form-check-input" type="checkbox" id="remember-me" />
                                 <label class="form-check-label" for="remember-me"> Remember Me </label>
                             </div>
-                            <a href="auth-forgot-password-basic.html" class="float-end mb-1">
+                            <a href="javascript:void(0)" class="float-end mb-1">
                                 <span>Forgot Password?</span>
                             </a>
                         </div>
                         <div class="mb-3">
-                            <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
+                            <button name="admin_login" class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
                         </div>
                     </form>
 
