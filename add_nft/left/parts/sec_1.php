@@ -47,7 +47,7 @@
 
                         <fieldset>
                             <label >Enter short description</label>
-                            <input type="text" name="description" placeholder="E.G. After Purchase You Will Get A  T-Shirt">
+                            <input type="text" name="description" placeholder="E.G. After Purchase You Will Get A  T-Shirt" style="resize: both;">
                         </fieldset>
 
                         <fieldset>
