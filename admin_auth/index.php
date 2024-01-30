@@ -1,4 +1,5 @@
 <?php
+session_start();
 const rootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_html/';
 const adminUrl = 'https://caketoolnftmarketplace.com/admin/';
 include_once(rootDir . 'includes/generalConfig.php');
