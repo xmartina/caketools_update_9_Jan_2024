@@ -1,6 +1,11 @@
 <h6 class="pb-1 mb-4 text-muted">All Selected User NFT</h6>
 <!--<div class="row" data-masonry='{"percentPosition": true }'>-->
 <div class="row">
+    <style>
+        .non.blockquote {
+            margin-bottom: 0;
+        }
+    </style>
     <?php
     while ($nft_parent = $nft_result->fetch_assoc()) {
         $get_nft_count = "SELECT COUNT(*) as total_rows FROM nft_parent WHERE id = $nft_parent[id]";
@@ -24,7 +29,7 @@
                     <div class="col-sm-7 col-lg-7 mb-4">
                         <div class="card p-3">
                             <figure class="py-2 px-2 pb-1 mb-0">
-                                <blockquote class="blockquote">
+                                <blockquote class="non blockquote">
                                     <p>Available Quantity</p>
                                 </blockquote>
                             </figure>
@@ -33,7 +38,7 @@
                     <div class="col-sm-5 col-lg-5 mb-4">
                         <div class="card bg-primary text-white text-center p-3">
                             <figure class="py-2 px-2 mb-0 pb-1">
-                                <blockquote class="blockquote">
+                                <blockquote class="non blockquote">
                                     <p> <?=$nft_parent['available_quantity']?></p>
                                 </blockquote>
                             </figure>
