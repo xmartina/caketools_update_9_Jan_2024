@@ -33,7 +33,7 @@
                     <div class="col-sm-5 col-lg-5 mb-4">
                         <div class="card bg-primary text-white text-center p-3">
                             <figure class=" py-2 px-3 mb-0">
-                                <figcaption class="blockquote-footer mb-0 text-white">
+                                <figcaption class=" text-white">
                                     <?=$nft_parent['available_quantity']?>
                                 </figcaption>
                             </figure>
