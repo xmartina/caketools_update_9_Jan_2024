@@ -437,7 +437,7 @@
                                 session_destroy();
 
                             // Redirect to the login page or any other desired page after logout
-                                header("Location:" . siteUrl . "admin_auth");
+                                header("Location: /admin_auth");
                                 exit();
                         }
                         ?>
