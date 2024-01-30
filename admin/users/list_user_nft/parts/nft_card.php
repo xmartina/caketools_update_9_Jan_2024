@@ -1,5 +1,5 @@
 
-<h6 class="pb-1 mb-4 text-muted">Masonry</h6>
+<h6 class="pb-1 mb-4 text-muted">All Selected User NFT</h6>
 <!--<div class="row" data-masonry='{"percentPosition": true }'>-->
 <div class="row">
     <?php
