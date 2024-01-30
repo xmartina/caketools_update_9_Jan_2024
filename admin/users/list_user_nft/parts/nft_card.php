@@ -25,7 +25,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row pt-3">
                     <div class="col-sm-7 col-lg-7 mb-4">
                         <div class="card p-3">
                             <figure class="py-2 px-2 pb-1 mb-0">
