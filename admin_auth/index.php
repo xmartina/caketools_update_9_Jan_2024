@@ -3,9 +3,9 @@ const rootDir = '/home/multistream6/domains/caketoolnftmarketplace.com/public_ht
 const adminUrl = 'https://caketoolnftmarketplace.com/admin/';
 include_once(rootDir . 'includes/generalConfig.php');
 include_once (rootDir.'includes/db_connect.php');
-$get_admin_details = "SELECT * FROM admin";
-$result = $conn->query($get_admin_details);
-$row = $result->fetch_assoc();
+//$get_admin_details = "SELECT * FROM admin";
+//$result = $conn->query($get_admin_details);
+//$row = $result->fetch_assoc();
 //$admin_email = $row['admin_email'];
 
 if (isset($_POST['admin_login'])) {
