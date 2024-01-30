@@ -20,7 +20,7 @@
             // Check if the query was successful
             if ($get_nft_currency_result) {
                 while ($currency = $get_nft_currency_result->fetch_assoc()) {
-                    if ($currency['cur_id '] == $nft_parent['price_currency']) {
+                    if ($currency['cur_id'] == $nft_parent['price_currency']) {
                         $currency_symbol = $currency['cur_abbreviation'];
                     }
                 }
