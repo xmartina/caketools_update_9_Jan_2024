@@ -14,6 +14,20 @@
         // Check if the query was successful and if 'nft_img' is not empty
         if ($result) {
             ?>
+            <?php
+            $get_nft_currency = "SELECT * FROM currency";
+            $get_nft_currency_result = $conn->query($get_nft_currency);
+            // Check if the query was successful
+            if ($get_nft_currency_result) {
+                while ($currency = $get_nft_currency_result->fetch_assoc()) {
+                    if ($currency['cur_id '] == $nft_parent['price_currency']) {
+                        $currency_symbol = $currency['cur_abbreviation'];
+                    }
+                }
+            }
+         ?>
+
+            ?>
             <div class="col-sm-6 col-lg-4 mb-4">
                 <div class="card">
                     <img class="card-img-top" src="<?=siteUrl?>assets/images/nfts/<?=$nft_parent['nft_img']?>" alt="<?=$nft_parent['name']?>" style="height: 300px; object-fit: cover" />
@@ -59,7 +73,7 @@
                         <div class="card bg-primary text-white text-center p-3">
                             <figure class="py-2 px-2 mb-0 pb-1">
                                 <blockquote class="non blockquote">
-                                    <p> <?=$nft_parent['price_currency'].$nft_parent['nft_price']?></p>
+                                    <p> <?=$currency_symbol.$nft_parent['nft_price']?></p>
                                 </blockquote>
                             </figure>
                         </div>
