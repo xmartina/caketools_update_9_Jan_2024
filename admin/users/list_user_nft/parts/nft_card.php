@@ -73,7 +73,7 @@
                         <div class="card bg-primary text-white text-center p-3">
                             <figure class="py-2 px-2 mb-0 pb-1">
                                 <blockquote class="non blockquote">
-                                    <p> <?=$currency_symbol.$nft_parent['nft_price']?></p>
+                                    <p class="text-capitalized" capitalized=""> <?=$currency_symbol.$nft_parent['nft_price']?></p>
                                 </blockquote>
                             </figure>
                         </div>
