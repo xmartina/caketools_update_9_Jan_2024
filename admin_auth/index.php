@@ -37,21 +37,6 @@ if (isset($_POST['admin_login'])) {
         exit();
     }
 }
-elseif (isset($_POST['admin_logout'])){
-
-    session_start();
-
-// Unset all session variables
-    $_SESSION = array();
-
-// Destroy the session
-    session_destroy();
-
-// Redirect to the login page or any other desired page after logout
-    header("Location:" . siteUrl . "admin_auth");
-    exit();
-
-}
 
 include_once (rootDir . 'admin_auth/login/main.php');
 

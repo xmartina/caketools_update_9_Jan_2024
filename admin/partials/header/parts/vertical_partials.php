@@ -427,10 +427,27 @@
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="auth-login-cover.html" target="_blank">
-                            <i class="mdi mdi-logout me-2"></i>
-                            <span class="align-middle">Log Out</span>
-                        </a>
+                        <?php
+                        if (isset($_POST['admin_logout'])){
+                                session_start();
+                            // Unset all session variables
+                                $_SESSION = array();
+
+                            // Destroy the session
+                                session_destroy();
+
+                            // Redirect to the login page or any other desired page after logout
+                                header("Location:" . siteUrl . "admin_auth");
+                                exit();
+                        }
+                        ?>
+                        <form action="" method="post">
+                            <button name="admin_logout" type="submit" class="dropdown-item">
+                                <i class="mdi mdi-logout me-2"></i>
+                                <span class="align-middle">Log Out</span>
+                            </button>
+                        </form>
+
                     </li>
                 </ul>
             </li>
