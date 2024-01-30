@@ -150,7 +150,7 @@ if (!$result) {
     <div class="card mb-4 border-2 border-primary">
         <div class="card-body">
             <div class="d-grid w-100 mt-4">
-                <button class="btn btn-primary">
+                <button class="btn btn-primary" onclick="location.href='<?=adminUrl?>users/list_user_nft?user_nft_id=<?=$user_data['id']?>'">
                     See all users uploaded NFTs
                 </button>
             </div>
