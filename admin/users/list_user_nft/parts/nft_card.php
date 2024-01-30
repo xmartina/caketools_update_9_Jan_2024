@@ -3,7 +3,7 @@
 <div class="row">
     <?php
     while ($nft_parent = $nft_result->fetch_assoc()) {
-        $get_nft_count = "SELECT COUNT(*) as total_rows FROM nft_parent WHERE id = $nft_data[id]";
+        $get_nft_count = "SELECT COUNT(*) as total_rows FROM nft_parent WHERE id = $nft_parent[id]";
         $result = $conn->query($get_nft_count);
 
         // Check if the query was successful and if 'nft_img' is not empty
