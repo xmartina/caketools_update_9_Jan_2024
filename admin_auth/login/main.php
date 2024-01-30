@@ -22,7 +22,7 @@ include_once (rootDir . 'admin_auth/login/parts/header.php');
                     <h4 class="mb-2">Welcome Admin 👋</h4>
                     <p class="mb-4">Please sign-in to your account </p>
 
-                    <form id="formAuthentication" class="mb-3" action="index.html" method="GET">
+                    <form id="formAuthentication" class="mb-3"  method="POST">
                         <div class="form-floating form-floating-outline mb-3">
                             <input
                                 type="text"
@@ -64,33 +64,9 @@ include_once (rootDir . 'admin_auth/login/parts/header.php');
                         </div>
                     </form>
 
-                    <p class="text-center">
-                        <span>New on our platform?</span>
-                        <a href="auth-register-basic.html">
-                            <span>Create an account</span>
-                        </a>
-                    </p>
 
                     <div class="divider my-4">
                         <div class="divider-text">or</div>
-                    </div>
-
-                    <div class="d-flex justify-content-center gap-2">
-                        <a href="javascript:;" class="btn btn-icon btn-lg rounded-pill btn-text-facebook">
-                            <i class="tf-icons mdi mdi-24px mdi-facebook"></i>
-                        </a>
-
-                        <a href="javascript:;" class="btn btn-icon btn-lg rounded-pill btn-text-twitter">
-                            <i class="tf-icons mdi mdi-24px mdi-twitter"></i>
-                        </a>
-
-                        <a href="javascript:;" class="btn btn-icon btn-lg rounded-pill btn-text-github">
-                            <i class="tf-icons mdi mdi-24px mdi-github"></i>
-                        </a>
-
-                        <a href="javascript:;" class="btn btn-icon btn-lg rounded-pill btn-text-google-plus">
-                            <i class="tf-icons mdi mdi-24px mdi-google"></i>
-                        </a>
                     </div>
                 </div>
             </div>
