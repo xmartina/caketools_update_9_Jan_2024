@@ -23,7 +23,7 @@
                 <div class="row py-3">
                     <div class="col-sm-7 col-lg-7 mb-4">
                         <div class="card p-3">
-                            <figure class="py-2 px-2 mb-0">
+                            <figure class="py-2 px-2 pb-1 mb-0">
                                 <blockquote class="blockquote">
                                     <p>Available Quantity</p>
                                 </blockquote>
@@ -32,7 +32,7 @@
                     </div>
                     <div class="col-sm-5 col-lg-5 mb-4">
                         <div class="card bg-primary text-white text-center p-3">
-                            <figure class="py-2 px-2 mb-0">
+                            <figure class="py-2 px-2 mb-0 pb-1">
                                 <blockquote class="blockquote">
                                     <p> <?=$nft_parent['available_quantity']?></p>
                                 </blockquote>
