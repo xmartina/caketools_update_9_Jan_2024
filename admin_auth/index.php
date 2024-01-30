@@ -6,7 +6,7 @@ include_once (rootDir.'includes/db_connect.php');
 $get_admin_details = "SELECT * FROM admin";
 $result = $conn->query($get_admin_details);
 $row = $result->fetch_assoc();
-$admin_email = $row['admin_email'];
+//$admin_email = $row['admin_email'];
 
 if (isset($_POST['admin_login'])) {
     // Collect user input
