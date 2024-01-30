@@ -19,8 +19,8 @@ include_once (rootDir . 'admin_auth/login/parts/header.php');
                 <!-- /Logo -->
 
                 <div class="card-body mt-2">
-                    <h4 class="mb-2">Welcome to Materialize! 👋</h4>
-                    <p class="mb-4">Please sign-in to your account and start the adventure</p>
+                    <h4 class="mb-2">Welcome Admin 👋</h4>
+                    <p class="mb-4">Please sign-in to your account </p>
 
                     <form id="formAuthentication" class="mb-3" action="index.html" method="GET">
                         <div class="form-floating form-floating-outline mb-3">
