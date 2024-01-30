@@ -47,7 +47,7 @@ include_once (rootDir . 'admin_auth/login/parts/header.php');
                     <h4 class="mb-2">Welcome Admin 👋</h4>
                     <p class="mb-4">Please sign-in to your account </p>
 
-                    <form id="formAuthentication" class="mb-3"  method="POST">
+                    <form class="mb-3"  method="POST">
                         <div class="form-floating form-floating-outline mb-3">
                             <input
                                 type="text"

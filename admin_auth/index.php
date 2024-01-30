@@ -47,12 +47,9 @@ elseif (isset($_POST['admin_logout'])){
     session_destroy();
 
 // Redirect to the login page or any other desired page after logout
-    header("Location:" . siteUrl . "auth/login");
+    header("Location:" . siteUrl . "admin_auth");
     exit();
 
-}
-elseif (isset($_POST['goto_my_dashboard'])){
-    header("Location: /users");
 }
 
 include_once (rootDir . 'admin_auth/login/main.php');
