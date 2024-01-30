@@ -25,7 +25,7 @@
                     </div>
                 </div>
 
-                <div class="row py-3">
+                <div class="row">
                     <div class="col-sm-7 col-lg-7 mb-4">
                         <div class="card p-3">
                             <figure class="py-2 px-2 pb-1 mb-0">
@@ -65,7 +65,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row ">
+                <!--<div class="row ">
                     <div class="col-sm-7 col-lg-7 mb-4">
                         <div class="card p-3">
                             <figure class="py-2 px-2 pb-1 mb-0">
@@ -104,7 +104,7 @@
                             </figure>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         <?php } else { ?>
             No NFT
