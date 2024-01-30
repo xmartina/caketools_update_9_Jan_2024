@@ -5,8 +5,13 @@
     while ($nft_data = $nft_result->fetch_assoc()) {
     ?>
     <?php
-    if ($nft_data['nft_img'] == '') { ?>
-        User has no NFT
+        $get_nft_count = "SELECT COUNT(*) as total_rows FROM nft_parent WHERE id = $nft_data[id]";
+        $result = $conn->query($get_nft_count);
+        // Check if the query was successful
+        if ($result) {
+        $row = $result->fetch_assoc();
+        $user_total_nft = $row['total_rows'];
+      ?>
     <?php } elseif($nft_data['nft_img'] != '') {
     ?>
     <div class="col-sm-6 col-lg-4 mb-4">
