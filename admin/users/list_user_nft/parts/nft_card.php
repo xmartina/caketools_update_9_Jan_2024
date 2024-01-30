@@ -32,10 +32,10 @@
                     </div>
                     <div class="col-sm-5 col-lg-5 mb-4">
                         <div class="card bg-primary text-white text-center p-3">
-                            <figure class=" py-2 px-2 mb-0">
-                                <figcaption class=" text-white">
-                                    <?=$nft_parent['available_quantity']?>
-                                </figcaption>
+                            <figure class="py-2 px-2 mb-0">
+                                <blockquote class="blockquote">
+                                    <p> <?=$nft_parent['available_quantity']?></p>
+                                </blockquote>
                             </figure>
                         </div>
                     </div>
