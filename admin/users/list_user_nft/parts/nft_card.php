@@ -3,12 +3,12 @@
 <div class="row">
     <?php
     while ($nft_data = $nft_result->fetch_assoc()) {
-    ?>
-    <?php
         $get_nft_count = "SELECT COUNT(*) as total_rows FROM nft_parent WHERE id = $nft_data[id]";
         $result = $conn->query($get_nft_count);
-        // Check if the query was successful
-        if ($result) { ?>
+
+        // Check if the query was successful and if 'nft_img' is not empty
+        if ($result) {
+            ?>
             <div class="col-sm-6 col-lg-4 mb-4">
                 <div class="card">
                     <img class="card-img-top" src="<?=siteUrl?>assets/images/nfts/<?=$nft_data['nft_img']?>" alt="<?=$nft_data['name']?>" style="height: 300px; object-fit: cover" />
@@ -19,7 +19,6 @@
                         </p>
                     </div>
                 </div>
-
 
                 <div class="row">
                     <div class="col-sm-12 col-lg-12 mb-12 py-3">
@@ -36,9 +35,8 @@
                     </div>
                 </div>
             </div>
-    <?php } elseif($nft_data['nft_img'] != '') {
-    ?>
-     No NFT
-    <?php } ?>
+        <?php } else { ?>
+            No NFT
+        <?php } ?>
     <?php } ?>
 </div>
