@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="row py-3">
-                    <div class="col-sm-8 col-lg-8 mb-4">
+                    <div class="col-sm-7 col-lg-7 mb-4">
                         <div class="card p-3">
                             <figure class="p-3 mb-0">
                                 <blockquote class="blockquote">
@@ -33,7 +33,7 @@
                             </figure>
                         </div>
                     </div>
-                    <div class="col-sm-4 col-lg-4 mb-4">
+                    <div class="col-sm-5 col-lg-5 mb-4">
                         <div class="card bg-primary text-white text-center p-3">
                             <figure class="mb-0">
                                 <blockquote class="blockquote">
