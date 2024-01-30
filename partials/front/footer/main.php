@@ -9,7 +9,7 @@
                         <img id="logo_footer" src="/assets/images/logo/logo_dark.png" alt="Image">
                     </div>
                     <p class="content">Embrace the Digital Renaissance: Explore the World of NFTs by creating, minting, and selling your unique digital collections seamlessly.</p>
-                    <i class="fab fa-mailbox pr-2"></i> <a href="mailto:contact@caketoolnftmarketplace.com">contact@caketoolnftmarketplace.com</a>
+                    <i class="fas fa-mailbox pr-2"></i> <a href="mailto:contact@caketoolnftmarketplace.com">contact@caketoolnftmarketplace.com</a>
 <!--                    <ul class="social-item">-->
 <!--                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>-->
 <!--                        <li><a href="mailto:contact@caketoolnftmarketplace.com">contact@caketoolnftmarketplace.com</a></li>-->
