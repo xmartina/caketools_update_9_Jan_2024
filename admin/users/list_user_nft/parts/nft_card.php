@@ -20,16 +20,28 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-sm-12 col-lg-12 mb-12 py-3">
+                <div class="row py-3">
+                    <div class="col-sm-8 col-lg-8 mb-4">
                         <div class="card p-3">
                             <figure class="p-3 mb-0">
                                 <blockquote class="blockquote">
                                     <p>A well-known quote, contained in a blockquote element.</p>
                                 </blockquote>
-                                <figcaption class="blockquote-footer mb-0 text-muted">
-                                    Someone famous in <cite title="Source Title">Source Title</cite>
-                                </figcaption>
+<!--                                <figcaption class="blockquote-footer mb-0 text-muted">-->
+<!--                                    Someone famous in <cite title="Source Title">Source Title</cite>-->
+<!--                                </figcaption>-->
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-lg-4 mb-4">
+                        <div class="card bg-primary text-white text-center p-3">
+                            <figure class="mb-0">
+                                <blockquote class="blockquote">
+                                    <p>A well-known quote, contained in a blockquote element.</p>
+                                </blockquote>
+<!--                                <figcaption class="blockquote-footer mb-0 text-white">-->
+<!--                                    Someone famous in <cite title="Source Title">Source Title</cite>-->
+<!--                                </figcaption>-->
                             </figure>
                         </div>
                     </div>
